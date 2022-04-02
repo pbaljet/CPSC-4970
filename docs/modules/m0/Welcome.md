@@ -1,4 +1,4 @@
-# Welcome to CPSC 4970!
+# Welcome to CPSC 4970
 
 Cyber Security is  an area of increasing importance in today's modern world as software is involved in almost every aspect of our daily lives.  This course provides a thorough understanding of the security practices involved during the software development process to ensure secure and robust software applications.
 
