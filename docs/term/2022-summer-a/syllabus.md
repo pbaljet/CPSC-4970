@@ -144,7 +144,7 @@ be provided in Canvas during the first week of the course.
 
 ## Instructor
 
-<img src="https://drive.google.com/file/d/1fQFVcrkzSWSzPJWxdUp74AB7xvM1s-yG/view?usp=sharing" width="200" height="200"/>
+<img src="../../img/peter_image.jpg" width="200" height="200"/>
 
 ### Pete Baljet
 
