@@ -144,13 +144,13 @@ be provided in Canvas during the first week of the course.
 
 ## Instructor
 
-<img src="https://drive.google.com/file/d/1fQFVcrkzSWSzPJWxdUp74AB7xvM1s-yG/view?usp=sharing" />
+<img src="https://drive.google.com/file/d/1fQFVcrkzSWSzPJWxdUp74AB7xvM1s-yG/view?usp=sharing" width="200" height="200"/>
 
 ### Pete Baljet
 
 Visiting Professor 
 Computer Science and Software Engineering  
-3101D Shelby Center  
+3101 Selby Center
 Auburn University  
 345 West Magnolia Ave  
 Auburn, AL 36849  
