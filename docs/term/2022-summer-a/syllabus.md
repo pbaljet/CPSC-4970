@@ -144,7 +144,7 @@ be provided in Canvas during the first week of the course.
 
 ## Instructor
 
-![screenshot](/img/peter_image.jpg)
+![Peter](https://pbaljet.github.io/CPSC-4970/img/peter_image.jpg)
 
 ### Pete Baljet
 
