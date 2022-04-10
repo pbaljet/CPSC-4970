@@ -27,4 +27,4 @@ react (thumbs-up) to the rules you will be upgraded to the Student role.
 
 To get started, just click on the following invitation link:
 
-- [https://discord.gg/ycNtpacKre](https://discord.gg/ycNtpacKre)
+- [https://discord.gg/Hdq6Jx28](https://discord.gg/Hdq6Jx28)
