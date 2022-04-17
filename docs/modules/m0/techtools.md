@@ -1,4 +1,4 @@
-# Hands-On: Development Environment
+# Development Environment
 
 To complete the work in this course you will need a **development
 environment** -- a collection of tools with which you build software.
@@ -20,8 +20,8 @@ There is quite of bit of material here, so you can jump to a particular section 
 - [Integrated Development Environment](#integrated-development-environment-ide)
     - [IntelliJ](#intellij)
     - [Eclipse](#eclipse)
-    - [Git](#Git Source Code Version Control)
     - [Visual Studio Code](#visual-studio-code)
+- [Git](#Git Source Code Version Control)
 - [Editor + Command Line](#editor--command-line)
     - [Text Editors](#text-editors)
     - [Command Line](#command-line)
