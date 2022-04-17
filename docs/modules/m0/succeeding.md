@@ -77,8 +77,7 @@ Here are some actions that can lead to smart, efficient work:
 > theory and practice come together more than in any other discipline, because
 > of the nature of computing machines.
 >
-> - [Don Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) in ["Theory and
-    >   Practice"](https://doi.org/10.1016/0304-3975(91)90295-D)
+> - [Don Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) in ["Theory and Practice"](https://doi.org/10.1016/0304-3975(91)90295-D)
 
 You will hopefully come to see and appreciate how theory and practice blend
 and influence and support each other in this course. For now, though, let me
