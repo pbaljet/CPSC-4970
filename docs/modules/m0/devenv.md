@@ -1,4 +1,4 @@
-# Hands-On: Development Environment
+# Development Environment
 
 To complete the work in this course you will need a **development
 environment** -- a collection of tools with which you build software.
