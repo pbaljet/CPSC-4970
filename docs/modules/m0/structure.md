@@ -23,19 +23,18 @@ The timeboxed organization of the course is as follows. Module 0 begins on the
 first day of classes for the term and ends on the first Sunday of the term.
 Each module 1-7 begins on a Monday and ends on the following Sunday.
 
-Here is the specific schedule for [Fall B
-2021](http://online.auburn.edu/term_calendar).
+Here is the specific schedule for [Summer A
+2022](http://online.auburn.edu/term_calendar).
 
 Module | Begin | End
 ------ | ----- | ---
-M0 | Mon 12 Jan | Sun 16 Jan
-M1 | Mon 17 Jan | Sun 23 Jan
-M2 | Mon 24 Jan | Sun 30 Jan
-M3 | Mon 31 Jan | Sun 6 Feb
-M4 | Mon 7 Feb  | Sun 13 Feb
-M5 | Mon 14 Feb | Sun 20 Feb
-M6 | Mon 21 Feb | Sun 27 Feb
-M7 | Mon 28 Feb | Thu 3 Mar
+M0 | Wed 18 May | Sun 22 May
+M1 | Mon 23 May | Sun 29 May
+M2 | Mon 30 May | Sun 5 Jun 
+M3 | Mon 6 Jun | Sun 12 Jun
+M4 | Mon 13 Jun  | Sun 19 Jun
+M5 | Mon 20 Jun | Sun 3 Jul
+M6 | Mon 27 Jun | Sun 11 Jul
 
 The last official class day is Thursday, March 3, so Module 7 is structured so
 that there is time to finish all work by that date.
@@ -58,16 +57,9 @@ Each of the seven content modules has the same structure with the following comp
   the current and/or previous modules.
 - **Summary:** A brief recap of what was covered in the module.
 
-In addition to these common elements, Module 2, 4, and 7 have:
+In addition to these common elements, Module 4 and 7 have:
 
-- **Lab Test:** A timed programming test that requires you to implement software
-  solutions for small, focused problems. While a programming assignment measures
-  your ability to solve a larger problem over a longer period, the lab tests are
-  designed to measure your ability to solve small problems quickly. Doing this
-  requires that you have internalized and mastered basic problem solving skills,
-  basic programming skills, and appropriate language knowledge. A lab test is
-  very much a test of your *fluency*.
-- **Exam:** A timed Canvas quiz that tests your overall mastery of the content
+- **Exam:** A timed Canvas exam that tests your overall mastery of the content
   in the current module and one or more previous modules.
 
 
