@@ -36,9 +36,6 @@ M4 | Mon 13 Jun  | Sun 19 Jun
 M5 | Mon 20 Jun | Sun 3 Jul
 M6 | Mon 27 Jun | Sun 11 Jul
 
-The last official class day is Thursday, March 3, so Module 7 is structured so
-that there is time to finish all work by that date.
-
 # Module Structure
 
 Each of the seven content modules has the same structure with the following components.
