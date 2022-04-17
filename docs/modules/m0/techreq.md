@@ -28,8 +28,8 @@ Auburn University students are entitled to educational price discounts for compu
 # Other Requirements
 Many of your online courses will have additional requirements you will need to consider. Depending on your courses, you will need software and tools to help prepare for activities. It is a good idea to have the following list of additional tools available:
 
-- Microsoft Office 365, which is offered to Auburn University students at no cost. Visit here (Links to an external site.) for full details and download instructions.
-- Acrobat Reader (Links to an external site.)
+- Microsoft Office 365, which is offered to Auburn University students at no cost. [Visit here](http://www.auburn.edu/oit/365/students/) for full details and download instructions.
+- [Acrobat Reader](https://get.adobe.com/reader/)
 - Webcam for video chat (often built into computers)
 - Audio microphone (often built into computers)
 - Speakers (often built into computers)
