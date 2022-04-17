@@ -9,59 +9,43 @@
 
 # Instructional Mode
 
-The instructional mode for this course is *Online Asynchronous*. The course will
-be conducted online in its entirety, and there will be no specific time of day
-during which you are required to participate in a course activity. You will be
-responsible for setting your own schedule for completing course readings,
-watching pre-recorded lecture videos, submitting assignments and taking exams no
-later than the published deadlines, and completing all other activities required
-by this course.
+The instructional mode for this course is *Online Asynchronous*. The course will be conducted online in its entirety, and there will be no specific time of day during which you are required to participate in a course activity. You will be responsible for setting your own schedule for completing course readings, watching pre-recorded lecture videos, submitting assignments and taking exams no later than the published deadlines, and completing all other activities required by this course.
 
-You are expected to have all the equipment and software needed to be successful
-in this course. At a minimum, you must have a computer and a broadband Internet
-connection capable of interacting with Canvas and Vocareum via a web browser, as
-well as streaming video and audio of pre-recorded lectures.
+You are expected to have all the equipment and software needed to be successful in this course. At a minimum, you must have a computer and a broadband Internet connection capable of interacting with Canvas and Gitlab via a web browser, as well as streaming video and audio of pre-recorded lectures.
 
-Times for all course events (assignment deadlines, exam times, etc.) will be set
-in US [Central Time](https://www.timeanddate.com/time/zones/ct).  You are
-responsible for meeting deadlines in Central Time regardless of what your local
-time zone may be. You may find it helpful to follow the instructions linked
-[here](https://community.canvaslms.com/t5/Student-Guide/How-do-I-set-a-time-zone-in-my-user-account-as-a-student/ta-p/414)
-to have Canvas show deadlines appropriately in your local time zone to avoid any
-confusion.
+Times for all course events (assignment deadlines, exam times, etc.) will be set in US [Central Time](https://www.timeanddate.com/time/zones/ct).  You are responsible for meeting deadlines in Central Time regardless of what your local time zone may be. You may find it helpful to follow the instructions linked [here](https://community.canvaslms.com/t5/Student-Guide/How-do-I-set-a-time-zone-in-my-user-account-as-a-student/ta-p/414) to have Canvas show deadlines appropriately in your local time zone to avoid any confusion.
 
 # Course Description
 
-CPSC 1230 is designed to introduce fundamental data structures and associated
-algorithms, as well as applications in which they are commonly used. An
-object-oriented approach to problem solving and program design will be
-emphasized in the lecture and reinforced in the lab.
+CPSC 4970 is designed to introduce applied cyber security techniques in the software development process. A java based application and associated build tools will be used as the method to provide hands on experience and knowledge.  The course is designed around constructing a software build pipeline that progressively gets more advanced. 
 
->**Bulletin Description:** Admission into Bachelor of Computer Science Program.
->Developing programs that use data structures and collections to efficiently
->store data. Emphasis will be placed on the interplay between effective data
->structures and efficient algorithms.
+
+>Description: Admission into Bachelor of Computer Science Program. Introduction to vulnerabilities and associated
+> security control methods used to implement a  secure software development lifecycle.  Emphasis is placed on code
+> level vulnerabilities, vulnerability detection and resolution, software composition with external dependencies,
+> security scanning and analysis tools, implementing secure automated build pipelines, and secrets management.
 >
 >**Credit Hours:** 3 (DSL. 45.)
 >
->**Prerequisite:** CPSC 1220
+>**Prerequisite:** CPSC 4970
 
 
 # Learning Outcomes
 
 By the end of this course, the student will demonstrate an ability to:
 
-- Create, verify, and assess computational solutions in Java.
-- Create, verify, and assess software components that are expressed at a high
-  level of abstraction.
-- Apply standard problem-solving strategies in the creation of solutions.
-- Demonstrate the behavior of standard collections and data structures.
-- Analyze and assess standard collections and data structures with respect to
-  efficiency and use case.
-- Apply standard collections, data structures, and associated algorithms in the
-  creation of solutions.
-- Assess algorithms and software components with respect to time complexity.
+- Understanding of software composition and execution
+- How software systems are delivered and managed
+- Impact of compliance and regulations on software requirements
+- Common pitfalls in the security of computer systems, and how to combat them.
+- Apply security testing practices to the software development lifecycle
+- Use industry standard threat detection, notification and response remediate security flaws
+- Understand and assess different attack surface environments such as containers and serverless computing
+- How share security models work in the 3rd party operating environments
+- Apply technical material taught in lecture to design secure software development lifecycle
 
+##Syllabus Modification
+The syllabus is subject to revision. The last modified date is always listed in the last section with a description of the modification. A notification will be made in Canvas and Discord. 
 
 ---
 
@@ -69,26 +53,11 @@ By the end of this course, the student will demonstrate an ability to:
 
 ## Textbook
 
-No specific text is required for this course, but I recommend that you do select
-a good text for reference and studying. There are many excellent texts on data
-structures and algorithms, and I've listed four examples below. Any one of these
-texts will serve you well for the course. Both Bailey and Shaffer are available
-as **free** PDF downloads, while Weiss and Sedgewick are available for purchase
-from Amazon and other booksellers.
+No specific text is required for this course. Throughout the course there will be references to a number sources on the web.  For deeper insight
 
-> **Bailey**, Duane A. (2007). *Java Structures: Data Structures in Java for the
-> Principled Programmer, $$\sqrt{7}$$ Edition*.
-> [http://www.cs.williams.edu/~bailey/JavaStructures/Welcome.html](http://www.cs.williams.edu/~bailey/JavaStructures/Welcome.html)
+> **Ransome** James, **Misra** Anmol  (2014). *Core Software Security: Security At The Source,
+> [https://www.routledge.com/Core-Software-Security-Security-at-the-Source/Ransome-Misra/p/book/9781032027418](https://www.routledge.com/Core-Software-Security-Security-at-the-Source/Ransome-Misra/p/book/9781032027418)
 >
-> **Shaffer**, Clifford A. (2013). *Data Structures and Algorithm Analysis, 3.2
-> (Java version)*.
-> [http://people.cs.vt.edu/~shaffer/Book/JAVA3elatest.pdf](http://people.cs.vt.edu/~shaffer/Book/JAVA3elatest.pdf)
->
-> **Weiss**, Mark A. (2010). *Data Structures and Problem Solving Ssing Java.
-> 4th ed.*, Addison-Wesley. ISBN: 978-0321541406.
->
-> **Sedgewick**, Robert. (2002). *Algorithms in Java: Parts 1–4. 3rd ed.*,
-> Addison-Wesley. ISBN: 978-0201361209.
 
 
 ## Course Notes
@@ -97,18 +66,13 @@ Notes and other materials relating to each topic covered in the course are
 available through Canvas. You are expected to read the notes and interact with
 the other materials as we progress through the course. Although the course notes
 are relatively complete, they are not designed to be your only source of
-information on the course material. You are expected to use a textbook to
-supplement the course notes.
+information on the course material. You are expected to use all material referenced 
+in the course as part of our learning.
 
 
-## Vocareum
+## Gitlab
 
-Vocareum is a cloud-based lab environment in which you will submit programming
-assignments and complete programming tests. The fee for using Vocareum this
-semester will be charged to your eBill via Auburn's [All
-Access](https://www.aubookstore.com/t-Textbook_AllAccess.aspx) program. Further
-instructions are provided in a Canvas announcement.
-
+[Gitlab](http://gitlab.com) is a cloud-based DevOps software platform that combines the ability to develop, secure, and operate software. You will be primarily using the Gitlab platform to complete and submit assignments. Each student will have an indiviual account setup and a project area created where you will manage source code and configure various build tools.
 
 ## Discord
 
@@ -116,7 +80,6 @@ Discord is an online communication and community-building tool that this course
 will use as a collaborative discussion and Q&A forum. This software is free, and
 instructions on installation and use will be provided in Canvas during the first
 week of the course.
-
 
 ## Zoom
 
@@ -156,13 +119,14 @@ Auburn University
 Auburn, AL 36849  
 +1 404 216 8434  
 `pete.baljet@auburn.edu`  
+[LinkedIn Profile](https://www.linkedin.com/in/peter-baljet-882656/)
 <http://eng.auburn.edu/csse>  
 **Office Hours:** By appointment
 
 
 ## Teaching Assistant
 
-### Chen Jiang
+### TBD
 
 Doctoral Candidate  
 Computer Science and Software Engineering  
@@ -184,46 +148,23 @@ Auburn, AL 36849
 Your grade for the course will be determined by the points you earn on items
 in the following categories.
 
-- **Exams** (40%): There will be three exams in the course, including the final
-  exam. Dates for the first two exams will be set and announced at least one
-  week in advance. All three exams will be administered online using the
-  Honorlock proctoring system. Missed exams are assigned a score of zero points.
+- **Project** (50%): There will be seven parts to the project designed to both reinforce and expand on the topics covered in lecture. Each project assignment will build on the previous so it is important you successfully complete each project assignment. Assignments involve Java coding, Gitlab configuration, and use of various tools in the software build pipeline. Most assignments will be completed individually while some may be completed in teams. Unless it is explicitly stated otherwise, all assignments are to be completed individually and must reflect your own individual work. Assignment grades will be based on the successful completion of the assigned task by reviewing code check ins, commit history, and successfuyl build pipeline output. Assignments not completed by the specified deadline are assigned a score of zero points.
 
-- **Lab Tests** (25%): There will be three programming-based tests in the
-  course. Dates for each will be set and announced at least one week in advance.
-  All three tests will be administered online using the Honorlock proctoring
-  system. Lab Test grades will be based on the percentage of test cases passed
-  on Vocareum. Passing zero test cases will result in a grade of zero points.
-  Missed lab tests are assigned a score of zero points.
+- **Quizzes** (15%): There will be a quiz each week in the course covering the material for that week.  These will typically be due Sunday by 11:59 CST. Missed quizzes are assigned a score of zero points.
 
-- **Assignments** (30%): There will be seven assignments designed to both
-  reinforce and expand on the topics covered in lecture. Each assignment will
-  specify a well-defined problem with multiple possible solutions. You will be
-  required to apply what you have learned, discover new information, and
-  exercise creative problem solving to construct a solution that meets the
-  problem specification. All assignments require you to express solutions in
-  Java.  Most assignments will be completed individually while some may be
-  completed in teams. Unless it is explicitly stated otherwise, all assignments
-  are to be completed individually and must reflect your own individual work.
-  Assignment grades will be based on the percentage of test cases passed on
-  Vocareum. Passing zero test cases will result in a grade of zero points.
-  Assignments not completed by the specified deadline are assigned a score of
-  zero points.
+- **Exams** (20%): There are a mid term and final exam.  The midterm is given in week 4 and the final will be given in week 8.  These will be delivered via Canvas and cover the material in the course up to that point.
 
-- **Hands-On Activities** (5%): There will be a set of hands-on activities
-  designed to both reinforce and expand on the topics covered in lecture.
-  Hands-on activities not completed by the specified deadline are assigned a
-  score of zero points.
+- **Assignments** (15%): There will be seven assignments designed to both reinforce and expand on the topics covered in lecture.  Passing zero test cases will result in a grade of zero points. Assignments not completed by the specified deadline are assigned a score of zero points.
 
 Your total score (*Total*) for the course will be calculated as follows, where
-*E* is the percentage of possible points earned on exams, *A* is the percentage
-of possible points earned on assignments, *T* is the percentage of possible
-points earned on lab tests, and *H* is the percentage of possible points earned
-on hands-on activities. Each percentage is calculated as (*points earned* /
+*E* is the percentage of possible points earned on exams, *P* is the percentage
+of possible points earned on project assignments, *Q* is the percentage of possible
+points earned on Quizzes and *A* is the percentage of possible
+points earned on Assignments. Each percentage is calculated as (*points earned* /
 *points possible*) * 100.
 
 
-*Total* = (0.4 * *E*) + (0.25 * *T*) + (0.3 * *A*) + (0.05 * *H*)
+*Total* = (0.5 * *P*) + (0.2 * *E*) + (0.15 * *Q*)  + (0.15 * *A*) 
 
 Your letter grade for the course will be assigned based on your *Total*
 numeric score using the following scale.
@@ -248,22 +189,19 @@ The course is organized into eight modules covering the topics below.
 
 - **Module 0**: Course overview, policies, getting started
 
-- **Module 1**: Programming fundamentals, correctness, testing, debugging,
-  generality, idioms, patterns
+- **Module 1**: Security in Source Code Management
 
-- **Module 2**: Efficiency, algorithm analysis, sorting, divide-and-conquer,
-  recursion
+- **Module 2**: Security in Software Composition and Dependency
 
-- **Module 3**: Collections, array-based and node-based implementations
+- **Module 3**: Security in  Software Build Pipelines
 
-- **Module 4**: Lists, stacks, queues
+- **Module 4**: Security in Software Testing
 
-- **Module 5**: Trees, binary search trees, AVL trees, red-black trees, 2-4
-  trees, binary heaps
+- **Module 5**: Security in Software Testing
 
-- **Module 6**: Hash tables, graphs
+- **Module 6**: Security in Deployment
 
-- **Module 7**: ~~Disjoint sets~~
+- **Module 7**: Bringing it all Together
 
 Module 0 runs from the first day of classes through the first Sunday of the
 term, Module 1 through Module 7 are each allocated one week, with each beginning
@@ -274,16 +212,16 @@ Below is the weekly schedule for [Fall B
 through all days of the term, including those marked as holidays.
 
 
-Week  | Dates          | Module | Graded Items | Bailey | Shaffer | Weiss | Sedgewick
-----  | -----          | ------ | ------------ | ------ | ------- | ----- | ---------
-1     | 10/11 - 10/17  | M0     | H            |        |         |       |
-2     | 10/18 - 10-24  | M1     | H A          | 2, 4, 8, 11 | 1 | 1-4, 6 | 3, 4, 12
-3     | 10/25 - 10/31  | M2     | H A E T      | 5, 6 | 2, 3, 7 | 5, 8 | 2, 6-8
-4     | 11/1 - 11/7    | M3     | H A          | 3, 7, 9 | 4 | 6, 17 | 3, 4
-5     | 11/8 - 11/14   | M4     | H A E T      | 5, 9-11 | 2, 4 | 6, 7, 15-17 | 4, 5
-6     | 11/15 - 11/21  | M5     | H A          | 12, 13 | 5, 10, 13 | 6, 18, 19, 21 | 5, 9, 12, 13
-7     | 11/22 - 11/28  | M6     | H A          | 15, 16 | 9, 11 | 6, 14, 20 | 1, 14
-8     | 11/29 - 12/5   | M7     | H A E T      |   | 6 | 24 | 1, 4
+Week  | Dates         | Module | Graded Items 
+----  | -----         | ------ | ------------ 
+1     | 5/18 - 5/22   | M0     | Q            
+2     | 5/23 - 5/29   | M1     | Q P          
+3     | 5/30 - 6/5    | M2     | Q P       
+4     | 6/6  - 6/12   | M3     | Q P E          
+5     | 6/13 - 6/19   | M4     | Q P       
+6     | 6/20 - 6/26   | M5     | Q P           
+7     | 6/27 - 7/3    | M6     | Q P           
+8     | 7/4  - 7/11   | M7     | Q P E     
 
 
 ---
@@ -377,10 +315,9 @@ compressed 7.5 format, the expected amount of time per week is effectively
 doubled.
 
 This course carries three credit hours, so at a minimum, an "appropriately
-prepared" student (read: you did great in COMP 1220) would be expected to
-spend 3 * 3 * 2 = 18 hours each week working on this course. Regardless of the
-specifics, you should be prepared to allocate an appropriate amount of time
-for this course.
+prepared" student would be expected to spend 3 * 3 * 2 = 18 hours each week 
+working on this course. Regardless of the specifics, you should be prepared 
+to allocate an appropriate amount of time for this course.
 
 
 ## Academic Honesty
