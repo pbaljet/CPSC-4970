@@ -1,4 +1,4 @@
-# Lecture Notes
+# Lecture Notes 5
 
 - [Problem Solving, Patterns, and
   Search](notes/01-Problem-Solving-Patterns-Search.pdf)
