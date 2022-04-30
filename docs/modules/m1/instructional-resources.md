@@ -3,7 +3,6 @@
 - [Cyber Security in Software Development](notes/01-Problem-Solving-Patterns-Search.pdf)
 - [Git Version Control System](notes/02-Correctness-and-Testing.pdf)
 - [Apache Maven Software Build Tool](notes/03-Generality.pdf)
-- 
 
 # References
 - [Git Version Control System](https://git-scm.com/)
