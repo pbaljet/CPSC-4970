@@ -1,19 +1,19 @@
 # Lecture Notes
 
-- [Problem Solving, Patterns, and
-  Search](notes/01-Problem-Solving-Patterns-Search.pdf)
-- [Correctness and Testing](notes/02-Correctness-and-Testing.pdf)
-- [Generality](notes/03-Generality.pdf)
+- [Cyber Security in Software Development](notes/01-Problem-Solving-Patterns-Search.pdf)
+- [Git Version Control System](notes/02-Correctness-and-Testing.pdf)
+- [Apache Maven Software Build Tool](notes/03-Generality.pdf)
+- 
+
+# References
+- [Git Version Control System](https://git-scm.com/)
+- [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf), Github.com
+- [Apache Maven Software Build Tool](https://maven.apache.org/)
+- [Git Lab DevOps Platform](https://about.gitlab.com/)
 
 # Supplemental Readings
 
-- Chapters 1-4 of Bailey, D. A. (2007). [*Java structures: Data structures in
-  Java for the principled programmer ("Root 7"
-  Edition)*](http://dept.cs.williams.edu/~bailey/JavaStructures/Book_files/JavaStructures.pdf).
-  Williams, MA: Williams University.
 
-- Chapter 1 of Shaffer, C. A. (2013). [*A practical introduction to data
-  structures and algorithm analysis (Edition
-  3.2)*](http://people.cs.vt.edu/~shaffer/Book/JAVA3elatest.pdf). Upper Saddle
-  River, NJ: Prentice Hall.
+- Chapter 1,2,3 of Ghandi, R. (2022). [*Head First Git*](https://learning.oreilly.com/library/view/head-first-git/9781492092506/). O'Reilly Media, Inc.
+
 
