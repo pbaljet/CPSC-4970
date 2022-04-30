@@ -24,8 +24,8 @@ everyone should follow when using the course Discord server.
 
 When you join the server, you will be placed in a limited Guest role. Once you react (thumbs-up) to the rules in the rules channel you will be upgraded to the Student role and the remainder of the categories will appear.
 
-To get started, just click on the following invitation link:
+To get started, just paste on the following link in your browser:
 
-- [https://discord.gg/3gu9HvfMTD](https://discord.gg/3gu9HvfMTD)
+> [https://discord.gg/3gu9HvfMTD](https://discord.gg/3gu9HvfMTD)
 
 Once you have been granted the student role take a moment to introduce yourself in the introductions channel.  Where you are located, an interesting fact, etc.  During the course it is expected everyone contributes and help each other.
