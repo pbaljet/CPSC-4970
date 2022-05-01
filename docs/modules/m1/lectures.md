@@ -34,7 +34,7 @@ A common language and framework to communicate security related information is i
 
 # Setting up Development Environment
 
-The next view lectures guide you through installing and learning to use the core development tools that will be used throughout the course.  Each of these tools can be installed on Linux, Windows, or Mac operating systems.  Most of the videos and examples will be using unix command line, but the options and commands should for the most part be the same on each operations system.
+The next sections and lectures guide you through installing and learning to use the core development tools that will be used throughout the course.  Each of these tools can be installed on Linux, Windows, or Mac operating systems.  Most of the videos and examples will be using unix command line, but the options and commands should for the most part be the same on each operations system.
 
 ## Java Installation and Verification
 
@@ -48,7 +48,9 @@ The output looks something line this:
     Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS)
     Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.8+10-LTS, mixed mode)
 
-The Java JDK 11 can be downloaded from [Oracle](https://www.oracle.com/java/technologies/downloads/#java11) 
+The Java JDK 11 can be downloaded from <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle</a>
+
+[Oracle](https://www.oracle.com/java/technologies/downloads/#java11) 
 
 If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey ([windows](https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd)) to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
 
@@ -73,7 +75,9 @@ or for windows:
 
     git version 2.36.0.windows.1
 
-### Git Installation
+### Using Git
+
+
 
 ## Maven Build Automation
 
