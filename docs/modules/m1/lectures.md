@@ -34,23 +34,46 @@ A common language and framework to communicate security related information is i
 
 # Setting up Development Environment
 
-We would like to write code that is **general** and **abstract** rather
-than tied to a concrete and specific context. The advantages of this include
-greater reuse, increased robustness, and often times better efficiency. This set
-of videos takes you through important concepts in writing general code in Java.
+The next view lectures guide you through installing and learning to use the core development tools that will be used throughout the course.  Each of these tools can be installed on Linux, Windows, or Mac operating systems.  Most of the videos and examples will be using unix command line, but the options and commands should for the most part be the same on each operations system.
 
 ## Java Installation and Verification
 
-This video discusses coding style, code structure, and the idea of clean, simple
-code and the influence these ideas have on correctness.
+The version of Java used through the course is Java JDK 11.  To check your java version type the following command:
+
+    java -version
+
+The output looks something line this:
+
+    java version "11.0.8" 2020-07-14 LTS
+    Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS)
+    Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.8+10-LTS, mixed mode)
+
+The Java JDK 11 can be downloaded from [Oracle](https://www.oracle.com/java/technologies/downloads/#java11) 
+
+If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey ([windows](https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd)) to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
 
 
 ## Git Version Control
 
-Testing is only as useful as the test cases that you design. In this video you
-will learn about different perspectives on testing, as well as the basics of
-purposeful test case design.
+Source code version control is foundational to managing change to a software code base.  It provides the ability to maintain a history of all changes, control introduction of changes to a stable code base, and provide the ability to work independently through branches among other essential capabilities.
 
+Git
+
+### Git Installation
+
+Check to see if you have Git installed with the following command:
+
+    git --version
+
+The output looks something line this:
+
+    git version 2.23.0
+
+or for windows:
+
+    git version 2.36.0.windows.1
+
+### Git Installation
 
 ## Maven Build Automation
 
