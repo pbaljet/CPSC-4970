@@ -16,6 +16,7 @@ purposes of this course it will be important to choose a development that is a
 
 There is quite of bit of material here, so you can jump to a particular section through the following list.
 
+- [Command Line Interface](#command-line-interface)
 - [Java Development Kit](#java-development-kit-jdk)
 - [Integrated Development Environment](#integrated-development-environment-ide)
     - [IntelliJ](#intellij)
@@ -29,6 +30,9 @@ There is quite of bit of material here, so you can jump to a particular section 
 - [JUnit](#testing-framework---junit)
 
 
+## Command Line Interface
+
+Almost all examples and discussions in this book assume you are familiar with a Unix-like system with a command-line interface. The examples should work under other environments, such as Mac OS X, but the reader can expect slight variations.  On Windows, 
 
 ## Java Development Kit (JDK)
 
