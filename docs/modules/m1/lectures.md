@@ -50,6 +50,8 @@ The output looks something line this:
 
 The Java JDK 11 can be downloaded from <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle</a>
 
+Hello
+
 [Oracle](https://www.oracle.com/java/technologies/downloads/#java11) 
 
 If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey ([windows](https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd)) to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
