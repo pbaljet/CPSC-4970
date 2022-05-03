@@ -38,7 +38,9 @@ The next sections and lectures guide you through installing and learning to use 
 
 ## Java Installation and Verification
 
-The version of Java used through the course is Java JDK 11.  To check your java version type the following command:
+The version of Java used through the course is Java JDK 11.  The Java JDK 11 can be downloaded from <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle</a>
+
+To check your java version type the following command:
 
     java -version
 
@@ -48,7 +50,6 @@ The output looks something line this:
     Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS)
     Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.8+10-LTS, mixed mode)
 
-The Java JDK 11 can be downloaded from <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle</a>
 
 If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey (<a href="https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd" target="_blank">Windows</a> to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
 
