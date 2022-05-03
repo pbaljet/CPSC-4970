@@ -50,11 +50,7 @@ The output looks something line this:
 
 The Java JDK 11 can be downloaded from <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle</a>
 
-Hello
-
-[Oracle](https://www.oracle.com/java/technologies/downloads/#java11) 
-
-If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey ([windows](https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd)) to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
+If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey (<a href="https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd" target="_blank">Windows</a> to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
 
 
 ## Git Version Control
@@ -79,12 +75,31 @@ or for windows:
 
 ### Using Git
 
-
+> [*Video: Welcome Message*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=67e96d16-5cc1-4d59-bf17-ae8a000a224d)
 
 ## Maven Build Automation
 
-We would like to write code that is **general** and **abstract** rather
-than tied to a concrete and specific context. The advantages of this include
-greater reuse, increased robustness, and often times better efficiency. This set
-of videos takes you through important concepts in writing general code in Java.
+The Apache Java Maven tool (https://maven.apache.org/) to provide build automation for our Java source code.  Maven provides the ability to compile, test, scan, and package our applications using a configuration file called a project object model (POM).  
+
+### Maven Installation
+
+Maven can be downloaded from the <a href="https://maven.apache.org/download.cgi" target="_blank">project website</a>.  Maven is a Java based tool and can be uncompressed in a directory.
+
+<a href="https://maven.apache.org/install.html" target="_blank">Installation steps</a>. Once downloaded your path variable needs to be updated to include the "bin" directory under the root maven directory.  
+
+Once completed you can run the following command to check the installation and setup:
+
+    mvn - version
+
+The output looks something line this:
+
+    Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T14:41:47-04:00)
+    Maven home: /usr/local/Cellar/maven/3.6.0/libexec
+    Java version: 14.0.2, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home
+    Default locale: en_US, platform encoding: UTF-8
+    OS name: "mac os x", version: "10.16", arch: "x86_64", family: "mac"
+
+
+
+
 
