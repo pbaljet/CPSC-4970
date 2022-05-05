@@ -1,7 +1,7 @@
 # Lecture Notes
 
-- [Cyber Security in Software Development](notes/01-Problem-Solving-Patterns-Search.pdf)
-- [Git Version Control System](notes/02-Correctness-and-Testing.pdf)
+- [Cyber Security in Software Development](notes/cpsc4970-m1-intro.pdf)
+- [Git Version Control System](notes/cpsc4970-m1-git.pdf)
 - [Apache Maven Software Build Tool](notes/03-Generality.pdf)
 
 # References
