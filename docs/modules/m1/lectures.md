@@ -90,7 +90,7 @@ Maven can be downloaded from the <a href="https://maven.apache.org/download.cgi"
 
 Once completed you can run the following command to check the installation and setup:
 
-    mvn - version
+    mvn -version
 
 The output looks something line this:
 
