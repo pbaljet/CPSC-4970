@@ -11,7 +11,7 @@ The following video lectures provide a broad overview of the importance of secur
 
 A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
 
-> [*Video: Where do *](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
+> [*Video: Cyber Security Industry Standards *](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
 
 ---
 
@@ -34,23 +34,17 @@ A common language and framework to communicate security related information is i
 
 # Git Version Control
 
-A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
-
 > [*Video: Git Version Control*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
 
 ---
 
 # Gitlab DevOps System
 
-A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
-
 > [*Video: Gitlab DevOps System*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
 
 ---
 
 # Apache Maven
-
-A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
 
 > [*Video: Apache Maven*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
 
