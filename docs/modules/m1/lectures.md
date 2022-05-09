@@ -22,11 +22,36 @@ Much of the software that comprises software applications is not what is typical
 
 > [*Video: Software Composition*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
 
+---
 
 # Course Project Overview
 
 A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
 
 > [*Video: Cyber Security Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
+
+---
+
+# Git Version Control
+
+A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
+
+> [*Video: Git Version Control*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
+
+---
+
+# Gitlab DevOps System
+
+A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
+
+> [*Video: Gitlab DevOps System*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
+
+---
+
+# Apache Maven
+
+A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
+
+> [*Video: Apache Maven*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
 
 
