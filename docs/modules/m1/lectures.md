@@ -2,7 +2,7 @@
 
 The following video lectures provide a broad overview of the importance of security in software development as part of an organizations comprehensive security program. Also covered are a number of industry standards that will be referenced throughout the course as we examine how security practices can be used to prevent, detect, and remediate different types of security threats.
 
-> [*Video: Cyber Security Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5a2da35-7d70-4dd1-8dbf-acbc0052c762)
+> [*Video: Cyber Security Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
 
 ---
 
