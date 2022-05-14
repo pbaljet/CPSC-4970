@@ -6,7 +6,6 @@ The following video lectures provide a broad overview of the importance of secur
 
 ---
 
-
 # Cyber Security Industry Standards
 
 A common language and framework to communicate security related information is important to ensure rapid understanding and comprehensive coverage.  This lecture video describes the NIST standards and the National Vulnerability Database.
@@ -29,4 +28,17 @@ A common language and framework to communicate security related information is i
 
 > [*Video: Course Project*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=027ea13c-8e61-4639-b59e-ae950154f8c4)
 
+---
+# Git Version Control Tool
 
+> [*Video: Git Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+
+---
+# Maven Software Build Automation Tool
+
+> [*Video: Maven Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+---
+# Gitlab DevOps Tool
+
+> [*Video: Gitlab Overvieww*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+---
