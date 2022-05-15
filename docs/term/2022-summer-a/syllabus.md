@@ -158,7 +158,7 @@ in the following categories.
 
 - **Exams** (20%): There are a mid term and final exam.  The midterm is given in week 4 and the final will be given in week 8.  These will be delivered via Canvas and cover the material in the course up to that point.
 
-- **Assignments** (15%): There will be seven assignments designed to both reinforce and expand on the topics covered in lecture.  Passing zero test cases will result in a grade of zero points. Assignments not completed by the specified deadline are assigned a score of zero points.
+- **Assignments** (15%): There will be seven assignments designed to both reinforce and expand on the topics covered in lecture. Assignments not completed by the specified deadline are assigned a score of zero points.
 
 Your total score (*Total*) for the course will be calculated as follows, where
 *E* is the percentage of possible points earned on exams, *P* is the percentage
@@ -262,20 +262,18 @@ the course instructor directly for other absences.
 > present verifiable documentation related to university excused absences.  The
 > steps for obtaining an excused absence memo are as follows:
 >
-> 1. The student submits the request form using this link:
-     >    [https://aub.ie/EngAbsence](https://aub.ie/EngAbsence)
-     >    - Students submit documentation of the reason for the absence.
+> 1. The student submits the request form using this link: [https://aub.ie/EngAbsence](https://aub.ie/EngAbsence)
+>    - Students submit documentation of the reason for the absence.
 >    - Students must read and acknowledge the excused absence policy.
 >
-> 1. The ESS office staff processes the requests and verifies authenticity of
-     >    documentation provided by student, as well as the dates of the absence(s).
+> 1. The ESS office staff processes the requests and verifies authenticity of documentation provided by student, as well as the dates of the absence(s).
 >
 > 1. Assistant Dean determines if the documentation meets the standard for a
-     >    university excused absence or if the documentation warrants consideration
-     >    by the professor.
+>    university excused absence or if the documentation warrants consideration
+>    by the professor.
 >
 > 1. An official memo is sent directly to professors via email regarding the
-     >    student’s absence
+>    student’s absence
 
 ## Exam and Test Makeup
 
