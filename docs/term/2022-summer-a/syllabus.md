@@ -44,7 +44,7 @@ By the end of this course, the student will demonstrate an ability to:
 - How share security models work in the 3rd party operating environments
 - Apply technical material taught in lecture to design secure software development lifecycle
 
-##Syllabus Modification
+## Syllabus Modification
 The syllabus is subject to revision. The last modified date is always listed in the last section with a description of the modification. A notification will be made in Canvas and Discord. 
 
 ---
