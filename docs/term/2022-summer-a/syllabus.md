@@ -160,13 +160,14 @@ in the following categories.
 
 - **Assignments** (15%): There will be seven assignments designed to both reinforce and expand on the topics covered in lecture. Assignments not completed by the specified deadline are assigned a score of zero points.
 
-Your total score (*Total*) for the course will be calculated as follows, where
-*E* is the percentage of possible points earned on exams, *P* is the percentage
-of possible points earned on project assignments, *Q* is the percentage of possible
-points earned on Quizzes and *A* is the percentage of possible
-points earned on Assignments. Each percentage is calculated as (*points earned* /
-*points possible*) * 100.
+Your total score (*Total*) for the course will be calculated as follows:
 
+- *E* is the percentage of possible points earned on exams
+- *P* is the percentage of possible points earned on project assignments
+- *Q* is the percentage of possible points earned on Quizzes
+- *A* is the percentage of possible points earned on Assignments. 
+
+Each percentage is calculated as (*points earned* / *points possible*) * 100
 
 *Total* = (0.5 * *P*) + (0.2 * *E*) + (0.15 * *Q*)  + (0.15 * *A*) 
 
@@ -211,8 +212,8 @@ Module 0 runs from the first day of classes through the first Sunday of the
 term, Module 1 through Module 7 are each allocated one week, with each beginning
 on a Monday and ending on the following Sunday.
 
-Below is the weekly schedule for [Fall B
-2021](http://online.auburn.edu/term_calendar).  Note that course work continues
+Below is the weekly schedule for [Summer A
+2022](http://online.auburn.edu/term_calendar).  Note that course work continues
 through all days of the term, including those marked as holidays.
 
 
