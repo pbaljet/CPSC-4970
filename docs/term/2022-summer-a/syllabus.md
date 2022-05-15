@@ -96,8 +96,12 @@ installing and reliably running
 
 ## Development Environment and Other Software
 
-This course will require the use of the Java Development Kit (JDK) and other
-software. This software is free, and instructions on installation and use will
+This course will require the primarily the following software to be installed on your local computer:
+- Java Development Kit (JDK)
+- Git Version Control
+- Maven Build Automation
+
+This software is free, and instructions on installation and use will
 be provided in Canvas during the first week of the course.
 
 
