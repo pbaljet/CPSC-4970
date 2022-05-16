@@ -2,7 +2,7 @@
 
 Cyber Security is  an area of increasing importance in today's modern world as software is involved in almost every aspect of our daily lives.  This course provides a thorough understanding of the security practices involved during the software development process to ensure secure and robust software applications.
 
-> [*Video: Welcome Message*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=67e96d16-5cc1-4d59-bf17-ae8a000a224d)
+> [*Video: Welcome Message*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c47465cd-7af8-48d7-8b92-ae8a017bcae2)
 > 
 ## Course Outcomes
 
