@@ -32,7 +32,7 @@ There is quite of bit of material here, so you can jump to a particular section 
 
 ## Command Line Interface
 
-Almost all examples and discussions in this book assume you are familiar with a Unix-like system with a command-line interface. The examples should work under other environments, such as Mac OS X, but the reader can expect slight variations.  On Windows, 
+Almost all examples and discussions in this book assume you are familiar with a Unix-like system with a command-line interface. The examples should work under other environments, such as Mac OS X, but the reader can expect slight variations on specific operations systems.
 
 ## Java Development Kit (JDK)
 
@@ -97,7 +97,7 @@ Code soon.
 
 ## Git Source Code Version Control
 
-This course uses [Git](https://git-scm.com/) extensively to manage source and interact with the cloud based DevOps platform [Gitlab](https://www.gitlb.com). Git has become an extremely popular tool for modern, distributed software development teams. The module 1 of this course will cover the basic of how to use git.  Make sure you have the latest Git version 2 install on your workstation:
+This course uses [Git](https://git-scm.com/) extensively to manage source and interact with the cloud based DevOps platform [Gitlab](https://www.gitlb.com). Git has become an extremely popular tool for modern, distributed software development teams. The module 1 of this course will cover the basic of how to use Git.  Make sure you have the latest Git version 2 install on your workstation:
 
 - [Mac](https://git-scm.com/download/mac) - Git comes installed with Xcode or can be installed through homebrew or macports
 - [Linux Install](https://git-scm.com/download/linux)
@@ -202,7 +202,15 @@ environment (JRE) from the command line. The compiler can be invoked with the
 `javac` command and the JRE can be invoked with the `java` command.
 
 Once the JDK is installed, you can compile and run the Java source code file
-`WarEagle.java` from the command line as follows. (The `$` character represents
+`WarEagle.java:
+
+>class WarEagle{  
+>    public static void main(String args[]) {  
+>       System.out.println("War Eagle!");  
+>    }  
+>}  
+
+`From the command line as follows. (The `$` character represents
 the command-line prompt.)
 
 ```bash
