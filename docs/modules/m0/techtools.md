@@ -204,11 +204,11 @@ environment (JRE) from the command line. The compiler can be invoked with the
 Once the JDK is installed, you can compile and run the Java source code file
 `WarEagle.java:
 
->class WarEagle{  
->    public static void main(String args[]) {  
->       System.out.println("War Eagle!");  
->    }  
->}  
+  class WarEagle{  
+    public static void main(String args[]) {  
+      System.out.println("War Eagle!");  
+    }  
+  }  
 
 `From the command line as follows. (The `$` character represents
 the command-line prompt.)
