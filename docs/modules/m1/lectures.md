@@ -30,18 +30,18 @@ A common language and framework to communicate security related information is i
 
 ---
 
-# Git Version Control Tool
+# Git Version Control Tool 
 
-> [*Video: Git Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+> Video Post on 5/22
 
 ---
 
 # Maven Software Build Automation Tool
 
-> [*Video: Maven Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+> Video Post on 5/22
 
 ---
 
 # Gitlab DevOps Tool
 
-> [*Video: Gitlab Overvieww*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+> Video Posted on 5/22
