@@ -130,17 +130,16 @@ Auburn, AL 36849
 
 ## Teaching Assistant
 
-### TBD
+### Emma Ingram
 
-Doctoral Candidate  
+Graduate Teaching Assistant  
 Computer Science and Software Engineering  
 3101 Shelby Center  
 Auburn University  
 345 West Magnolia Ave  
 Auburn, AL 36849  
 +1 334 844 4330  
-`czj0042@auburn.edu`  
-<https://www.linkedin.com/in/chen-jiang-67032468/>  
+`eci0004@auburn.edu`  
 **Office Hours:** By appointment
 
 
