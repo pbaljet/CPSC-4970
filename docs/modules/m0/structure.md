@@ -47,34 +47,24 @@ Each of the seven content modules has the same structure with the following comp
   and references to associated readings from textbooks.
 - **Lectures:** Links to complete instructional videos tied to the lecture
   notes.
-- **Hands-On Activities:** One or more activities designed to help you put into
-  practice some of the topics being presented in the notes.
-- **Programming Assignment:** An assignment that requires you to implement a
-  software solution to a given problem. The assignment relates to the content of
-  the current and/or previous modules.
+- **Assignments:** One or more activities designed to help you put into practice the topics being presented in the notes.
+- **Project Assignment:** An assignment that builds on the previous project assignment in building a secure software development pipeline
 - **Summary:** A brief recap of what was covered in the module.
 
 In addition to these common elements, Module 4 and 7 have:
 
-- **Exam:** A timed Canvas exam that tests your overall mastery of the content
-  in the current module and one or more previous modules.
+- **Exam:** A timed Canvas exam that tests your overall mastery of the content in the current module and one or more previous modules.
 
 
 # Workflow
 
-Since each content module has the same structure, you can apply the same process
-to going through each. Here is a suggested
-[workflow](https://en.wikipedia.org/wiki/Workflow) for going through each module
-of this course.
+Since each content module has the same structure, you can apply the same process to going through each. Here is a suggested
+[workflow](https://en.wikipedia.org/wiki/Workflow) for going through each module of this course.
 
 ![worflow](img/workflow.png)
 
 Notice the iterative nature of the items in the *Work & Learn*
-[swimlane](https://en.wikipedia.org/wiki/Swim_lane). Rather than going through
-this portion of the module sequentially, I strongly encourage you to take an
-[iterative](https://en.wikipedia.org/wiki/Iteration) approach. Read a portion of
-the notes, then watch the associated lecture videos, and then do the associated
-hands-on activities (if any). I also suggest that you start the assignment at
-the beginning of the module and interleave your work on the assignment with the
-notes/lecture/hands-on cycle. Since most assignments are based on material
+[swimlane](https://en.wikipedia.org/wiki/Swim_lane). Rather than going through this portion of the module sequentially, I strongly encourage you to take an
+[iterative](https://en.wikipedia.org/wiki/Iteration) approach. Read a portion of the notes, then watch the associated lecture videos, and then do the associated
+hands-on activities (if any). I also suggest that you start the assignment at  the beginning of the module and interleave your work on the assignment with the notes/lecture/assignment cycle. Since most assignments are based on material
 covered in previous modules, this interleaving is easy to do.
