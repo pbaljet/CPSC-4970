@@ -48,4 +48,9 @@ A common language and framework to communicate security related information is i
 
 # Gitlab DevOps Tool
 
-> [*Video: Gitlab & Git Remotes*](> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b))
+> [*Video: Gitlab & Git Remotes*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b)
+---
+
+# Maven Automated Build Tool
+
+> [*Video: Maven & Assignment 1b*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=610b775f-c4a0-4bdd-a73d-ae9d00e42077)
