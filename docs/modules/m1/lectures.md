@@ -46,12 +46,6 @@ A common language and framework to communicate security related information is i
 
 ---
 
-# Maven Software Build Automation Tool
-
-> Video Post on 5/22
-
----
-
 # Gitlab DevOps Tool
 
-> Video Posted on 5/22
+> [*Video: Gitlab & Git Remotes*](> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b))
