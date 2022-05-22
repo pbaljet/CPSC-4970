@@ -30,9 +30,19 @@ A common language and framework to communicate security related information is i
 
 ---
 
-# Git Version Control Tool 
+# Git Version Control Tool
 
-> Video Post on 5/22
+## Git Concepts
+
+> [*Video: Git Overview & Concepts*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c629d7c5-1deb-466b-be11-ae9d0074f520)
+
+## Git Hands On
+
+> [*Video: Git Hands On*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1645e05b-b05e-4a2c-aa18-ae9d00b0c2bb)
+
+## Git Branching & Merging
+
+> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b)
 
 ---
 
