@@ -52,7 +52,7 @@ Git will be used throughout the course to manage our source code, build automati
 
 GitLab is a modern CI/CD DevOps platform that helps automate the builds integration, and verification of your code. Gitlab incorporates SAST, DAST, code quality analysis, build pipeline, and dependency management capabilities.  
 
-> [*Video: Gitlab & Git Remotes*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b)
+> [*Video: Gitlab & Git Remotes*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d0916ebc-8816-47d1-922a-ae9d00c94422)
 
 ---
 
