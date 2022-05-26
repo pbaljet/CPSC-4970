@@ -2,6 +2,7 @@
 
 - [Cyber Security in Software Development](notes/cpsc4970-m1-intro.pdf)
 - [Git Version Control System](notes/cpsc4970-m1-git.pdf)
+- [Cyber Security Industry Standards](notes/cpsc4970-m1-standards.pdf)
 - [Apache Maven Software Build Tool](notes/cpsc4970-m1-maven.pdf)
 - [Gitlab DevOps Platform](notes/cpsc4970-m1-gitlab.pdf)
 
