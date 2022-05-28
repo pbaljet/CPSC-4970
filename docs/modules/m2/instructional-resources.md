@@ -1,17 +1,16 @@
 # Lecture Notes
 - [Module Overview]()
-- [Git Version Control System]()
-- [Cyber Security Industry Standards]()
-- [Apache Maven Software Build Tool]()
-- [Gitlab DevOps Platform]()
+- [Build Pipelines]()
+- [Advanced Git Commit and Merge]()
+- [Implementation Security Flaws]()
+- [Code Review Process]()
 
 # References
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf), Github.com
 - [Apache Maven Software Build Tool](https://maven.apache.org/)
-- [Gitlab Build Pipelines](https://docs.gitlab.com/ee/ci/pipelines/)
 - [Gitlab DevOps Platform](https://docs.gitlab.com/ee/#the-entire-devops-lifecycle)
-- [UnixLinx Command Cheat Sheet](https://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
+- [Unix/Linux Command Cheat Sheet](https://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
 - [Cygwin](https://www.cygwin.com/) - Unix shell on windows.
 
 # Supplemental Readings
