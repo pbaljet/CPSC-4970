@@ -1,0 +1,1 @@
+https://explainshell.com/explain?cmd=git+commit+-a

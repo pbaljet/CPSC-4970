@@ -1,19 +1,24 @@
-# Lecture Notes 2
+# Lecture Notes
+- [Module Overview]()
+- [Git Version Control System]()
+- [Cyber Security Industry Standards]()
+- [Apache Maven Software Build Tool]()
+- [Gitlab DevOps Platform]()
 
-- [Problem Solving, Patterns, and
-  Search](notes/01-Problem-Solving-Patterns-Search.pdf)
-- [Correctness and Testing](notes/02-Correctness-and-Testing.pdf)
-- [Generality](notes/03-Generality.pdf)
+# References
+- [Git Version Control System](https://git-scm.com/)
+- [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf), Github.com
+- [Apache Maven Software Build Tool](https://maven.apache.org/)
+- [Gitlab Build Pipelines](https://docs.gitlab.com/ee/ci/pipelines/)
+- [Gitlab DevOps Platform](https://docs.gitlab.com/ee/#the-entire-devops-lifecycle)
+- [UnixLinx Command Cheat Sheet](https://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
+- [Cygwin](https://www.cygwin.com/) - Unix shell on windows.
 
 # Supplemental Readings
+- [Core Software Security](https://www.amazon.com/Core-Software-Security-Source-ebook-dp-B00HSSC0LY/dp/B00HSSC0LY), December 9, 2013, Ransome J., Misra A.
+- Chapter 1,2,3 of Ghandi, R. (2022). [*Head First Git*](https://learning.oreilly.com/library/view/head-first-git/9781492092506/). O'Reilly Media, Inc.
+- [Tech Talk: Linus Torvalds on git](https://www.youtube.com/watch?v=4XpnKHJAok8), Google Tech Taks, May 14, 2007
 
-- Chapters 1-4 of Bailey, D. A. (2007). [*Java structures: Data structures in
-  Java for the principled programmer ("Root 7"
-  Edition)*](http://dept.cs.williams.edu/~bailey/JavaStructures/Book_files/JavaStructures.pdf).
-  Williams, MA: Williams University.
+# Supplemental Videos
 
-- Chapter 1 of Shaffer, C. A. (2013). [*A practical introduction to data
-  structures and algorithm analysis (Edition
-  3.2)*](http://people.cs.vt.edu/~shaffer/Book/JAVA3elatest.pdf). Upper Saddle
-  River, NJ: Prentice Hall.
 
