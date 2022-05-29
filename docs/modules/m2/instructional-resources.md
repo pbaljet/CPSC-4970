@@ -17,7 +17,6 @@
 # Supplemental Readings
 - [Core Software Security](https://www.amazon.com/Core-Software-Security-Source-ebook-dp-B00HSSC0LY/dp/B00HSSC0LY), December 9, 2013, Ransome J., Misra A.
 - Chapter 1,2,3 of Ghandi, R. (2022). [*Head First Git*](https://learning.oreilly.com/library/view/head-first-git/9781492092506/). O'Reilly Media, Inc.
-- [Tech Talk: Linus Torvalds on git](https://www.youtube.com/watch?v=4XpnKHJAok8), Google Tech Taks, May 14, 2007
 
 # Supplemental Videos
 
