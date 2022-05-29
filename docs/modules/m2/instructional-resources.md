@@ -8,7 +8,7 @@
 # References
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 - [Git Version Control System](https://git-scm.com/)
-- [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf), Github.com
+- [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Apache Maven Software Build Tool](https://maven.apache.org/)
 - [Gitlab DevOps Platform](https://docs.gitlab.com/ee/#the-entire-devops-lifecycle)
 - [Unix/Linux Command Cheat Sheet](https://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
