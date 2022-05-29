@@ -6,6 +6,7 @@
 - [Code Review Process]()
 
 # References
+- [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf), Github.com
 - [Apache Maven Software Build Tool](https://maven.apache.org/)
