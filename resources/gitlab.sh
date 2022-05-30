@@ -5,8 +5,15 @@
 #
 
 getGroupName () {
-   echo "Getting subgroups for $1"
-   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url https://gitlab.com/api/v4/groups/$1/subgroups | jq -rj '.[].id | tostring + " "'`
+#   echo "Getting Group name $1"
+   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url https://gitlab.com/api/v4/groups/$1 | jq -rj '.name'`
+   echo "Name: $groupName"
+}
+
+getProjectName () {
+#   echo "Getting Project name $1"
+   projectName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url https://gitlab.com/api/v4/projects/$1 | jq -rj '.name'`
+   echo "Name: $projectName"
 }
 
 getSubgroupList () {
@@ -29,8 +36,9 @@ setProjectPermissions() {
 
 getProjectBranches() {
   project_url="https://gitlab.com/api/v4/projects/$1/repository/branches"
-  echo "Setting Project Permissions $project_url: $2=$3"
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "$2=$3" | jq
+  getProjectName $1
+#  echo "Getting branches for $project_url: "
+  curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq '.[].name'
 }
 
 getProjectPermission() {
@@ -53,7 +61,7 @@ adjustBranchPermissions() {
 getProjectsForGroups () {
   project_list=""
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
-  echo "Retrieving $project_url"
+#  echo "Retrieving $project_url"
   project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[].id | tostring + " "'`
 
 }
@@ -71,12 +79,15 @@ cycleThroughProjects () {
   echo "Subgroups: $group_list"
   for gid in $group_list
   do
-    echo "Group for $pid"
+    getGroupName $gid
+    echo "================================================="
+    echo "Group for $pid - $groupName"
     getProjectsForGroups $gid
     for pid in $project_list
     do
-      echo "Branches for $pid"
-      adjustProjectPermissions $pid
+      getProjectName $pid
+      echo "   Branches for $pid - $projectName"
+      getProjectBranches $pid
     done
   done
 }
@@ -102,6 +113,11 @@ case $1 in
     setProjectPermissions $2 $3 $4
     ;;
 
+  "get-group-name")
+    if [ -z $2 ]; then echo "No group specified"; exit; fi
+    getGroupName $2
+    ;;
+
   "get-proj-perm")
     if [ -z $2 ]; then echo "No project specified"; exit; fi
     if [ -z $3 ]; then echo "Permission specified"; exit; fi
@@ -109,9 +125,8 @@ case $1 in
     ;;
 
   "proj-cycle")
-    if [ -z $2 ]; then echo "No project specified"; exit; fi
-    if [ -z $3 ]; then echo "Permission specified"; exit; fi
-    getProjectPermission $2 $3
+    if [ -z $2 ]; then echo "No group specified"; exit; fi
+    cycleThroughProjects 51696684
     ;;
 
   *)

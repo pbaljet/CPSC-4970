@@ -22,9 +22,25 @@ Before building a automated and secure build pipeline we need to understand how 
 
 ---
 
+# Security Code Testing Methods
+
+In this course we will be incorporating several security testing tools into our build pipeline.  Each of them have their specific purpose and are complimentary with some overlap.  There are also advantages and disadvantage that should be understood to build a holistic security testing approach.
+
+> [*Video: Security Code Testing Methods*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=02d71de3-0119-4406-8c02-aea5012b3503)
+
+---
+
+# Manual Security Code Reviews
+
+This module focuses on the manual security code review process.  The second assignment has you inspecting a Java code base for security vulnerabilities and best practice.  Understanding how to conduct security code reviews is essential to catching security issues as early as possible in the development process.
+
+> [*Video: Manual Security Code Reviews*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd35efa7-b71e-48e4-8310-aea5012ebf5c)
+
+---
+
 # Gitlab Build Pipelines
 
 A fundamental part of a CI/CD DevOps process is the software build pipeline.  Gitlab provides a modern platform for building software pipelines.  
 
 > [*Video: Gitlab Pipelines*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cc3d3ffb-210a-4a84-8ede-aea5002b0c0b)
-
+    
