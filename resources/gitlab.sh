@@ -4,6 +4,11 @@
 # Gitlab private token to use
 #
 
+getGroupName () {
+   echo "Getting subgroups for $1"
+   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url https://gitlab.com/api/v4/groups/$1/subgroups | jq -rj '.[].id | tostring + " "'`
+}
+
 getSubgroupList () {
    echo "Getting subgroups for $1"
    group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url https://gitlab.com/api/v4/groups/$1/subgroups | jq -rj '.[].id | tostring + " "'`
@@ -17,6 +22,13 @@ adjustProjectPermissions() {
 
 setProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
+  echo "Setting Project Permissions $project_url: $2=$3"
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "$2=$3" | jq
+}
+
+
+getProjectBranches() {
+  project_url="https://gitlab.com/api/v4/projects/$1/repository/branches"
   echo "Setting Project Permissions $project_url: $2=$3"
   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "$2=$3" | jq
 }
@@ -53,6 +65,22 @@ getProjectInfo () {
 
 }
 
+cycleThroughProjects () {
+
+  getSubgroupList $1
+  echo "Subgroups: $group_list"
+  for gid in $group_list
+  do
+    echo "Group for $pid"
+    getProjectsForGroups $gid
+    for pid in $project_list
+    do
+      echo "Branches for $pid"
+      adjustProjectPermissions $pid
+    done
+  done
+}
+
 echo "Parameters: $1"
 
 case $1 in
@@ -80,6 +108,12 @@ case $1 in
     getProjectPermission $2 $3
     ;;
 
+  "proj-cycle")
+    if [ -z $2 ]; then echo "No project specified"; exit; fi
+    if [ -z $3 ]; then echo "Permission specified"; exit; fi
+    getProjectPermission $2 $3
+    ;;
+
   *)
     echo "Unknown parameter: $1"
     exit 0
@@ -87,17 +121,6 @@ case $1 in
 esac
 
 
-#getSubgroupList $1
-#echo "Subgroups: $group_list"
-#for gid in $group_list
-#do
-#  getProjectsForGroups $gid
-#  for pid in $project_list
-#  do
-#    echo "Adjusting permission for $pid"
-#    adjustProjectPermissions $pid
-#  done
-#done
 
 
 
