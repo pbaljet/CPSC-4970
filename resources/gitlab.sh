@@ -11,9 +11,22 @@ getSubgroupList () {
 
 adjustProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
-  echo "\Adjust Project Permissions $project_url"
-#  curl --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "remove_source_branch_after_merge=false&wiki_enabled=false&snippets_enabled=false&analytics_access_level=disabled&issues_enabled=false&security_and_compliance_access_level=disabled&requirements_enabled=false&pages_access_level=disabled&=operations_access_leveldisabled&packages_enabled=false&service_desk_enabled=false&jobs_enabled=false&container_registry_enabled=false&builds_access_level=disabled&operations_access_level=disabled&container_registry_access_level=disabled&emails_disabled=true"  echo $result
-  curl --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "remove_source_branch_after_merge=false"
+  echo "Adjust Project Permissions $project_url"
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "remove_source_branch_after_merge=false&wiki_enabled=false&snippets_enabled=false&analytics_access_level=disabled&issues_enabled=false&security_and_compliance_access_level=disabled&requirements_enabled=false&pages_access_level=disabled&=operations_access_leveldisabled&packages_enabled=false&service_desk_enabled=false&container_registry_enabled=false&builds_access_level=disabled&operations_access_level=disabled&container_registry_access_level=disabled&emails_disabled=true"  | jq
+}
+
+setProjectPermissions() {
+  project_url="https://gitlab.com/api/v4/projects/$1"
+  echo "Setting Project Permissions $project_url: $2=$3"
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "$2=$3" | jq
+}
+
+getProjectPermission() {
+  project_url="https://gitlab.com/api/v4/projects/$1"
+  echo "Getting Project Permissions $project_url: $2"
+  jq_filter="'.$2'"
+  echo $jq_filter
+  curl -s --request GET --header "PRIVATE-TOKEN: glpat-zsFLW8a6faLu7pv3dGbk" --url $project_url | jq
 }
 
 adjustBranchPermissions() {
@@ -36,22 +49,55 @@ getProjectsForGroups () {
 getProjectInfo () {
     project_url="https://gitlab.com/api/v4/projects/$1"
     echo "Retrieving Info for $project_url"
-    echo "curl -s --request GET --header \"PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd\" --url $project_url | jq"
+    curl -s --request GET --header "PRIVATE-TOKEN: glpat-zsFLW8a6faLu7pv3dGbk" --url $project_url | jq
 
 }
 
 echo "Parameters: $1"
-getSubgroupList $1
-echo "Subgroups: $group_list"
-for gid in $group_list
-do
-  getProjectsForGroups $gid
-  for pid in $project_list
-  do
-    echo "Adjusting permission for $pid"
-    adjustProjectPermissions $pid
-  done
-done
+
+case $1 in
+
+  "proj-info")
+    if [ -z $2 ]; then echo "No project specified"; exit; fi
+    getProjectInfo $2
+    ;;
+
+  "adjust-proj-perm")
+    if [ -z $2 ]; then echo "No project specified"; exit; fi
+    adjustProjectPermissions $2
+    ;;
+
+  "set-proj-perm")
+    if [ -z $2 ]; then echo "No project specified"; exit; fi
+    if [ -z $3 ]; then echo "Permission specified"; exit; fi
+    if [ -z $4 ]; then echo "Permission value specified"; exit; fi
+    setProjectPermissions $2 $3 $4
+    ;;
+
+  "get-proj-perm")
+    if [ -z $2 ]; then echo "No project specified"; exit; fi
+    if [ -z $3 ]; then echo "Permission specified"; exit; fi
+    getProjectPermission $2 $3
+    ;;
+
+  *)
+    echo "Unknown parameter: $1"
+    exit 0
+    ;;
+esac
+
+
+#getSubgroupList $1
+#echo "Subgroups: $group_list"
+#for gid in $group_list
+#do
+#  getProjectsForGroups $gid
+#  for pid in $project_list
+#  do
+#    echo "Adjusting permission for $pid"
+#    adjustProjectPermissions $pid
+#  done
+#done
 
 
 

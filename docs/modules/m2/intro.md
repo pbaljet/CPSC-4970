@@ -1,0 +1,5 @@
+## Welcome to Module 2 - Security in Source Code Management
+
+With our tools setup and a basic understanding of thier usage we will begin using them to build a secure software development process.
+
+> [*Video: Module 2 Intro*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e67cb0fd-9cb8-4199-860a-aea50029086c)
