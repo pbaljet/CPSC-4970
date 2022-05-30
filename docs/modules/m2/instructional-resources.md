@@ -1,9 +1,9 @@
 # Lecture Notes
-- [Module Overview]()
-- [Build Pipelines]()
-- [Advanced Git Commit and Merge]()
-- [Implementation Security Flaws]()
-- [Code Review Process]()
+- [Module Overview](cpsc4970-m2-intro.pdf)
+- [Build Pipelines](cpsc4970-m2-gitlab-pipelines.pdf)
+- [Advanced Git Commit and Merge](cpsc4970-m2-git-commit-merge.pdf)
+- [Security Analysis and Thread Modeling](cpsc4970-m2-security-analysis.pdf)
+- [Code Review Process](cpsc4970-m2-code-review.pdf)
 
 # References
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
