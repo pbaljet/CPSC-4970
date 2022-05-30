@@ -11,6 +11,8 @@
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Apache Maven Software Build Tool](https://maven.apache.org/)
 - [Gitlab DevOps Platform](https://docs.gitlab.com/ee/#the-entire-devops-lifecycle)
+- [Gitlab CI/CD Pipelines](https://docs.gitlab.com/ee/ci/pipelines/)
+- [Gitlab gidlab-ci.yml reference](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html)
 - [Unix/Linux Command Cheat Sheet](https://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/)
 - [Cygwin](https://www.cygwin.com/) - Unix shell on windows.
 
