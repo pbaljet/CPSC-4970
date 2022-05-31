@@ -1,6 +1,6 @@
 # Lecture Notes
 - [Module Overview](notes/cpsc4970-m2-intro.pdf)
-- [Gitlab Merge Requests](notes/cpsc4970-m2-git.pdf)
+- [Gitlab Merge Requests](notes/cpsc4970-m2-git-commit-merge.pdf)
 - [Advanced Git Commit and Merge](notes/cpsc4970-m2-git-commit-merge.pdf)
 - [Security Analysis and Thread Modeling](notes/cpsc4970-m2-security-analysis.pdf)
 - [Security Code Testing Methods](notes/cpsc4970-m2-testing-methods.pdf)
@@ -23,5 +23,6 @@
 - Chapter 1,2,3 of Ghandi, R. (2022). [*Head First Git*](https://learning.oreilly.com/library/view/head-first-git/9781492092506/). O'Reilly Media, Inc.
 
 # Supplemental Videos
+- [Git Rebasing](https://youtu.be/_UZEXUrj-Ds)
 
 
