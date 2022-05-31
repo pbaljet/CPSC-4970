@@ -38,16 +38,32 @@ and comprehensive coverage. This lecture video describes the NIST standards and 
 
 # Git Version Control Tool
 
-> [*Video: Git Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+Git will be used throughout the course to manage our source code, build automation, CI/CD pipeline.  Git has become increasingly popular over the last 10 years and is a tool that every software developer will encounter.  Having a firm understanding of core git commands is key to success in this course.
+
+## Git Concepts
+
+> [*Video: Git Overview & Concepts*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c629d7c5-1deb-466b-be11-ae9d0074f520)
+
+## Git Hands On
+
+> [*Video: Git Hands On*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1645e05b-b05e-4a2c-aa18-ae9d00b0c2bb)
+
+## Git Branching & Merging
+
+> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b)
 
 ---
 
-# Maven Software Build Automation Tool
+## Gitlab DevOps Tool
 
-> [*Video: Maven Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+GitLab is a modern CI/CD DevOps platform that helps automate the builds integration, and verification of your code. Gitlab incorporates SAST, DAST, code quality analysis, build pipeline, and dependency management capabilities.  
+
+> [*Video: Gitlab & Git Remotes*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d0916ebc-8816-47d1-922a-ae9d00c94422)
 
 ---
 
-# Gitlab DevOps Tool
+## Maven Automated Build Tool
 
-> [*Video: Gitlab Overvieww*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+Maven is a build automatoin tool that is based on POM (project object model). It is used for projects build, dependency and documentation. It simplifies the build process and eliminates much of the decision making for a development team around how to build packages. It makes the day-to-day work of Java developers easier by eliminating manual tasks and providing a reliable and repeatable build process.
+
+> [*Video: Maven & Assignment 1b*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=610b775f-c4a0-4bdd-a73d-ae9d00e42077)
