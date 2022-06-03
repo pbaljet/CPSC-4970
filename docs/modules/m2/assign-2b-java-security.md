@@ -13,5 +13,4 @@ Short video with explanatino of 4 branches to resolve security issues.
 
 > [*Video: Fixing Issues on 4 Branches*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee18ac6a-7c77-4b5f-be63-aea9013d6609)
 
-
-
+N
