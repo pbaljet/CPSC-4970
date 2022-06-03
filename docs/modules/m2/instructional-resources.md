@@ -4,7 +4,7 @@
 - [Advanced Git Commit and Merge](notes/cpsc4970-m2-git-commit-merge.pdf)
 - [Security Analysis and Thread Modeling](notes/cpsc4970-m2-security-analysis.pdf)
 - [Security Code Testing Methods](notes/cpsc4970-m2-testing-methods.pdf)
-- [Manual Code Review Process](notes/cpsc4970-m2-code-review.pdf)
+- [Security Code Review Methods](notes/cpsc4970-m2-code-review.pdf)
 - [Build Pipelines](notes/cpsc4970-m2-gitlab-pipelines.pdf)
 
 # References
