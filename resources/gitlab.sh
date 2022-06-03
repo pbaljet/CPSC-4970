@@ -65,7 +65,7 @@ getProjectsForGroups () {
   echo $filter
   echo "Retrieving $project_url"
 #  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[].id | tostring + " "'`
-  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("2a")) | .id'`
+  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("2b")) | .id'`
   echo $project_list
 }
 
