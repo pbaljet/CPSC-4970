@@ -18,7 +18,11 @@ Understanding how commit history changes as we work with local branches and remo
 
 Before building a automated and secure build pipeline we need to understand how to identify the threats and vulnerabilities of our software application, assess the risk level of each vulnerability, and decide on mitigation to take.
 
-> [*Video: Security Analysis & Thread Modeling*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fa1b92df-3b28-4ae6-b301-aea500312d41)
+> [*Video: Security Analysis*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fb5ec3fa-4962-4f9f-94f0-aea90147f941)
+
+> [*Video: Thread Modeling*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=89188006-7f0b-4d80-8abc-aea9014e063f)
+
+> > [*Video: Risk Analysis*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=809c3bfe-9573-4559-a774-aea901551675)
 
 ---
 
