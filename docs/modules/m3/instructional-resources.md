@@ -4,7 +4,7 @@
 - [SonarQube](notes/cpsc4970-m3-sonarqube.pdf)
 
 # References
-- [SonarQube](https://docs.sonarqube.org/latest/)
+- [SonarQube](https://docs.sonarqube.org/latest/), [Wikipedia](https://en.wikipedia.org/wiki/SonarQube)
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
