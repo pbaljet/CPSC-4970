@@ -12,8 +12,11 @@ SonarQube is on of the most widely used and mature SAST tools in the industry.  
 > [*Video: SonarQube Lecture*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4306e17-27dd-4271-8475-aeac01021639) 
 
 Before we dive into the functional use of SonarQube this diagram and video provides an overview of the deployment setup.
+
 ![img.png](img/sonarqube-setup.png)
+
 > [*Video: SonarQube Setup*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4306e17-27dd-4271-8475-aeac01021639)
+
 
 SonarQube Overview
 
