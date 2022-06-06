@@ -1,7 +1,7 @@
 # Static Application Security Testing (SAST)
 
 SAST Tools are important to support the agile and early discovery of security vulnerabilities in a software application.  It is important to understand it's capabilties and limitations in the context of security testing.
-> [*Video: SAST Security Testing*]()
+> [*Video: SAST Security Testing*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0afb744-4469-4429-abff-aeac00f7cf7e)
 
 ---
 
