@@ -14,7 +14,7 @@
 - [Gitlab gidlab-ci.yml reference](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html)
 
 # Supplemental Readings
-- [Core Software Security](https://www.amazon.com/Core-Software-Security-Source-ebook-dp-B00HSSC0LY/dp/B00HSSC0LY), December 9, 2013, Ransome J., Misra A.
+- [SonarQube In Action](https://www.amazon.com/SonarQube-Action-G-Ann-Campbell/dp/1617290955), November 14, 2013, 2013, Campbell A.
 - Chapter 1,2,3 of Ghandi, R. (2022). [*Head First Git*](https://learning.oreilly.com/library/view/head-first-git/9781492092506/). O'Reilly Media, Inc.
 
 
