@@ -9,7 +9,9 @@ SAST Tools are important to support the agile and early discovery of security vu
 
 SonarQube is on of the most widely used and mature SAST tools in the industry.  It supports the most common programming languages and incorporates and references to vulnerabilities and associated resolutions.  
 
-> [*Video: SonarQube*]()
+> [*Video: SonarQube Lecture*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4306e17-27dd-4271-8475-aeac01021639) 
+
+> [*Video: SonarQube Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4306e17-27dd-4271-8475-aeac01021639)
 
 
 
