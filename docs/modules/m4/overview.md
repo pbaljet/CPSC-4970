@@ -1,4 +1,4 @@
-# Security in Software Depedency and Composition
+# Security in Software Dependency and Composition
 
 In this module we will understand the composition of modern software applications and importance of cyber security as it relates to the external dependencies contained with them.  
 
