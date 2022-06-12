@@ -1,9 +1,8 @@
 # Lecture Notes 4
 
-- [Problem Solving, Patterns, and
-  Search](notes/01-Problem-Solving-Patterns-Search.pdf)
-- [Correctness and Testing](notes/02-Correctness-and-Testing.pdf)
-- [Generality](notes/03-Generality.pdf)
+- [Software Composition and Dependencies](notes/)
+- [Maven Dependency Management](notes/)
+- [Crptographic Hasing and File Integrity](notes/)
 
 # Supplemental Readings
 
