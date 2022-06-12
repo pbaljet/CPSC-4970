@@ -61,11 +61,11 @@ adjustBranchPermissions() {
 getProjectsForGroups () {
   project_list=""
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
-  filter="select( .name | contains(\"3a\"))"
+  filter="select( .name | contains(\"3b\"))"
   echo $filter
   echo "Retrieving $project_url"
 #  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[].id | tostring + " "'`
-  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("3a")) | .id'`
+  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("3b")) | .id'`
   echo $project_list
 }
 
