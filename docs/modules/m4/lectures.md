@@ -10,3 +10,8 @@ In this lecture we look at the industry trends that are driving the need for Dep
 > [*Video: Dependency Management Part 1*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bdbc4db-8075-40b7-90ba-aeb300c2c3c7)
 
 >  [*Video: Dependency Management Part 2*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fe818304-e51f-4a5f-95c9-aeb300d3dd1f)
+
+# Cryptographic Hashing and File Integrity
+Validating dependency files have not be tampered ensures the integrity principle is maintained with our dependencies.  Cryptographic hashing is a fundamental method used to validate files.  The following lecture provides an explaination of how these algorithms work.
+
+>  [*Video: Cryptographic Hashing and File Integrity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=de8628ee-2690-41f9-9f47-aeb300dfec86)
