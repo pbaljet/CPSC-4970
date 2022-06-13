@@ -18,4 +18,5 @@ Validating dependency files have not be tampered ensures the integrity principle
 
 > [*Computerphile Explanation of Hashing*](https://youtu.be/b4b8ktEV4Bg)
 
+Deeper Explanation of Hashing (if your interested)
 > [*Computerphile Explanation of SHA1 Hashing*](https://youtu.be/DMtFhACPnTY)
