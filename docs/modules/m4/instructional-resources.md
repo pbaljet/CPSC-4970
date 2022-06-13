@@ -5,7 +5,7 @@
 - [Maven Dependency Management](notes/cpsc4970-m4-dependency-mgmt.pdf)
 - [Crptographic Hasing and File Integrity](notes/cpsc4970-m4-hashing.pdf)
 
-- [SonarQube](https://docs.sonarqube.org/latest/), [Wikipedia](https://en.wikipedia.org/wiki/SonarQube)
+- [Gitlab Dependency Scanning](https://about.gitlab.com/blog/2021/01/14/try-dependency-scanning/)
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
