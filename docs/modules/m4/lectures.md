@@ -15,4 +15,5 @@ In this lecture we look at the industry trends that are driving the need for Dep
 Validating dependency files have not be tampered ensures the integrity principle is maintained with our dependencies.  Cryptographic hashing is a fundamental method used to validate files.  The following lecture provides an explaination of how these algorithms work.
 
 >  [*Video: Cryptographic Hashing and File Integrity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=de8628ee-2690-41f9-9f47-aeb300dfec86)
-> [*Computerphile Explanation of Hashing](https://youtu.be/b4b8ktEV4Bg)
+
+> [*Computerphile Explanation of Hashing*](https://youtu.be/b4b8ktEV4Bg)
