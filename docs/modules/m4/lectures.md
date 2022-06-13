@@ -17,3 +17,5 @@ Validating dependency files have not be tampered ensures the integrity principle
 >  [*Video: Cryptographic Hashing and File Integrity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=de8628ee-2690-41f9-9f47-aeb300dfec86)
 
 > [*Computerphile Explanation of Hashing*](https://youtu.be/b4b8ktEV4Bg)
+
+> [*Computerphile Explanation of SHA1 Hashing*](https://youtu.be/DMtFhACPnTY)
