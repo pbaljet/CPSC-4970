@@ -20,3 +20,7 @@ Validating dependency files have not be tampered ensures the integrity principle
 
 Deeper Explanation of Hashing (if your interested)
 > [*Computerphile Explanation of SHA1 Hashing*](https://youtu.be/DMtFhACPnTY)
+
+# Maven Dependency Management & Package Registry
+In addition to providing build automation maven provides dependency management.  In this lecture we will be looking at how dependencies are defined, download and stored locally, and validated.  In addition, we will also discuss how we can publish our own application as an artifact to repository (Gitlab).  
+> [*Video: Maven Dependency Management*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5e75dd39-517f-432d-9b31-aeb4005f1648)
