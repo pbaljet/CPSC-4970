@@ -1,9 +1,10 @@
 # Lecture Notes 4
 
 - [Introduction to Module 5](notes/cpsc4970-m5-intro.pdf)
-- [Samy Worm Case Study](notes/cpsc4970-m5-samy-css.pdf)
+- [Samy Worm CSS Case Study](notes/cpsc4970-m5-samy-css.pdf)
 - [OWASP & OWASP Top Ten](notes/cpsc4970-m5-owasp.pdf)
-
+- [ZAP DAST Tool](notes/cpsc4970-m5-zap.pdf)
+- 
 # References
 - [*ZAP DAST Tool*](https://www.zaproxy.org/)
 - [*OWASP Website*](https://owasp.org/)
