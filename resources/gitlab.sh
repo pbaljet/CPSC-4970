@@ -24,7 +24,7 @@ getSubgroupList () {
 adjustProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
   echo "Adjust Project Permissions $project_url"
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "jobs_enabled=true&remove_source_branch_after_merge=false&wiki_enabled=false&snippets_enabled=false&analytics_access_level=disabled&issues_enabled=false&security_and_compliance_access_level=disabled&requirements_enabled=false&pages_access_level=disabled&=operations_access_leveldisabled&packages_enabled=false&service_desk_enabled=false&container_registry_enabled=false&builds_access_level=disabled&operations_access_level=disabled&container_registry_access_level=disabled&emails_disabled=true"  | jq
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url --data "jobs_enabled=true&remove_source_branch_after_merge=false&wiki_enabled=false&snippets_enabled=false&analytics_access_level=disabled&issues_enabled=false&security_and_compliance_access_level=enabled&requirements_enabled=false&pages_access_level=disabled&=operations_access_leveldisabled&packages_enabled=true&service_desk_enabled=false&container_registry_enabled=false&builds_access_level=disabled&operations_access_level=disabled&emails_disabled=true"  | jq
 }
 
 setProjectPermissions() {
@@ -61,11 +61,11 @@ adjustBranchPermissions() {
 getProjectsForGroups () {
   project_list=""
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
-  filter="select( .name | contains(\"3b\"))"
+  filter="select( .name | contains(\"4a\"))"
   echo $filter
   echo "Retrieving $project_url"
 #  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[].id | tostring + " "'`
-  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("3b")) | .id'`
+  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("4a")) | .id'`
   echo $project_list
 }
 
