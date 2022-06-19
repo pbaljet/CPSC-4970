@@ -1,4 +1,4 @@
-# Succeeding in This Module 5
+# Succeeding in This Module
 
 Every software engineer develops applications for the internet should be knowledgeable of common web security vulnerabilities.  Similar to CWEs, the Open Web Application Security Project (OWASP) maintains a comprehensive list of web related vulnerabilities and continuously ranks them based on their prevelance on the internet.
 

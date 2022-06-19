@@ -1,6 +1,6 @@
-# Assignment 4a - Publishing library jar file to package registry
+# Assignment 5a - Building and Deploying a Spring Boot Web Application
 
-In this assignment you will be creating an Java JAR library package (aka artifact) to be published to Gitlab package registry for your project.  This artifact will be used later in the course as a dependency for a web application authentication.
+In this assignment you will be creating a Spring Boot Jav a web application.  This web application will be used to perform DAST against in the next assignment
 
-Assignment 4a can be found in README.md in your Gitlab group in a repository called "Assignment 4a". 
+Assignment 5a can be found in README.md in your Gitlab group in a repository called "Assignment 5a". 
 
