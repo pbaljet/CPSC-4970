@@ -1,18 +1,20 @@
-# Lecture Notes 4
+# Lecture Notes Module 5
 
 - [Introduction to Module 5](notes/cpsc4970-m5-intro.pdf)
 - [Samy Worm CSS Case Study](notes/cpsc4970-m5-samy-css.pdf)
 - [OWASP & OWASP Top Ten](notes/cpsc4970-m5-owasp.pdf)
 - [ZAP DAST Tool](notes/cpsc4970-m5-zap.pdf)
-- 
+- [Spring Boot Web App](notes/cpsc4970-m5-springboot.pdf)
 # References
-- [*ZAP DAST Tool*](https://www.zaproxy.org/)
-- [*OWASP Website*](https://owasp.org/)
-- [*OWASP Top Ten*](https://owasp.org/www-project-top-ten/)
-- [*OWASP DAST Tools Reference*](https://owasp.org/www-community/Vulnerability_Scanning_Tools)
+- [ZAP DAST Tool](https://www.zaproxy.org/)
+- [OWASP Website](https://owasp.org/)
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+- [OWASP DAST Tools Reference](https://owasp.org/www-community/Vulnerability_Scanning_Tools)
 - [Cross Site Scripting (CSS)](https://developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
-- [*Samy Worm Wikipedia*](https://en.wikipedia.org/wiki/Samy_(computer_worm))
-- [*Samy Kamkar Interview w/ Tim Ferris*](https://tim.blog/2015/05/02/samy-kamkar/)
+- [Samy Worm Wikipedia](https://en.wikipedia.org/wiki/Samy_(computer_worm))
+- [Samy Kamkar Interview w/ Tim Ferris](https://tim.blog/2015/05/02/samy-kamkar/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Java Annotations Overview](https://youtu.be/0VPRkVWkM70)
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
