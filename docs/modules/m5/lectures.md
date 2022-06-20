@@ -1,26 +1,39 @@
-# Log4j Case Study
+# Samy Worm XSS Vulnerability Case Study
 
-Much of the Internet, from Amazon’s cloud to connected TVs, is uses with the log4j for logging.  This common framework has been around for 21 years, yet in December 2021 a critical vulnerability was discovered sending the industry into crisis mode.  Log4j is what we call a dependency, a software library required by applications to function.  This case study demonstrates the importance of dependency management from a cyber security perspective.
-> [*Video: Log4j Case Study*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19027d93-3d1d-4601-bf46-aeb300bca4ca)
+Cross Site Scripting is one of old know vulnerabilities in web browsers.  The infamous javascript being entered into an input field:
+
+>  javascript:alert()
+
+XSS vulnerabilities have become less common due to enhanced browser security controls around executing javascript. This case study illustrates the general problem of web applications not sufficiently taking vulnerabilities into account when building customizable features.
+
+> [*Video: Samy Worm Case Study*]()
+> 
+Deeper Explanation of XSS Vulnerability (if your interested)
+> [*Computerphile Explanation of XSS*](https://youtu.be/L5l9lSnNMxg)
+
+# OWASP & OWASP Top Ten
+In this lecture we look at the Open Web Application Security Project Foundation's work in tracking vulnerabilities associate with the web.  Similar to the NIST/MITRE National Vulnerability Database, OWASP has a narrower Cyber Security focus on the web.  It as become the defacto standard used by tools and professionals to detect and prevent web related vulnerabilities
+
+> [*Video: OWASP*]()
 
 
-# Dependency Management
-In this lecture we look at the industry trends that are driving the need for Dependency Management.  Automated management tools for identifying vulnerabilities and lowering risk are essential as our software applications are composed mostly of external software not developed with a team.
+# Dynamic Application Security Testing (DAST)
+Our next security testing is DAST testing.  DAST testing has become expected for any web application serving business or consumer customers.  No web application is considered secure without going through adequate DAST testing on a regular basis. It is important to understand DAST testing characteristics. 
 
-> [*Video: Dependency Management Part 1*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4bdbc4db-8075-40b7-90ba-aeb300c2c3c7)
+> [*Video: DAST Security Testing*]()
 
->  [*Video: Dependency Management Part 2*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fe818304-e51f-4a5f-95c9-aeb300d3dd1f)
 
-# Cryptographic Hashing and File Integrity
-Validating dependency files have not be tampered ensures the integrity principle is maintained with our dependencies.  Cryptographic hashing is a fundamental method used to validate files.  The following lecture provides an explaination of how these algorithms work.
+# Spring Boot Web Application
+What is the easiest way to create a Java Web Application.  The answer: Spring Boot.  Not only does Spring Boot make it fast to build a web application, it involves little configuration, and provides production grade modules.  Since this course is not focused on web application development we will be using Spring Boot along with Maven to build and deploy a web application for testing.
 
->  [*Video: Cryptographic Hashing and File Integrity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=de8628ee-2690-41f9-9f47-aeb300dfec86)
+> [*Video: Web Application with Spring Boot*]()
+ 
 
-> [*Computerphile Explanation of Hashing*](https://youtu.be/b4b8ktEV4Bg)
+# ZAP DAST Testing Tool
+Gitlab uses ZAP for performing automated DAST scanning as part of a build pipeline and integrates it's reporting into Gitlab's security dashboard.  ZAP is the most popular free tool used by both developers and security professionals for both vulnerability and penetration testing.  This lecture cover the high level aspects of ZAP
 
-Deeper Explanation of Hashing (if your interested)
-> [*Computerphile Explanation of SHA1 Hashing*](https://youtu.be/DMtFhACPnTY)
+> [*Video: ZAP DAST Tool*]()
 
-# Maven Dependency Management & Package Registry
-In addition to providing build automation maven provides dependency management.  In this lecture we will be looking at how dependencies are defined, download and stored locally, and validated.  In addition, we will also discuss how we can publish our own application as an artifact to repository (Gitlab).  
-> [*Video: Maven Dependency Management*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5e75dd39-517f-432d-9b31-aeb4005f1648)
+For introduction videos for ZAP features see the following:
+
+>[*Video: ZAP Usage*](https://www.zaproxy.org/zap-in-ten/) 
