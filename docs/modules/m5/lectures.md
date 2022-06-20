@@ -26,7 +26,7 @@ Our next security testing is DAST testing.  DAST testing has become expected for
 # Spring Boot Web Application
 What is the easiest way to create a Java Web Application.  The answer: Spring Boot.  Not only does Spring Boot make it fast to build a web application, it involves little configuration, and provides production grade modules.  Since this course is not focused on web application development we will be using Spring Boot along with Maven to build and deploy a web application for testing.
 
-> [*Video: Web Application with Spring Boot*]()
+> [*Video: Web Application with Spring Boot*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9771a30d-735c-48fc-a21a-aeba01498969)
  
 
 # ZAP DAST Testing Tool
