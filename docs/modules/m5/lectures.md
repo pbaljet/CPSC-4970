@@ -29,11 +29,4 @@ What is the easiest way to create a Java Web Application.  The answer: Spring Bo
 > [*Video: Web Application with Spring Boot*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9771a30d-735c-48fc-a21a-aeba01498969)
  
 
-# ZAP DAST Testing Tool
-Gitlab uses ZAP for performing automated DAST scanning as part of a build pipeline and integrates it's reporting into Gitlab's security dashboard.  ZAP is the most popular free tool used by both developers and security professionals for both vulnerability and penetration testing.  This lecture cover the high level aspects of ZAP
 
-> [*Video: ZAP DAST Tool*]()
-
-For introduction videos for ZAP features see the following:
-
->[*Video: ZAP Usage*](https://www.zaproxy.org/zap-in-ten/) 
