@@ -2,6 +2,7 @@
 
 - [Introduction to Module 5](notes/cpsc4970-m5-intro.pdf)
 - [Samy Worm XSS Case Study](notes/cpsc4970-m5-samy-xss.pdf)
+- [DAST Security Testing](notes/cpsc4970-m5-dast.pdf)
 - [OWASP & OWASP Top Ten](notes/cpsc4970-m5-owasp.pdf)
 - [ZAP DAST Tool](notes/cpsc4970-m5-zap.pdf)
 - [Spring Boot Web App](notes/cpsc4970-m5-springboot.pdf)
