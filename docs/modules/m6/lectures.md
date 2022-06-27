@@ -1,33 +1,13 @@
 # Stuxnet Vulnerability Case Study
 
-Cross Site Scripting is one of old know vulnerabilities in web browsers.  The infamous javascript being entered into an input field:
+In this case study we will look into on of the most sophisticated worms ever built to attack Iranian centrifuges tha were being used to enrich uranium.  The key aspect of this case study is the use of stolen secrets to perform code signing so software could be installed on a system without any warnings.
 
->  javascript:alert()
+> [*Video: Stuxnet Worm Case Study*]()
 
-XSS vulnerabilities have become less common due to enhanced browser security controls around executing javascript. This case study illustrates the general problem of web applications not sufficiently taking vulnerabilities into account when building customizable features.
+# HTTP Protocol
+The HTTP Protocol in an intregal part of the World Wide Web.  HTTP is used not only for browsers to connect back to web servers, but also for communications between servers and devices such as mobile phones and Internet of Things (IoT) devices.  Most attacks and vulnerabilities occur over HTTP and a good understanding of this protocol is necessary to perform testing and analyze results.
 
-> [*Video: Samy Worm Case Study*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e7729fcd-731d-4134-b701-aeba0142f23e)
-> 
-Deeper Explanation of XSS Vulnerability (if your interested)
-> [*Computerphile Explanation of XSS*](https://youtu.be/L5l9lSnNMxg)
-
-# OWASP & OWASP Top Ten
-In this lecture we look at the Open Web Application Security Project Foundation's work in tracking vulnerabilities associate with the web.  Similar to the NIST/MITRE National Vulnerability Database, OWASP has a narrower Cyber Security focus on the web.  It as become the defacto standard used by tools and professionals to detect and prevent web related vulnerabilities
-
-> [*Video: OWASP*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5dcd8b9a-e3f7-49d8-af39-aeba013dd97b)
-
-
-# Dynamic Application Security Testing (DAST)
-Our next security testing is DAST testing.  DAST testing has become expected for any web application serving business or consumer customers.  No web application is considered secure without going through adequate DAST testing on a regular basis. It is important to understand DAST testing characteristics. 
-
-> [*Video: DAST Security Testing*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=70c2c15f-f6a6-4248-9fb8-aeba013e29ba)
-
-
-# Spring Boot Web Application
-What is the easiest way to create a Java Web Application.  The answer: Spring Boot.  Not only does Spring Boot make it fast to build a web application, it involves little configuration, and provides production grade modules.  Since this course is not focused on web application development we will be using Spring Boot along with Maven to build and deploy a web application for testing.
-
-> [*Video: Web Application with Spring Boot*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9771a30d-735c-48fc-a21a-aeba01498969)
-
+> [*Video: HTTP Protocol*]()
 
 
 # ZAP DAST Testing Tool
@@ -37,5 +17,29 @@ Gitlab uses ZAP for performing automated DAST scanning as part of a build pipeli
 
 For introduction videos for ZAP features see the following:
 
->[*Video: ZAP Usage*](https://www.zaproxy.org/zap-in-ten/) 
+>[*Video: ZAP Usage*](https://www.zaproxy.org/zap-in-ten/)
+
+
+# Secrets Management
+Today’s digital enterprises rely on commercial, internally developed and open source applications to run their businesses and increasingly leverage automated IT infrastructure and DevOps methodologies to speed development and innovation. While application and IT environments vary significantly from organization to organization, one thing remains constant: every application, script, automation tool and other non-human identity relies on some form of privileged credential to access other tools, applications and data.
+
+What is a Secret?
+These non-human privileged credentials are often called “secrets” and refer to a private piece of information that acts as a key to unlock protected resources or sensitive information in tools, applications, containers, DevOps and cloud-native environments.
+
+Examples of common secrets:
+
+- Privileged account credentials
+- Username & Passwords
+- Digital Certificates
+- SSH keys
+- API keys
+- Encryption keys
+
+>[*Video: Secrets Management*]()
+
+
+
+
+
+
 
