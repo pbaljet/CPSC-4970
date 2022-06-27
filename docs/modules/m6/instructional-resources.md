@@ -3,7 +3,7 @@
 - [Introduction to Module 6](notes/cpsc4970-m6-intro.pdf)
 - [Stuxnet Case Study](notes/cpsc4970-m6-stuxnet.pdf)
 - [HTTP Protocol](notes/cpsc4970-m6-http.pdf)
-- [Secrets Management](notes/cpsc4970-m6-secrets.pdf)
+- [Secrets Management](notes/cpsc4970-m6-secrets-mgmt.pdf)
 - [ZAP DAST Tool](notes/cpsc4970-m6-zap.pdf)
 # References
 ### HTTP Protocol
