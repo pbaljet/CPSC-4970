@@ -31,7 +31,7 @@
 - [Gitlab CI/CD Pipelines](https://docs.gitlab.com/ee/ci/pipelines/)
 - [Gitlab gidlab-ci.yml reference](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html)
 ### Cryptography
-- 
+- [Digital Signatures](https://www.youtube.com/watch?v=s22eJ1eVLTU)
 ### Misc
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 
