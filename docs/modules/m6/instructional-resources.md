@@ -6,7 +6,7 @@
 - [Secrets Management](notes/cpsc4970-m6-secrets.pdf)
 - [ZAP DAST Tool](notes/cpsc4970-m6-zap.pdf)
 # References
-### HTTP Reference
+### HTTP Protocol
 - [HTTP Headers Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 - [What happends when you click?](https://www.youtube.com/watch?v=keo0dglCj7I)
 - [How DNS Works](https://www.youtube.com/watch?v=uOfonONtIuk)
