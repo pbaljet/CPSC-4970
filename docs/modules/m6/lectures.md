@@ -1,4 +1,4 @@
-# Samy Worm XSS Vulnerability Case Study
+# Stuxnet Vulnerability Case Study
 
 Cross Site Scripting is one of old know vulnerabilities in web browsers.  The infamous javascript being entered into an input field:
 
@@ -27,6 +27,15 @@ Our next security testing is DAST testing.  DAST testing has become expected for
 What is the easiest way to create a Java Web Application.  The answer: Spring Boot.  Not only does Spring Boot make it fast to build a web application, it involves little configuration, and provides production grade modules.  Since this course is not focused on web application development we will be using Spring Boot along with Maven to build and deploy a web application for testing.
 
 > [*Video: Web Application with Spring Boot*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9771a30d-735c-48fc-a21a-aeba01498969)
- 
 
+
+
+# ZAP DAST Testing Tool
+Gitlab uses ZAP for performing automated DAST scanning as part of a build pipeline and integrates it's reporting into Gitlab's security dashboard.  ZAP is the most popular free tool used by both developers and security professionals for both vulnerability and penetration testing.  This lecture cover the high level aspects of ZAP
+
+> [*Video: ZAP DAST Tool*]()
+
+For introduction videos for ZAP features see the following:
+
+>[*Video: ZAP Usage*](https://www.zaproxy.org/zap-in-ten/) 
 
