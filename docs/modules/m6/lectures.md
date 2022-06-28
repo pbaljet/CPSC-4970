@@ -19,7 +19,7 @@ Demonstration of using the ZAP DAST Tool:
 
 > [*Video: ZAP Tool Demo*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eb7937f7-f649-4c68-8408-aec200203e89)
 
-For introduction videos for ZAP features see the following:
+For additional videos on ZAP see the following:
 
 >[*Video: ZAP Usage*](https://www.zaproxy.org/zap-in-ten/)
 
