@@ -13,7 +13,11 @@ The HTTP Protocol in an intregal part of the World Wide Web.  HTTP is used not o
 # ZAP DAST Testing Tool
 Gitlab uses ZAP for performing automated DAST scanning as part of a build pipeline and integrates it's reporting into Gitlab's security dashboard.  ZAP is the most popular free tool used by both developers and security professionals for both vulnerability and penetration testing.  This lecture cover the high level aspects of ZAP
 
-> [*Video: ZAP DAST Tool*]()
+> [*Video: ZAP DAST Tool*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=af29a476-8071-4373-b7ef-aec2001b9b21)
+
+Demonstration of using the ZAP DAST Tool:
+
+> [*Video: ZAP Tool Demo*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eb7937f7-f649-4c68-8408-aec200203e89)
 
 For introduction videos for ZAP features see the following:
 
