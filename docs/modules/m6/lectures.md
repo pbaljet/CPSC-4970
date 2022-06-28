@@ -2,12 +2,12 @@
 
 In this case study we will look into on of the most sophisticated worms ever built to attack Iranian centrifuges tha were being used to enrich uranium.  The key aspect of this case study is the use of stolen secrets to perform code signing so software could be installed on a system without any warnings.
 
-> [*Video: Stuxnet Worm Case Study*]()
+> [*Video: Stuxnet Worm Case Study*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e95b04e0-c8d5-47c0-bf20-aec200017083)
 
 # HTTP Protocol
 The HTTP Protocol in an intregal part of the World Wide Web.  HTTP is used not only for browsers to connect back to web servers, but also for communications between servers and devices such as mobile phones and Internet of Things (IoT) devices.  Most attacks and vulnerabilities occur over HTTP and a good understanding of this protocol is necessary to perform testing and analyze results.
 
-> [*Video: HTTP Protocol*]()
+> [*Video: HTTP Protocol*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f781f4b6-1cdb-4580-bcd7-aec2000ce57c)
 
 
 # ZAP DAST Testing Tool
@@ -35,7 +35,7 @@ Examples of common secrets:
 - API keys
 - Encryption keys
 
->[*Video: Secrets Management*]()
+>[*Video: Secrets Management*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9bbb28dc-d474-4df5-836d-aec20013db90)
 
 
 
