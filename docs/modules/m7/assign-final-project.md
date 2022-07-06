@@ -1,5 +1,5 @@
-# Assignment 6a - Secrets Management Integration
+# Final Project
 
-In this assignment you will be removing our database credentials from the entire repository.  We will be using AWS Secrets Management service to store our connection credentials.  
+In this assignment you will constructing a complete automated build pipeline incorporating the security methods and tools learned in the course.   
 
-Assignment 6a can be found in README.md in your Gitlab group in a repository called "Assignment 6b".
+Final Project assignment can be found in README.md in your Gitlab group in a repository called "Final Project".
