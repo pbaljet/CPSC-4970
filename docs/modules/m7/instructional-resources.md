@@ -1,11 +1,11 @@
-# Lecture Notes Module 6
+# Lecture Notes Module 7
 
-- [Introduction to Module 6](notes/cpsc4970-m6-intro.pdf)
-- [Stuxnet Case Study](notes/cpsc4970-m6-stuxnet.pdf)
-- [HTTP Protocol](notes/cpsc4970-m6-http.pdf)
-- [Secrets Management](notes/cpsc4970-m6-secrets-mgmt.pdf)
-- [ZAP DAST Tool](notes/cpsc4970-m6-zap.pdf)
+- [Introduction to Module 7](notes/cpsc4970-m7-intro.pdf)
+- [SIEM](notes/cpsc4970-siem.pdf)
+- [Wrapup Lecture](notes/cpsc4970-wrapup.pdf)
+
 # References
+
 ### Java, Maven, Spring Boot
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Java Annotations Overview](https://youtu.be/0VPRkVWkM70)
