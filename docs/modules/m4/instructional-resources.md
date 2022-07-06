@@ -6,9 +6,8 @@
 - [Crptographic Hasing and File Integrity](notes/cpsc4970-m4-hashing.pdf)
 
 # References
-- > [*Computerphile Explanation of Hashing*](https://youtu.be/b4b8ktEV4Bg)
-- > [*Computerphile Explanation of SHA1 Hashing*](https://youtu.be/DMtFhACPnTY)
-- [Gitlab Dependency Scanning](https://about.gitlab.com/blog/2021/01/14/try-dependency-scanning/)
+- [Computerphile Explanation of Hashing](https://youtu.be/b4b8ktEV4Bg)
+- [Computerphile Explanation of SHA1 Hashing](https://youtu.be/DMtFhACPnTY)
 - [YAML Syntax Reference](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
