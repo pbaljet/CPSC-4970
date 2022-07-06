@@ -3,6 +3,7 @@
 - [Introduction to Module 7](notes/cpsc4970-m7-intro.pdf)
 - [SIEM](notes/cpsc4970-siem.pdf)
 - [Wrapup Lecture](notes/cpsc4970-wrapup.pdf)
+- [AWS Elastic Beanstalk Deploy Config](notes/aws-eb.pdf)
 
 # References
 
