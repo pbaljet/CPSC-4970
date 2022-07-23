@@ -1,13 +1,14 @@
 #!/bin/bash
 
+student_list="azb azo bpm bzg cef cwj czl czt dhc dml eci frs fzg jmh klb msb rwm"
+
 #
 # Gitlab private token to use
 #
 
 getGroupName () {
 #   echo "Getting Group name $1"
-   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url https://gitlab.com/api/v4/groups/$1 | jq -rj '.name'`
-   echo "Name: $groupName"
+   aws elasticbeanstalk echo "Name: $groupName"
 }
 
 getProjectName () {
@@ -61,11 +62,11 @@ adjustBranchPermissions() {
 getProjectsForGroups () {
   project_list=""
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
-  filter="select( .name | contains(\"Final Exam\"))"
+  filter="select( .name | contains(\"4a\"))"
   echo $filter
   echo "Retrieving $project_url"
 #  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[].id | tostring + " "'`
-  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("Final Exam")) | .id'`
+  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" --url $project_url | jq -rj '.[] | select( .name | contains("4a")) | .id'`
   echo $project_list
 }
 

@@ -1,0 +1,19 @@
+{
+    "ApplicationName": "webapp5a-XXX",
+    "Description": "",
+    "ResourceLifecycleConfig": {
+        "ServiceRole": "",
+        "VersionLifecycleConfig": {
+            "MaxCountRule": {
+                "Enabled": true,
+                "MaxCount": 0,
+                "DeleteSourceFromS3": true
+            },
+            "MaxAgeRule": {
+                "Enabled": true,
+                "MaxAgeInDays": 0,
+                "DeleteSourceFromS3": true
+            }
+        }
+    }
+}
