@@ -1,8 +1,33 @@
 #!/bin/bash
 
 #
-# Gitlab private token to use
+# Create Project
 #
+createProject() {
+curl --request POST \
+  --url "https://gitlab.com/api/v4/projects/remote-import-s3" \
+  --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "name": "Assignment1aa",
+  "namespace": "55903635",
+  "path": "assign-1a",
+  "region": "us-east-2",
+  "bucket_name": "cpsc4970-assignments",
+  "file_key": "cpsc4970-sum-a-assignment-2a.tar.gz",
+  "access_key_id": "AKIAR7BGN267JKVFTFPU",
+  "secret_access_key": "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"
+}'
+}
+
+# Export a project, check status, download
+exportProject() {
+echo "Exporting project $1"
+curl --request POST \
+  --url "https://gitlab.com/api/v4/projects/$1/export" \
+  --header "PRIVATE-TOKEN: glpat-RXNsASK2eK1zdN-UL3yd" 
+}
+
 
 getGroupName () {
 #   echo "Getting Group name $1"
@@ -136,6 +161,17 @@ case $1 in
   "proj-cycle")
     if [ -z $2 ]; then echo "No group specified"; exit; fi
     cycleThroughProjects 51696684
+    ;;
+
+  "export-project")
+    if [ -z $2 ]; then echo "No proejct id specified"; exit; fi
+    exportProject $2
+    ;;
+
+  "create-project")
+    if [ -z $2 ]; then echo "No group specified"; exit; fi
+    if [ -z $3 ]; then echo "No file specified"; exit; fi
+    createProject $2 $3
     ;;
 
   *)
