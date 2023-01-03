@@ -1,9 +1,9 @@
 
 ---
 
-# CPSC 4970 Applied Cyber Security <br> XXXX  X202X Course Syllabus
+# CPSC 4970 Applied Cyber Security <br> Spring Term A 2023 Course Syllabus
 
-*Published: XXX XX, 2022*
+*Published: Jan 10, 2022*
 
 ---
 
