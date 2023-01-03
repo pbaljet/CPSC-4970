@@ -1,40 +1,25 @@
 # Course Structure
 
-This course is organized into eight modules numbered
-[zero](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html)
-through seven. Module 0 is an introductory "getting started" module, while
-Module 1 through Module 7 are course-content modules. Rather than being
-organized strictly by content, these modules are
-[timeboxed](https://en.wikipedia.org/wiki/Timeboxing); that is, M1 - M7 are
-of fixed, equal durations with specific tasks to be completed within each. (If
-you're familiar with
-[agile methods](https://en.wikipedia.org/wiki/Agile_software_development),
-you'll recognize similarities to
-[Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) sprints.)
+This course is organized into eight modules numbered zero
+through seven. Module 0 is an introductory "getting started" module, while Module 1 through Module 7 are course-content modules. Rather than being organized strictly by content, these modules are
+[timeboxed](https://en.wikipedia.org/wiki/Timeboxing); that is, M1 - M7 are of fixed, equal durations with specific tasks to be completed within each. (If you're familiar with [agile methods](https://en.wikipedia.org/wiki/Agile_software_development), you'll recognize similarities to [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) sprints.)
 
-Scheduling, planning, and knowing when things are due are easy with timeboxed
-modules. All graded items are scheduled to be due or delivered on module
-boundaries. Specifically: **Each graded item in the course is due on the last
-day of the module that contains it.** There are late days for assignments and
-slip days for exams, tests, and activities, but the actual due date for
-everything is the last day of each module.
+Scheduling, planning, and knowing when things are due are easy with timeboxed modules. All graded items are scheduled to be due or delivered on module boundaries. Specifically: **Each graded item in the course is due on the last day of the module that contains it.** There are late days for assignments and slip days for exams, tests, and activities, but the actual due date for everything is the last day of each module.
 
-The timeboxed organization of the course is as follows. Module 0 begins on the
-first day of classes for the term and ends on the first Sunday of the term.
-Each module 1-7 begins on a Monday and ends on the following Sunday.
+The timeboxed organization of the course is as follows. Module 0 begins on the first day of classes for the term and ends on the first Sunday of the term. Each module 1-7 begins on a Monday and ends on the following Sunday.
 
-Here is the specific schedule for [Summer A
-2022](http://online.auburn.edu/term_calendar).
+Here is the specific schedule for [2023 Spring Term A](http://online.auburn.edu/term_calendar).
 
 Module | Begin | End
 ------ | ----- | ---
-M0 | Wed 18 May | Sun 22 May
-M1 | Mon 23 May | Sun 29 May
-M2 | Mon 30 May | Sun 5 Jun 
-M3 | Mon 6 Jun | Sun 12 Jun
-M4 | Mon 13 Jun  | Sun 19 Jun
-M5 | Mon 20 Jun | Sun 3 Jul
-M6 | Mon 27 Jun | Sun 11 Jul
+M0 | Wed 11 Jan | Sun 15 Jan
+M1 | Mon 16 Jan | Sun 22 Jan
+M2 | Mon 23 Jan | Sun 29 Jun 
+M3 | Mon 30 Feb | Sun 5 Feb
+M4 | Mon 6 Feb  | Sun 12 Feb
+M5 | Mon 13 Feb | Sun 19 Feb
+M6 | Mon 20 Feb | Sun 26 Feb
+M7 | Mon 27 Feb | Sun 5 Mar
 
 # Module Structure
 
