@@ -159,18 +159,22 @@ Auburn, AL 36849
 Your grade for the course will be determined by the points you earn on items
 in the following categories.
 
-- **Quizzes** (10%): There will be a quiz each week in the course covering the material for that week.  These will typically be due Sunday by 11:59 CST. Missed quizzes are assigned a score of zero points.
 
-- **Exams** (15%): There are a mid term and final exam.  The midterm is given in week 4 and the final will be given in week 8.  These will be delivered via Canvas and cover the material in the course up to that point.
+- **Hands-On** (2%): Module 0 contains several activities to setup and familiarize yourself with the course tools and structure.
 
-- **Module Assignments** (60%): There will be 1-3 assignments in each of the 8 modules designed to both reinforce and put into practical use the knowledge and techniques from the lecture. These assignments will be published as projects on Gitlab and instructions will be the README.md files in the project repository.  Assignments involve Java coding, Gitlab configuration, and use of various tools in the software build pipeline. Most assignments will be completed individually while some may be completed in teams. Unless it is explicitly stated otherwise, all assignments are to be completed individually and must reflect your own individual work. Assignment grades will be based on the successful completion of the assigned task by reviewing code check ins, commit history, and successfully build pipeline output. Assignments not completed by the specified deadline are assigned a score of zero points.
+- **Quizzes** (15%): There will be a quiz each week in the course covering the material for that week.  These will typically be due Sunday by 11:59 CST. Missed quizzes are assigned a score of zero points.
 
-- **Final Project Assignment** (15%): There will be seven parts to the project designed to both reinforce and expand on the topics covered in lecture. Each project assignment will build on the previous so it is important you successfully complete each project assignment.
+- **Exams** (20%): There are a mid term and final exam.  The midterm is given in week 4 and the final will be given in week 8.  These will be delivered via Canvas and cover the material in the course up to that point.
+
+- **Module Assignments** (48%): There will be 1-3 assignments in each of the 8 modules designed to both reinforce and put into practical use the knowledge and techniques from the lecture. These assignments will be published as projects on Gitlab and instructions will be the README.md files in the project repository.  Assignments involve Java coding, Gitlab configuration, and use of various tools in the software build pipeline. Most assignments will be completed individually while some may be completed in teams. Unless it is explicitly stated otherwise, all assignments are to be completed individually and must reflect your own individual work. Assignment grades will be based on the successful completion of the assigned task by reviewing code check ins, commit history, and successfully build pipeline output. Assignments not completed by the specified deadline are assigned a score of zero points.
+
+- **Final Project Assignment** (15%): There will be a final project designed to both reinforce and expand on all the topics covered in the course. The project combines all the concepts, tools, and techniques covered in the course.
 
 
 Your total score (*Total*) for the course will be calculated as follows:
 
-- *E* is the percentage of possible points earned on exams
+- *H* is the percentage of possible points earned on Hands-on
+- *E* is the percentage of possible points earned on Exams
 - *M* is the percentage of possible points earned on module assignments
 - *Q* is the percentage of possible points earned on Quizzes
 - *A* is the percentage of possible points earned on Assignments. 
@@ -178,7 +182,7 @@ Your total score (*Total*) for the course will be calculated as follows:
 
 Each percentage is calculated as (*points earned* / *points possible*) * 100
 
-*Total* = (0.5 * *P*) + (0.2 * *E*) + (0.15 * *Q*)  + (0.15 * *A*) 
+*Total* = (0.02 * *H*) +(0.48 * *A*) + (0.2 * *E*) + (0.15 * *Q*)  + (0.15 * *A*) 
 
 Your letter grade for the course will be assigned based on your *Total*
 numeric score using the following scale.
@@ -205,15 +209,15 @@ The course is organized into eight modules covering the topics below.
 
 - **Module 1**: Security in Source Code Management
 
-- **Module 2**: Security in Software Composition and Dependency
+- **Module 2**: Security in Source Code Management
 
-- **Module 3**: Security in  Software Build Pipelines
+- **Module 3**: Security in Static Code Scanning
 
-- **Module 4**: Security in Software Testing
+- **Module 4**: Security in Software Dependency and Composition
 
-- **Module 5**: Security in Software Testing
+- **Module 5**: Security in Dynamic Code Scanning
 
-- **Module 6**: Security in Deployment
+- **Module 6**: Security in Software Deployment
 
 - **Module 7**: Bringing it all Together
 
@@ -221,21 +225,21 @@ Module 0 runs from the first day of classes through the first Sunday of the
 term, Module 1 through Module 7 are each allocated one week, with each beginning
 on a Monday and ending on the following Sunday.
 
-Below is the weekly schedule for [Summer A
-2022](http://online.auburn.edu/term_calendar).  Note that course work continues
+Below is the weekly schedule for [Spring A
+2023](http://online.auburn.edu/term_calendar).  Note that course work continues
 through all days of the term, including those marked as holidays.
 
 
 Week  | Dates         | Module | Graded Items 
 ----  | -----         | ------ | ------------ 
-1     | 5/18 - 5/22   | M0     | Q            
-2     | 5/23 - 5/29   | M1     | Q P          
-3     | 5/30 - 6/5    | M2     | Q P       
-4     | 6/6  - 6/12   | M3     | Q P E          
-5     | 6/13 - 6/19   | M4     | Q P       
-6     | 6/20 - 6/26   | M5     | Q P           
-7     | 6/27 - 7/3    | M6     | Q P           
-8     | 7/4  - 7/11   | M7     | Q P E     
+1     | 1/11 - 1/14   | M0     | H            
+2     | 1/15 - 1/21   | M1     | Q A          
+3     | 1/22 - 1/28   | M2     | Q A       
+4     | 1/29 - 2/4    | M3     | Q A E          
+5     | 2/5  - 2/11   | M4     | Q A       
+6     | 2/12 - 2/18   | M5     | Q A           
+7     | 2/19 - 3/25   | M6     | Q A           
+8     | 2/26 - 3/4    | M7     | Q F E     
 
 
 ---
@@ -476,6 +480,6 @@ Any and all results of graded items in the course are data sources for
 research and assessment, and may be used in publications related to research
 and accreditation. All such use will be anonymous.
 
-# Revision History
+
 
 
