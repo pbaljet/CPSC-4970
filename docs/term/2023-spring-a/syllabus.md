@@ -17,7 +17,7 @@ Times for all course events (assignment deadlines, exam times, etc.) will be set
 
 # Course Description
 
-CPSC 4970 is designed to introduce applied cyber security techniques in the software development process. A java based application and associated build tools will be used as the method to provide hands on experience and knowledge.  The course is designed around constructing a software build pipeline that progressively gets more advanced. 
+CPSC 4970 Applied Cyber Security is designed to introduce applied cyber security techniques in the software development process. A java based application and associated build tools (Apache Maven, Gitlab) will be used as the method to provide hands-on experience and knowledge.  The course is designed around constructing a software build pipeline that incorporates manual and automated cyber security practices as the course progresses.
 
 
 >Description: Admission into Bachelor of Computer Science Program. Introduction to vulnerabilities and associated
@@ -27,21 +27,20 @@ CPSC 4970 is designed to introduce applied cyber security techniques in the soft
 >
 >**Credit Hours:** 3 (DSL. 45.)
 >
->**Prerequisite:** CPSC 4970
 
 
 # Learning Outcomes
 
 By the end of this course, the student will demonstrate an ability to:
 
-- Understanding of software composition and execution
+- Understanding of Software Composition Analysis (SCA)
 - How software systems are delivered and managed
 - Impact of compliance and regulations on software requirements
 - Common pitfalls in the security of computer systems, and how to combat them.
 - Apply security testing practices to the software development lifecycle
 - Use industry standard threat detection, notification and response remediate security flaws
-- Understand and assess different attack surface environments such as containers and serverless computing
-- How share security models work in the 3rd party operating environments
+- Understand and assess areas of software system vulnerabilities 
+- How shared security models work in the 3rd party operating environments
 - Apply technical material taught in lecture to design secure software development lifecycle
 
 ## Syllabus Modification
@@ -100,13 +99,16 @@ This course will require the following software to be installed on your local co
 - Java Development Kit (JDK)
 - Git Version Control
 - Maven Build Automation
+- SonarQube Static Code Analysis
 - Zed Attack Proxy (ZAP) Tool
 
 This software is free, and instructions on installation and use will
 be provided in Canvas during the first week of the course.
 
 In addition, the courses uses the following cloud based tools:
-- AWS Secrets Manager
+- AWS Public Cloud
+  - AWS Elastic Beanstalk
+  - AWS Secrets Manager
 - Gitlab DevOps Platform
 
 
@@ -134,7 +136,7 @@ Auburn, AL 36849
 
 
 ## Teaching Assistant
-
+![Emma](https://pbaljet.github.io/CPSC-4970/img/emma_picture.jpeg)
 ### Emma Ingram
 
 Graduate Teaching Assistant  
@@ -145,6 +147,7 @@ Auburn University
 Auburn, AL 36849  
 +1 334 844 4330  
 `eci0004@auburn.edu`  
+[LinkedIn Profile](https://www.linkedin.com/in/emmacingram/)
 **Office Hours:** By appointment
 
 
