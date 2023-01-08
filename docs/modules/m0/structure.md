@@ -32,8 +32,8 @@ Each of the seven content modules has the same structure with the following comp
   and references to associated readings from textbooks.
 - **Lectures:** Links to complete instructional videos tied to the lecture
   notes.
-- **Assignments:** One or more activities designed to help you put into practice the topics being presented in the notes.
-- **Project Assignment:** An assignment that builds on the previous project assignment in building a secure software development pipeline
+- **Module Assignments:** One or more activities designed to help you put into practice the topics being presented in the notes.
+- **Quiz:** Short test on the material covered in the lectures, slides, and readings for the module.
 - **Summary:** A brief recap of what was covered in the module.
 
 In addition to these common elements, Module 4 and 7 have:
@@ -46,7 +46,7 @@ In addition to these common elements, Module 4 and 7 have:
 Since each content module has the same structure, you can apply the same process to going through each. Here is a suggested
 [workflow](https://en.wikipedia.org/wiki/Workflow) for going through each module of this course.
 
-![worflow](img/workflow.png)
+![worflow](img/workflow2.png)
 
 Notice the iterative nature of the items in the *Work & Learn*
 [swimlane](https://en.wikipedia.org/wiki/Swim_lane). Rather than going through this portion of the module sequentially, I strongly encourage you to take an
