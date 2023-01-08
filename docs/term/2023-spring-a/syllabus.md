@@ -3,7 +3,7 @@
 
 # CPSC 4970 Applied Cyber Security <br> Spring Term A 2023 Course Syllabus
 
-*Published: Jan 10, 2022*
+*Published: Jan 10, 2023*
 
 ---
 
@@ -233,13 +233,13 @@ through all days of the term, including those marked as holidays.
 Week  | Dates         | Module | Graded Items 
 ----  | -----         | ------ | ------------ 
 1     | 1/11 - 1/14   | M0     | H            
-2     | 1/15 - 1/21   | M1     | Q A          
-3     | 1/22 - 1/28   | M2     | Q A       
-4     | 1/29 - 2/4    | M3     | Q A E          
-5     | 2/5  - 2/11   | M4     | Q A       
-6     | 2/12 - 2/18   | M5     | Q A           
-7     | 2/19 - 3/25   | M6     | Q A           
-8     | 2/26 - 3/4    | M7     | Q F E     
+2     | 1/16 - 1/21   | M1     | Q A          
+3     | 1/23 - 1/28   | M2     | Q A       
+4     | 1/30 - 2/4    | M3     | Q A E          
+5     | 2/6  - 2/11   | M4     | Q A       
+6     | 2/13 - 2/18   | M5     | Q A           
+7     | 2/20 - 3/25   | M6     | Q A           
+8     | 2/27 - 3/4    | M7     | Q F E     
 
 
 ---
