@@ -17,3 +17,5 @@ By the end of this course, you should be able to:
 - Understand and assess different attack surface environments such as containers and serverless computing
 - How shared security models work in the 3rd party operating environments
 - Apply technical  material taught in lecture to design secure software development lifecycle
+
+.
