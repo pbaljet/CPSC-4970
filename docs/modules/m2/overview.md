@@ -4,5 +4,5 @@ This module covers secure software development practices during the initial phas
 
 ![DiD](img/defense-in-depth.png)
 
-The security practices focused on during this module are the manual aspect of performing code analysis and review against known vulnerability areas.  Once mitigated changes are made to the source code the software version control and change control process to a protected repository are executed.  In addition to the manual process we will begin to build our secure automated build pipeline, getting ready to incorporate more automated security tools in upcoming modules.
+The security practices focused on during this module are the manual inspection aspect of performing code analysis and review against known vulnerability areas.  Once changes are made to source code the software version control and change control process to a protected branch are executed.  In addition to the manual process we will begin to build our secure automated build pipeline, getting ready to incorporate more automated security tools in upcoming modules.
 

@@ -1,4 +1,4 @@
-# Assignment 2a - Gitlab Pipline Basics
+# M2 Assignment A - Gitlab Pipline Basics
 
 In this assignment you will be configuring a basic Gitlab CI/CD pipeline with multiple stages.
 

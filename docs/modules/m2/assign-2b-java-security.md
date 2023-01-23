@@ -1,4 +1,4 @@
-# Assignment 2b - Manual Code Reviews and Resolving Vulnerability
+# M2 Assignment B - Manual Code Reviews and Resolving Vulnerability
 
 In this assignment you will analyzing a java code base that provides login authentication for a username and password. Use several vulnerability areas to resolve the following types of vulnerabilities:
 
