@@ -1,6 +1,4 @@
-# Reflecting on the Module 5
-
-This module...
+# Reflecting on Module 5
 
 Take time now to review and reflect on this module and the work you've done.
 
