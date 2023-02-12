@@ -1,7 +1,7 @@
 # Lecture Notes 4
 
 - [Introduction to Module 4](notes/cpsc4970-m4-intro.pdf)
-- [Log4j Cas Study](notes/cpsc4970-m4-log4j.pdf)
+- [Log4j Case Study](notes/cpsc4970-m4-log4j.pdf)
 - [Maven Dependency Management](notes/cpsc4970-m4-dependency-mgmt.pdf)
 - [Crptographic Hasing and File Integrity](notes/cpsc4970-m4-hashing.pdf)
 
