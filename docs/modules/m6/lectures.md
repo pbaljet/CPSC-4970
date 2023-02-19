@@ -1,6 +1,6 @@
 # Stuxnet Vulnerability Case Study
 
-In this case study we will look into on of the most sophisticated worms ever built to attack Iranian centrifuges tha were being used to enrich uranium.  The key aspect of this case study is the use of stolen secrets to perform code signing so software could be installed on a system without any warnings.
+In this case study we will look into one of the most sophisticated worms ever built.  This work was targeted to attack Iranian centrifuges that were being used to enrich uranium.  The key aspect of this case study is the use of stolen secrets to perform code signing so software drivers could be installed on a system without any warnings.
 
 > [*Video: Stuxnet Worm Case Study*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e95b04e0-c8d5-47c0-bf20-aec200017083)
 
