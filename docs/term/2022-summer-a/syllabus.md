@@ -122,9 +122,8 @@ Auburn University
 345 West Magnolia Ave  
 Auburn, AL 36849  
 +1 404 216 8434  
-`pete.baljet@auburn.edu`  
-[LinkedIn Profile](https://www.linkedin.com/in/peter-baljet-882656/)
-<http://eng.auburn.edu/csse>   .
+`pete.baljet@auburn.edu`
+<http://eng.auburn.edu/csse>
 **Office Hours:** By appointment
 
 
