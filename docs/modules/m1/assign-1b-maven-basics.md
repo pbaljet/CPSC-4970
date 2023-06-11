@@ -1,4 +1,4 @@
-# Assignment 1b - Maven Basics
+# M1 Assignment B - Maven Basics
 
-Assignment 1b can be found in README.md in your Gitlab group in a repository called "Assignment 1b". 
+Assignment B can be found in README.md in your Gitlab group in a repository called "M1 Assignment B". 
 
