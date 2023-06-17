@@ -1,9 +1,9 @@
 
 ---
 
-# CPSC 4970 Applied Cyber Security <br> Spring Term A 2023 Course Syllabus
+# CPSC 4970 Secure Software Development <br> Summer Term B 2023 Course Syllabus
 
-*Published: Jan 10, 2023*
+*Published: Jun 17, 2023*
 
 ---
 
