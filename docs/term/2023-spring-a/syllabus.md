@@ -131,7 +131,7 @@ Auburn, AL 36849
 +1 404 216 8434  
 `pete.baljet@auburn.edu`  
 [LinkedIn Profile](https://www.linkedin.com/in/peter-baljet-882656/)
-<http://eng.auburn.edu/csse>   .
+<http://eng.auburn.edu/csse><br>
 **Office Hours:** By appointment
 
 
@@ -147,7 +147,7 @@ Auburn University
 Auburn, AL 36849  
 +1 334 844 4330  
 `djs0080@auburn.edu`  
-[LinkedIn Profile](https://www.linkedin.com/in/deaconseals)
+[LinkedIn Profile](https://www.linkedin.com/in/deaconseals)<br>
 **Office Hours:** By appointment
 
 
