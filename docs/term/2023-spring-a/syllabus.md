@@ -1,7 +1,7 @@
 
 ---
 
-# CPSC 4970 Secure Software Development <br> Summer Term B 2023 Course Syllabus
+# COMP 5970 Secure Software Development <br> Summer Term B 2023 Course Syllabus
 
 *Published: Jun 17, 2023*
 
