@@ -186,13 +186,13 @@ Each percentage is calculated as (*points earned* / *points possible*) * 100
 Your letter grade for the course will be assigned based on your *Total*
 numeric score using the following scale.
 
-*Total*   | Letter Grade
---------  | ------------
-[90, 100] | A
-[80, 90)  | B
-[70, 80)  | C
-[60, 70)  | D
-[0, 60)   | F
+| *Total*   | Letter Grade |
+|-----------| ------------ |
+| [90, 100] | A |
+| [80, 90)  | B |
+| [70, 80)  | C |
+| [60, 70)  | D |
+|  [0, 60)  | F |
 
 **Extra Credit:** Opportunities for extra credit are sometimes given to the
 entire class, but are never given on an individual basis.
@@ -229,14 +229,14 @@ Below is the weekly schedule for [Spring A
 through all days of the term, including those marked as holidays.
 
 
-Week  | Dates       | Module | Graded Items 
-----  |-------------|--------| ------------ 
-1     | 6/27 - 7/2  | M0, M1 | H Q A            
-2     | 7/3  - 7/9  | M2     | Q A          
-3     | 7/10 - 7/16 | M3, M4 | Q A       
-4     | 7/17 - 7/23 | M4, M5 | Q A E          
-5     | 7/24 - 7/30 | M6     | Q A       
-6     | 7/31 - 8/4  | M7     | F           
+| Week | Dates       | Module | Graded Items |
+|------|-------------|--------|--------------|
+| 1    | 6/27 - 7/2  | M0, M1 | H Q A        |   
+| 2    | 7/3  - 7/9  | M2     | Q A          |
+| 3    | 7/10 - 7/16 | M3, M4 | Q A          | 
+| 4    | 7/17 - 7/23 | M4, M5 | Q A E        |   
+| 5    | 7/24 - 7/30 | M6     | Q A          |
+|  6   | 7/31 - 8/4  | M7     | F            | 
 
 
 
