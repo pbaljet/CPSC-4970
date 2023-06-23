@@ -13,14 +13,15 @@ For the Summer mini term there are several weeks with the modules combined due t
 Here is the specific schedule for [2023 Spring Term A](http://online.auburn.edu/term_calendar).
 
  
-Module | Begin       | End
------- | -----       | ---
-M0 | Tue June 27 | Sun Jul 2
-M1 | Mon Jul 3   | Sun Jul 9
-M2 | Mon Jul 10  | Sun Jul 16 
-M3, M4 | Mon Jul 17  | Sun Jul 23
-M5, M6 | Mon Jul 24  | Sun Jul 30
-M7 | Mon Jul 31  | Sun Aug 24
+| Module | Begin       | End        |
+|-------| -----       |------------|
+| M0    | Tue June 27 | Sun Jul 2  |
+| M1    | Mon Jul 3   | Sun Jul 9  |
+| M2    | Mon Jul 10  | Sun Jul 16 |
+| M3, M4 | Mon Jul 17  | Sun Jul 23 |
+| M5, M6 | Mon Jul 24  | Sun Jul 30 |
+| M7    | Mon Jul 31  | Sun Aug 24 |
+
 # Module Structure
 
 Each of the seven content modules has the same structure with the following components.
