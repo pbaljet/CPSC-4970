@@ -6,27 +6,99 @@
 setupClass() {
 
   studentFile=$1
-  classGroup=$2
+  dirLocation=$2
+  classGroup=$3
 
   echo "Setting up class from student file $studentFile"
 
   IFS=$'\n'
-  read -d '' -r -a lines < $1
+  read -d '' -r -a students < $1
 
   echo "Creating student directory"
-  mkdir students
+  mkdir $dirLocation
 
   echo "Creating directory for each student"
 
-  for line in ${lines[@]}
+  for student in ${students[@]}
   do
-    directory="students/${line}"
+    directory="students/${student}"
     echo "Creating directory for $directory"
     mkdir  "$directory"
     echo "Creating Gitlab group under $classGroup"
     createGroup $line $classGroup
     echo "Inviting ${line}@auburn.edu to $createdGroupId "
     inviteUserToGroup $line $createdGroupId
+  done
+
+}
+
+
+cycleSonarProject() {
+
+  projectName=$1
+  studentFile=$2
+  qualityGate=$3
+
+  IFS=$'\n'
+  read -d '' -r -a students < $studentFile
+
+  echo "Adding students..."
+
+  for student in ${students[@]}
+  do
+    echo "Add Project for ${student}"
+    addSonarProjectForUser $projectName $student
+  done
+}
+#
+# Setup SonarQube
+#
+addSonarProjectForUser() {
+
+    echo "Adding SonarQube project ${1} for ${2} quality gate ${3}"
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/projects/create\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}&name=${1}-${2}&visibility=private\""
+    eval $curlString
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=securityhotspotadmin\""
+    eval $curlString
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=user\""
+    eval $curlString
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=scan\""
+    eval $curlString
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=codeviewer\""
+    eval $curlString
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=issueadmin\""
+    eval $curlString
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualitygates/select\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&gateName=${3}\""
+    eval $curlString
+
+}
+
+#
+# Add SonarQube Users
+#
+addSonarqubeUsers() {
+
+  studentFile=$1
+
+  echo "Setting up class from student file $studentFile"
+
+  IFS=$'\n'
+  read -d '' -r -a students < $1
+
+  echo "Adding students..."
+
+  for student in ${students[@]}
+  do
+    IFS=','
+    read -d '' -ra aStudent <<< "$student"
+    echo "Adding student X${aStudent[0]}X"
+    echo "Adding student X${aStudent[1]}X"
+    echo "Adding student X${aStudent[2]}X"
+    #curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/users/create\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"login=${aStudent[0]}&name=test&password=aubie&email=${aStudent[1]}\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/users/update\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"login=${aStudent[0]}&name=${aStudent[2]}\""
+    eval $curlString
+#    curlString=`curl -s --request POST --url "https://au-csse-cpsc4970.com/api/users/create" --header "Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9" --data "login=${aStudent[0]}&name=test&password=aubie&email=${aStudent[1]}"`
+#    echo $createUser
   done
 
 }
@@ -233,21 +305,23 @@ cycleThroughProjects () {
 usage (){
   echo "gitlab <command> <parameters>"
   echo ""
-  echo "commands: "
-  echo "setup-class <student file> <Group ID> "
-  echo "proj-info <project id>"
-  echo "adjust-proj-perm <project id>"
-  echo "set-proj-perm <project id> <permission> <value>"
-  echo "get-proj-perm <project id> <permission>"
-  echo "get-group-projects <group id>"
-  echo "get-group-name <group id>"
-  echo "proj-cycle <group id>"
-  echo "export-proj <project id>"
-  echo "create_proj <group id> <file_name>"
-  echo "create-group <group name> <parent group id>"
-  echo "delete-group <project id> <full text path>"
-  echo "get-group-info <group id>"
-
+  echo "Commands: "
+  echo "   setup-class <student file> <directory> <group id> "
+  echo "   proj-info <project id>"
+  echo "   adjust-proj-perm <project id>"
+  echo "   set-proj-perm <project id> <permission> <value>"
+  echo "   get-proj-perm <project id> <permission>"
+  echo "   get-group-projects <group id>"
+  echo "   get-group-name <group id>"
+  echo "   proj-cycle <group id>"
+  echo "   export-proj <project id>"
+  echo "   create_proj <group id> <file_name>"
+  echo "   create-group <group name> <parent group id>"
+  echo "   delete-group <project id> <full text path>"
+  echo "   get-group-info <group id>"
+  echo "   create-sq-users <student file>"
+  echo "   create-sq-proj <project name> <student file>"
+  echo "   create-sq-proj-user <project name> <student>"
 
 }
 
@@ -256,9 +330,10 @@ echo "Parameters: $1"
 case $1 in
 
   "setup-class")
-    if [ -z $2 ]; then echo "No student file specified: setup-class <student file> <group id>"; exit; fi
-    if [ -z $3 ]; then echo "No group id specified: setup-class <student file> <group id>"; exit; fi
-    setupClass $2 $3
+    if [ -z $2 ]; then echo "No student file specified: setup-class <student file> <directory> <group id>"; exit; fi
+    if [ -z $3 ]; then echo "No directory specified : setup-class <student file> <directory> <group id>"; exit; fi
+    if [ -z $4 ]; then echo "No group id specified: setup-class <student file> <directory> <group id>"; exit; fi
+    setupClass $2 $3 $4
     ;;
 
   "invite-user")
@@ -348,6 +423,25 @@ case $1 in
     if [ -z $2 ]; then echo "No group specified"; exit; fi
     if [ -z $3 ]; then echo "No file specified"; exit; fi
     createProject $2 $3
+    ;;
+
+  "add-sq-users")
+    if [ -z $2 ]; then echo "No student file specified. Usage: add-sonarqube-users <student file>"; exit; fi
+    addSonarqubeUsers $2
+    ;;
+
+  "add-sq-proj")
+    if [ -z $2 ]; then echo "No project name specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
+    if [ -z $3 ]; then echo "No student file specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
+    if [ -z $3 ]; then echo "No quality gate specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
+    addSonarProj $2 $3 $4
+    ;;
+
+  "create-sq-proj-user")
+    if [ -z $2 ]; then echo "No project name specified. Usage: create-sq-proj-user <project name> <student> <quality gate>"; exit; fi
+    if [ -z $3 ]; then echo "No student  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
+    if [ -z $4 ]; then echo "No quality gate  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
+    addSonarProjectForUser $2 $3 $4
     ;;
 
   *)
