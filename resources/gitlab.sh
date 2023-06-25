@@ -212,13 +212,35 @@ getProjectName () {
 
 getSubgroupList () {
    echo "Getting subgroups for $1"
-   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1/subgroups | jq -rj '.[].id | tostring + " "'`
+   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
 }
 
 adjustProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
   echo "Adjust Project Permissions $project_url"
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url --data "jobs_enabled=true&remove_source_branch_after_merge=false&wiki_enabled=false&snippets_enabled=false&analytics_access_level=disabled&issues_enabled=false&security_and_compliance_access_level=enabled&requirements_enabled=false&pages_access_level=disabled&=operations_access_leveldisabled&packages_enabled=true&service_desk_enabled=false&container_registry_enabled=false&builds_access_level=disabled&operations_access_level=disabled&emails_disabled=true"  | jq
+  permString="security_and_compliance_access_level=enabled&"
+  permString+="releases_access_level=enabled&"
+  permString+="security_and_compliance_access_level=disabled"
+  permString+="feature_flags_access_level=disabled&"
+  permString+="infrastructure_access_level=disabled&"
+  permString+="monitor_access_level=disabled&"
+  permString+="jobs_enabled=false&"
+  permString+="remove_source_branch_after_merge=false&"
+  permString+="wiki_enabled=false&"
+  permString+="snippets_enabled=false&"
+  permString+="analytics_access_level=disabled&"
+  permString+="issues_enabled=false&"
+  permString+="security_and_compliance_access_level=disabled&"
+  permString+="requirements_enabled=false&"
+  permString+="pages_access_level=disabled&"
+  permString+="operations_access_level=disabled&"
+  permString+="packages_enabled=false&"
+  permString+="service_desk_enabled=false&"
+  permString+="container_registry_enabled=false&"
+  permString+="builds_access_level=disabled&"
+  permString+="emails_disabled=true"
+  echo $permString
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
 }
 
 setProjectPermissions() {
@@ -240,7 +262,7 @@ getProjectPermission() {
   echo "Getting Project Permissions $project_url: $2"
   jq_filter="'.$2'"
   echo $jq_filter
-  curl -s --request GET --header "PRIVATE-TOKEN: glpat-zsFLW8a6faLu7pv3dGbk" --url $project_url | jq
+  curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq
 }
 
 adjustBranchPermissions() {
@@ -255,11 +277,14 @@ adjustBranchPermissions() {
 getProjectsForGroups () {
   project_list=""
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
-  filter="select( .name | contains(\"Final Exam\"))"
+  filter="select( .name | contains(\"${projectFilter}\"))"
   echo $filter
   echo "Retrieving $project_url"
+  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
 #  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq -rj '.[].id | tostring + " "'`
-  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq -rj '.[] | select( .name | contains("Final Exam")) | .id'`
+#  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq -rj '.[] | select( .name | contains("${projectFilter}")) | .id'`
+  echo curlString
+  project_list=`eval $curlString`
   echo $project_list
 }
 
@@ -314,6 +339,8 @@ usage (){
   echo "   get-group-projects <group id>"
   echo "   get-group-name <group id>"
   echo "   proj-cycle <group id>"
+  echo "   proj-set-perms <project id>"
+  echo "   load-proj <group id> <project name> <path name> <import file>"
   echo "   export-proj <project id>"
   echo "   create_proj <group id> <file_name>"
   echo "   create-group <group name> <parent group id>"
@@ -322,6 +349,7 @@ usage (){
   echo "   create-sq-users <student file>"
   echo "   create-sq-proj <project name> <student file>"
   echo "   create-sq-proj-user <project name> <student>"
+  echo ""
 
 }
 
@@ -347,7 +375,7 @@ case $1 in
     getProjectInfo $2
     ;;
 
-  "adjust-proj-perm")
+  "proj-set-perms")
     if [ -z $2 ]; then echo "No project specified"; exit; fi
     adjustProjectPermissions $2
     ;;
@@ -386,16 +414,21 @@ case $1 in
     getGroupInfo $2
     ;;
 
-
   "get-proj-perm")
     if [ -z $2 ]; then echo "No project specified"; exit; fi
     if [ -z $3 ]; then echo "Permission specified"; exit; fi
     getProjectPermission $2 $3
     ;;
 
+  "proj-adjust-perms")
+    if [ -z $2 ]; then echo "No project specified"; exit; fi
+    adjustProjectPermissions $2
+    ;;
+
   "proj-cycle")
     if [ -z $2 ]; then echo "No group specified"; exit; fi
-    cycleThroughProjects $2
+    projectFilter=$3
+    cycleThroughProjects $2 $3
     ;;
 
   "export-proj")
@@ -403,11 +436,11 @@ case $1 in
     exportProject $2
     ;;
 
-  "load-project")
-    if [ -z $2 ]; then echo "No group specified: create-project <group id> <project name> <path name> <import file>"; exit; fi
-    if [ -z "$3" ]; then echo "No Project Name specified: create-project <group id> <project name> <path name> <import file>"; exit; fi
-    if [ -z $4 ]; then echo "No Path specified: create-project <group id> <project name> <path name> <import file>"; exit; fi
-    if [ -z $5 ]; then echo "No import file specified: create-project <group id> <project name> <path name> <import file>"; exit; fi
+  "load-proj")
+    if [ -z $2 ]; then echo "No group specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
+    if [ -z "$3" ]; then echo "No Project Name specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
+    if [ -z $4 ]; then echo "No Path specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
+    if [ -z $5 ]; then echo "No import file specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
     loadProjectIntoGroups $2 "$3" $4 $5
     ;;
 
