@@ -15,7 +15,7 @@ setupClass() {
   read -d '' -r -a students < $1
 
   echo "Creating student directory"
-  mkdir $dirLocation
+  mkdir ${dirLocation}/students
 
   echo "Creating directory for each student"
 
@@ -25,9 +25,9 @@ setupClass() {
     echo "Creating directory for $directory"
     mkdir  "$directory"
     echo "Creating Gitlab group under $classGroup"
-    createGroup $line $classGroup
+#    createGroup $line $classGroup
     echo "Inviting ${line}@auburn.edu to $createdGroupId "
-    inviteUserToGroup $line $createdGroupId
+#    inviteUserToGroup $line $createdGroupId
   done
 
 }
