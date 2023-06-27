@@ -1,5 +1,16 @@
 #!/bin/bash
 
+
+fix() {
+
+  getSubgroupList $1
+
+  for groupId in $group_list
+  do
+    echo $groupId
+  done
+
+}
 #
 # Setup Class
 #
@@ -24,10 +35,10 @@ setupClass() {
     directory="students/${student}"
     echo "Creating directory for $directory"
     mkdir  "$directory"
-    echo "Creating Gitlab group under $classGroup"
+#    echo "Creating Gitlab group under $classGroup"
 #    createGroup $line $classGroup
     echo "Inviting ${line}@auburn.edu to $createdGroupId "
-#    inviteUserToGroup $line $createdGroupId
+    inviteUserToGroup $line $createdGroupId
   done
 
 }
@@ -132,7 +143,7 @@ inviteUserToGroup() {
 
 echo "Inviting $1 to group $2"
 curl --request POST --url "https://gitlab.com/api/v4/groups/${2}/invitations" \
-     --data "email=${1}@gmail.com&access_level=40" \
+     --data "email=${1}@auburn.edu&access_level=40" \
     --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
 }
 
@@ -475,6 +486,11 @@ case $1 in
     if [ -z $3 ]; then echo "No student  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
     if [ -z $4 ]; then echo "No quality gate  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
     addSonarProjectForUser $2 $3 $4
+    ;;
+
+
+  "fix")
+    fix $2
     ;;
 
   *)

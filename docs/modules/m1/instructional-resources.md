@@ -6,6 +6,13 @@
 - [Apache Maven Software Build Tool](notes/cpsc4970-m1-maven.pdf)
 - [Gitlab DevOps Platform](notes/cpsc4970-m1-gitlab.pdf)
 
+# Readings
+### NIST Standards
+- [Common Vulnerability Enumeration (CVE) Program Description](https://www.cve.org/About/Overview)
+- [Common Weakness Enumeration (CWE) Description](https://cwe.mitre.org/about/new_to_cwe.html)
+- [Common Weakness Scoring System (CWSS) Description](https://cwe.mitre.org/cwss/cwss_v1.0.1.html)
+- [CVE Naming Authority (CNA) Description](https://www.cve.org/ProgramOrganization/CNAs)
+
 # References
 - [Git Version Control System](https://git-scm.com/)
 - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf), Github.com
