@@ -14,7 +14,7 @@ of security threats.
 A common language and framework to communicate security related information is important to ensure rapid understanding
 and comprehensive coverage. This lecture video describes the NIST standards and the National Vulnerability Database.
 
-> [*Video: Cyber Security Industry Standards](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=87e9b016-1d07-4ece-8aaa-ae95014b3304)
+> [*Video: Cyber Security Industry Standards*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=87e9b016-1d07-4ece-8aaa-ae95014b3304)
 
 ---
 
