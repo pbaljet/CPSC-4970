@@ -20,7 +20,7 @@ and comprehensive coverage. This lecture video describes the NIST standards and 
 
 ### CVE Program Description 
 
-> [*Video: What is a CVE? *](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1e63d0f3-4fa9-4b94-b51d-b03000242fd2) (9 min)
+> [*Video: What is a CVE?*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1e63d0f3-4fa9-4b94-b51d-b03000242fd2) (9 min)
 
 ### CWE - Common Weakness Enumeration 
 
@@ -32,7 +32,7 @@ and comprehensive coverage. This lecture video describes the NIST standards and 
 
 ### CNA CVE Numbering Authority
 
-> [*Video: Who creates and publishes CVEs? *](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5680c998-1adf-43f2-8313-b02f0174000a) (2min)
+> [*Video: Who creates and publishes CVEs?*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5680c998-1adf-43f2-8313-b02f0174000a) (2min)
 
 
 ---
