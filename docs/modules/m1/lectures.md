@@ -16,7 +16,7 @@ and comprehensive coverage. This lecture video describes the NIST standards and 
 
 ### CVE Level Overview
 
-[*Video: CVE Terminology & Structure](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0179e56-de7c-4e9e-b2ca-b030002f832a) (2 min)
+> [*Video: CVE Terminology & Structure*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0179e56-de7c-4e9e-b2ca-b030002f832a) (2 min)
 
 ### CVE Program Description 
 
@@ -24,11 +24,11 @@ and comprehensive coverage. This lecture video describes the NIST standards and 
 
 ### CWE - Common Weakness Enumeration 
 
-[*Video: Classifying Software Weaknesses*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6545965b-dfb8-4162-836b-b030002951f3) (7 min)
+> [*Video: Classifying Software Weaknesses*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6545965b-dfb8-4162-836b-b030002951f3) (7 min)
 
 ### CWSS - Common Weakness Scoring System
 
-[*Video: How to measure weakness severity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=635b435b-3d1d-4305-9312-b030002e01ba) (6 min)
+> [*Video: How to measure weakness severity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=635b435b-3d1d-4305-9312-b030002e01ba) (6 min)
 
 ### CNA CVE Numbering Authority
 
