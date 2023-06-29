@@ -44,14 +44,11 @@ The proliferation of open source and 3rd party components has made software deve
 and more secure. However it also introduces challenges with ensuring and maintaining secure software.
 
 
-> [*Video: Software Composition*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3e22254c-bae0-4e6c-bfeb-ae950151c7c8)
+> [*Video: Software Composition*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3e22254c-bae0-4e6c-bfeb-ae950151c7c8) (12 min)
 
-# Course Project Overview
+# Course Assignments Overview
 
-A common language and framework to communicate security related information is important to ensure rapid understanding
-and comprehensive coverage. This lecture video describes the NIST standards and the National Vulnerability Database.
-
-> [*Video: Course Project*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=027ea13c-8e61-4639-b59e-ae950154f8c4)
+> [*Video: Course Project*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=027ea13c-8e61-4639-b59e-ae950154f8c4) (3 min)
 
 ---
 
@@ -61,15 +58,15 @@ Git will be used throughout the course to manage our source code, build automati
 
 ## Git Concepts
 
-> [*Video: Git Overview & Concepts*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c629d7c5-1deb-466b-be11-ae9d0074f520)
+> [*Video: Git Overview & Concepts*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c629d7c5-1deb-466b-be11-ae9d0074f520) (7 min)
 
 ## Git Hands On
 
-> [*Video: Git Hands On*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1645e05b-b05e-4a2c-aa18-ae9d00b0c2bb)
+> [*Video: Git Hands On*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1645e05b-b05e-4a2c-aa18-ae9d00b0c2bb) (15 min)
 
 ## Git Branching & Merging
 
-> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b)
+> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b) (14 min)
 
 ---
 
