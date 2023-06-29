@@ -14,7 +14,26 @@ of security threats.
 A common language and framework to communicate security related information is important to ensure rapid understanding
 and comprehensive coverage. This lecture video describes the NIST standards and the National Vulnerability Database.
 
-> [*Video: Cyber Security Industry Standards*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=87e9b016-1d07-4ece-8aaa-ae95014b3304)
+### CVE Level Overview
+
+[*Video: CVE Terminology & Structure](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0179e56-de7c-4e9e-b2ca-b030002f832a) (2 min)
+
+### CVE Program Description 
+
+> [*Video: What is a CVE? *](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1e63d0f3-4fa9-4b94-b51d-b03000242fd2) (9 min)
+
+### CWE - Common Weakness Enumeration 
+
+[*Video: Classifying Software Weaknesses*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6545965b-dfb8-4162-836b-b030002951f3) (7 min)
+
+### CWSS - Common Weakness Scoring System
+
+[*Video: How to measure weakness severity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=635b435b-3d1d-4305-9312-b030002e01ba) (6 min)
+
+### CNA CVE Numbering Authority
+
+> [*Video: Who creates and publishes CVEs? *](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5680c998-1adf-43f2-8313-b02f0174000a) (2min)
+
 
 ---
 
