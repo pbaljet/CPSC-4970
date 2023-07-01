@@ -26,6 +26,6 @@ When you join the server, you will be placed in a limited Guest role. Once you r
 
 To get started, just paste on the following link in your browser:
 
-> [https://discord.gg/mWxsRRDZ](https://discord.gg/mWxsRRDZ)
+> [https://discord.gg/d9fgr4CW](https://discord.gg/d9fgr4CW)
 
 Once you have been granted the student role take a moment to introduce yourself in the introductions channel.  Where you are located, an interesting fact, etc.  During the course it is expected everyone contributes and help each other.

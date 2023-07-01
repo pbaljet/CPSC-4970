@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+student_group_id=68990640
+
+
 fix() {
 
   getSubgroupList $1
@@ -198,7 +201,12 @@ exportProject() {
 echo "Exporting project $1"
 curl --request POST \
   --url "https://gitlab.com/api/v4/projects/$1/export" \
-  --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" 
+  --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
+sleep 5
+curl --request GET \
+  --url "https://gitlab.com/api/v4/projects/$1/export/download" \
+  --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" \
+  --output "assign2b.tar.gz"
 }
 
 
@@ -491,6 +499,10 @@ case $1 in
 
   "fix")
     fix $2
+    ;;
+
+  "echo")
+    echo $student_group_id
     ;;
 
   *)
