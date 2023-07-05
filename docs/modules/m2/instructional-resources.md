@@ -9,6 +9,7 @@ Open the links outside of Canvas
     - [2.5.1 The Tools](https://learning.oreilly.com/library/view/core-software-security/9781466560963/chapter-17.html#:-:text=2.5%20Critical%20Tools%20and%20Talent)
 - [**Learning Git**](https://learning.oreilly.com/library/view/learning-git/9781098133900/)
   - [Chapter 5 Merging](https://learning.oreilly.com/library/view/learning-git/9781098133900/lg_ch05.xhtml#:-:text=Merging)
+- [**Pipelines - Git Lab Documentation**](https://docs.gitlab.com/ee/ci/pipelines/index.html)
 
 # Lecture Notes
 - [Module Overview](notes/cpsc4970-m2-intro.pdf)
