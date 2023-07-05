@@ -56,7 +56,8 @@ Several books are used throughout the course.  These books can be accessed with 
 
 > **Ransome** James, **Misra** Anmol  (2014). *Core Software Security: Security At The Source,
 > [https://www.routledge.com/Core-Software-Security-Security-at-the-Source/Ransome-Misra/p/book/9781032027418](https://www.routledge.com/Core-Software-Security-Security-at-the-Source/Ransome-Misra/p/book/9781032027418)
->
+> Skoulikari, Anna (2023). *Learning Git*
+> [https://learning.oreilly.com/library/view/learning-git/9781098133900/](https://learning.oreilly.com/library/view/learning-git/9781098133900/)
 
 
 ## Course Notes
