@@ -1,3 +1,12 @@
+# Readings
+- [Core Software Security](https://learning.oreilly.com/library/view/core-software-security/9781466560963/chapter-15.html)
+  - Chapter 2 The Secure Development Lifecycle
+    - 2.1 Overcoming Challenges in Making Software Secure
+    - 2.2 Software Security Maturity Models
+    - [2.3 Information Technology—Security Techniques—Application Security](https://learning.oreilly.com/library/view/core-software-security/9781466560963/chapter-15.html#:-:text=ISO%2FIEC%2027034,Techniques%E2%80%94Application%20Security)
+    - [2.4  Other Resources for SDL Best Practices](https://learning.oreilly.com/library/view/core-software-security/9781466560963/chapter-16.html#:-:text=2.4%20Other%20Resources%20for%20SDL%20Best%20Practices)
+    - 
+
 # Lecture Notes
 - [Module Overview](notes/cpsc4970-m2-intro.pdf)
 - [Gitlab Merge Requests](notes/cpsc4970-m2-git-commit-merge.pdf)
