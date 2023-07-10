@@ -171,6 +171,7 @@ importProject() {
     id=`echo ${result} | jq -rj '.id | tostring'`
     echo "Id: ${id}"
     adjustProjectPermissions $id
+    adjustBranchPermissions $id
   else
     echo "Message: ${message}"
   fi
@@ -242,6 +243,7 @@ adjustProjectPermissions() {
   permString+="security_and_compliance_access_level=disabled"
   permString+="feature_flags_access_level=disabled&"
   permString+="infrastructure_access_level=disabled&"
+  permString+="remove_source_branch_after_merge=false&"
   permString+="monitor_access_level=disabled&"
   permString+="jobs_enabled=false&"
   permString+="remove_source_branch_after_merge=false&"
@@ -289,7 +291,7 @@ adjustBranchPermissions() {
   echo "\tDeleting existing main protection: $project_url"
   curl -s --request DELETE --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" $project_url/main
   echo "\tAdd Protection $project_url"
-  curl -s --request POST --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url "$project_url?name=main&push_access_level=30&merge_access_level=30&unprotect_access_level=40" | jq
+  curl -s --request POST --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
   echo $result
 }
 
@@ -310,7 +312,7 @@ getProjectsForGroups () {
 getProjectInfo () {
     project_url="https://gitlab.com/api/v4/projects/$1"
     echo "Retrieving Info for $project_url"
-    curl -s --request GET --header "PRIVATE-TOKEN: glpat-zsFLW8a6faLu7pv3dGbk" --url $project_url | jq
+    curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq
 
 }
 
