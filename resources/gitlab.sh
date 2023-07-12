@@ -47,7 +47,7 @@ setupClass() {
 }
 
 
-cycleSonarProject() {
+createSonarQubeProjects() {
 
   projectName=$1
   studentFile=$2
@@ -56,12 +56,13 @@ cycleSonarProject() {
   IFS=$'\n'
   read -d '' -r -a students < $studentFile
 
-  echo "Adding students..."
+  echo "Cycling through students..."
 
   for student in ${students[@]}
   do
     echo "Add Project for ${student}"
-    addSonarProjectForUser $projectName $student
+    addSonarProjectForUser $projectName $student $qualityGate
+    sleep 1
   done
 }
 #
@@ -72,6 +73,7 @@ addSonarProjectForUser() {
     echo "Adding SonarQube project ${1} for ${2} quality gate ${3}"
     curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/projects/create\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}&name=${1}-${2}&visibility=private\""
     eval $curlString
+    echo "Adding permissions..."
     curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=securityhotspotadmin\""
     eval $curlString
     curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=user\""
@@ -82,7 +84,40 @@ addSonarProjectForUser() {
     eval $curlString
     curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=issueadmin\""
     eval $curlString
+    echo "Adding quality gate..."
     curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualitygates/select\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&gateName=${3}\""
+    eval $curlString
+    echo "Adding quality profile..."
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualityprofiles/add_project\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}&language=java&qualityProfile=au_profile\""
+    eval $curlString
+
+}
+
+deleteSonarQubeProjects() {
+
+  projectName=$1
+  studentFile=$2
+  qualityGate=$3
+
+  IFS=$'\n'
+  read -d '' -r -a students < $studentFile
+
+  echo "Cycling through students..."
+
+  for student in ${students[@]}
+  do
+    echo "Add Project for ${student}"
+    deleteSonarProjectForUser $projectName $student $qualityGate
+    sleep 1
+  done
+}
+#
+# Setup SonarQube
+#
+deleteSonarProjectForUser() {
+
+    echo "Deleting SonarQube project ${1} for ${2} quality gate ${3}"
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/projects/delete\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}\""
     eval $curlString
 
 }
@@ -207,7 +242,7 @@ sleep 5
 curl --request GET \
   --url "https://gitlab.com/api/v4/projects/$1/export/download" \
   --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" \
-  --output "assign2b.tar.gz"
+  --output "proj_export.tar.gz"
 }
 
 
@@ -368,7 +403,7 @@ usage (){
   echo "   delete-group <project id> <full text path>"
   echo "   get-group-info <group id>"
   echo "   create-sq-users <student file>"
-  echo "   create-sq-proj <project name> <student file>"
+  echo "   create-sq-projects <project name> <student file> <quality gate>"
   echo "   create-sq-proj-user <project name> <student>"
   echo ""
 
@@ -484,11 +519,11 @@ case $1 in
     addSonarqubeUsers $2
     ;;
 
-  "add-sq-proj")
+  "create-sq-projects")
     if [ -z $2 ]; then echo "No project name specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
     if [ -z $3 ]; then echo "No student file specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
     if [ -z $3 ]; then echo "No quality gate specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
-    addSonarProj $2 $3 $4
+    createSonarQubeProjects $2 $3 $4
     ;;
 
   "create-sq-proj-user")
@@ -496,6 +531,13 @@ case $1 in
     if [ -z $3 ]; then echo "No student  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
     if [ -z $4 ]; then echo "No quality gate  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
     addSonarProjectForUser $2 $3 $4
+    ;;
+
+  "delete-sq-projects")
+    if [ -z $2 ]; then echo "No project name specified. Usage: create-sq-proj-user <project name> <student> <quality gate>"; exit; fi
+    if [ -z $3 ]; then echo "No student  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
+    if [ -z $4 ]; then echo "No quality gate  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
+    deleteSonarQubeProjects $2 $3 $4
     ;;
 
 
