@@ -1,6 +1,6 @@
 # Lecture Notes
 - [Module 3 Intro](notes/cpsc4970-m3-intro.pdf)
-- [Static Application Security Testing](notes/cpsc4970-m3-sast.pdf)
+- [Static Application Security Testing (SAST)](notes/cpsc4970-m3-sast.pdf)
 - [SonarQube](notes/cpsc4970-m3-sonarqube.pdf)
 
 # References
