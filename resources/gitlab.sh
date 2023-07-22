@@ -2,6 +2,9 @@
 
 
 student_group_id=68990640
+projectId=0
+projectName="None"
+groupName=""
 
 
 fix() {
@@ -249,20 +252,20 @@ curl --request GET \
 getGroupInfo () {
 #   echo "Getting Group name $1"
    groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1 | jq`
-   echo "Name: $groupName"
+   echo "Group: $groupName"
 }
 
 
 getGroupName () {
 #   echo "Getting Group name $1"
-   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1 | jq -rj '.name'`
+   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url https://gitlab.com/api/v4/groups/${gid} | jq -rj '.name'"
+   groupName=`eval $curlString`
    echo "Name: $groupName"
 }
 
 getProjectName () {
 #   echo "Getting Project name $1"
    projectName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/projects/$1 | jq -rj '.name'`
-   echo "Name: $projectName"
 }
 
 getSubgroupList () {
@@ -270,38 +273,61 @@ getSubgroupList () {
    group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
 }
 
+turnOffProjectFeatures() {
+   project_url="https://gitlab.com/api/v4/projects/$projectId"
+   echo "Adjust Project Features $project_url"
+
+   permString="service_desk_enabled=false&"
+   permString+="issues_enabled=false&"
+   permString+="requirements_access_level=disabled&"
+   permString+="pages_access_level=disabled&"
+   permString+="environments_access_level=disabled&"
+   permString+="infrastructure_access_level=disabled&"
+   permString+="analytics_access_level=disabled&"
+   permString+="releases_access_level=disabled&"
+   permString+="feature_flags_access_level=disabled&"
+   permString+="monitor_access_level=disabled&"
+   permString+="pages_enabled=false&"
+   permString+="packages_enabled=false&"
+   permString+="service_desk_enabled=false&"
+   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
+
+}
+adjustProjectPermissions1() {
+  project_url="https://gitlab.com/api/v4/projects/$1"
+  echo "Adjust Project Permissions $project_url"
+  permString="jobs_enabled=true&"
+  echo $permString
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
+}
+
 adjustProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
   echo "Adjust Project Permissions $project_url"
   permString="security_and_compliance_access_level=enabled&"
-  permString+="container_registry_enabled=false&"
+  permString+="container_registry_enabled=true&"
   permString+="service_desk_enabled=false&"
   permString+="request_access_enabled=false&"
   permString+="releases_access_level=disabled&"
   permString+="issues_enabled=false&"
-  permString+="security_and_compliance_access_level=disabled"
   permString+="feature_flags_access_level=disabled&"
   permString+="infrastructure_access_level=disabled&"
   permString+="remove_source_branch_after_merge=false&"
   permString+="monitor_access_level=disabled&"
   permString+="jobs_enabled=true&"
-  permString+="remove_source_branch_after_merge=false&"
   permString+="wiki_enabled=false&"
   permString+="snippets_enabled=false&"
   permString+="analytics_access_level=disabled&"
-  permString+="security_and_compliance_access_level=disabled&"
-  permString+="requirements_enabled=false&"
+  permString+="security_and_compliance_enabled=true&"
+  permString+="requirements_access_level=disabled&"
   permString+="pages_access_level=disabled&"
   permString+="environments_access_level=disabled&"
-  permString+="feature_flags_access_level=disabled&"
   permString+="operations_access_level=disabled&"
   permString+="pages_enabled=false&"
-  permString+="packages_enabled=false&"
-  permString+="service_desk_enabled=false&"
-  permString+="container_registry_enabled=false&"
+  permString+="packages_enabled=true&"
   permString+="builds_access_level=private&"
   permString+="emails_disabled=true"
-  echo $permString
+  echo "Perm String: $permString"
   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
 }
 
@@ -320,11 +346,12 @@ getProjectBranches() {
 }
 
 getProjectPermission() {
-  project_url="https://gitlab.com/api/v4/projects/$1"
-  echo "Getting Project Permissions $project_url: $2"
-  jq_filter="'.$2'"
-  echo $jq_filter
-  curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq
+  echo "Getting project permission $permId for $projectName - $projectId"
+  project_url="https://gitlab.com/api/v4/projects/$projectId"
+  jq_filter="'.${permId}'"
+  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url $project_url | jq $jq_filter"
+  permValue=`eval $curlString`
+  echo "Project: $groupName $permId=$permValue"
 }
 
 adjustBranchPermissions() {
@@ -340,14 +367,11 @@ getProjectsForGroups () {
   project_list=""
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
   filter="select( .name | contains(\"${projectFilter}\"))"
-  echo $filter
-  echo "Retrieving $project_url"
+  echo "Using filter $filter for find projects in group $project_url"
   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
-#  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq -rj '.[].id | tostring + " "'`
-#  project_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq -rj '.[] | select( .name | contains("${projectFilter}")) | .id'`
-  echo curlString
+#  echo $curlString
   project_list=`eval $curlString`
-  echo $project_list
+  echo "Project list: $project_list"
 }
 
 getProjectInfo () {
@@ -366,6 +390,27 @@ loadProjectIntoGroups()
       importProject $gid "$2" $3 $4
       sleep 20
     # fi
+  done
+}
+
+cycleThroughProjectsSetPerms () {
+
+  echo "Cycling Temp"
+  echo "=========================="
+  echo "=========================="
+  getSubgroupList $groupId
+  echo "Found Subgroups: $group_list"
+  for gid in $group_list
+  do
+    getGroupName $gid
+    echo "================================================="
+    echo "Group for $gid - $groupName"
+    getProjectsForGroups $gid
+    for projectId in $project_list
+    do
+      getProjectName $projectId
+      adjustProjectPermissions $projectId
+    done
   done
 }
 
@@ -401,7 +446,7 @@ usage (){
   echo "   get-group-projects <group id>"
   echo "   get-group-name <group id>"
   echo "   proj-cycle <group id>"
-  echo "   proj-set-perms <project id>"
+  echo "   proj-cycle-set-perms <group id> <filter>"
   echo "   load-proj <group id> <project name> <path name> <import file>"
   echo "   export-proj <project id>"
   echo "   create_proj <group id> <file_name>"
@@ -491,6 +536,24 @@ case $1 in
     if [ -z $2 ]; then echo "No group specified"; exit; fi
     projectFilter=$3
     cycleThroughProjects $2 $3
+    ;;
+
+  "proj-cycle-set-perms")
+    if [ -z $2 ]; then echo "No group specified"; exit; fi
+    if [ -z $3 ]; then echo "No project filter specified"; exit; fi
+    projectFilter=$3
+    groupId=$2
+    cycleThroughProjectsSetPerms
+    ;;
+
+  "proj-cycle-temp")
+    if [ -z $2 ]; then echo "No group specified"; exit; fi
+    if [ -z $3 ]; then echo "No perm specified"; exit; fi
+    if [ -z $4 ]; then echo "No project filter specified"; exit; fi
+    projectFilter=$4
+    permId=$3
+    groupId=$2
+    cycleThroughProjectsTemp $2 $3
     ;;
 
   "export-proj")
