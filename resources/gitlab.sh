@@ -294,7 +294,7 @@ turnOffProjectFeatures() {
 
 }
 adjustProjectPermissions1() {
-  project_url="https://gitlab.com/api/v4/projects/$1"
+  project_url="https://gitlab.com/api/v4/projects/$projectId"
   echo "Adjust Project Permissions $project_url"
   permString="jobs_enabled=true&"
   echo $permString
@@ -355,12 +355,20 @@ getProjectPermission() {
 }
 
 adjustBranchPermissions() {
-  project_url="https://gitlab.com/api/v4/projects/$1/protected_branches"
+
+  echo "Adjusting Branch Permissions merge=$mergeAccessLevel push=$pushAccessLevel unprotect=$unprotectAccessLevel"
+  project_url="https://gitlab.com/api/v4/projects/$projectId/protected_branches"
   echo "\tDeleting existing main protection: $project_url"
-  curl -s --request DELETE --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" $project_url/main
-  echo "\tAdd Protection $project_url"
-  curl -s --request POST --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
+  curlString="curl -s --request DELETE --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" $project_url/main"
+  result=`eval $curlString`
   echo $result
+  echo "\tAdd Protection"
+#  curl -s --request POST --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
+  curlString="curl -s --request POST --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url \"$project_url?name=main&push_access_level=$pushAccessLevel&merge_access_level=$mergeAccessLevel&unprotect_access_level=$unprotectAccessLevel\" | jq"
+  result=`eval $curlString`
+  echo $curlString
+  echo $result | jq
+
 }
 
 getProjectsForGroups () {
@@ -434,6 +442,42 @@ cycleThroughProjects () {
   done
 }
 
+
+updateProjectFile () {
+
+  getSubgroupList $studentGroup
+  echo "Subgroups: $group_list"
+  for gid in $group_list
+  do
+    getGroupName $gid
+    echo "================================================="
+    echo "Group for $pid - $groupName"
+    getProjectsForGroups $gid
+    for pid in $project_list
+    do
+      getProjectName $pid
+      projectId=$pid
+      pushAccessLevel=30
+      mergeAccessLevel=30
+      unprotectAccessLevel=40
+      adjustBranchPermissions
+      echo "   UpdateFile $fileName for $pid - $projectName"
+      curlString="curl -v --request PUT --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\""
+      curlString+=" -F \"branch=main\""
+      curlString+=" -F \"author_email=pwb0016@auburn.edu\""
+      curlString+=" -F \"author_name=Peter Baljet\""
+      curlString+=" -F \"content=<$fileName\""
+      curlString+=" -F \"commit_message=Remove -app from url\""
+      curlString+=" https://gitlab.com/api/v4/projects/$pid/repository/files/$repositoryPath"
+      echo $curlString
+      result=`eval $curlString`
+      echo $result
+      pushAccessLevel=0
+      adjustBranchPermissions
+    done
+  done
+}
+
 usage (){
   echo "gitlab <command> <parameters>"
   echo ""
@@ -445,14 +489,17 @@ usage (){
   echo "   get-proj-perm <project id> <permission>"
   echo "   get-group-projects <group id>"
   echo "   get-group-name <group id>"
+  echo "   branch-adjust-perms <project id> <push perm> <merge perm > <unprotect perm>"
   echo "   proj-cycle <group id>"
   echo "   proj-cycle-set-perms <group id> <filter>"
+  echo "   proj-update-file <group id> <project name> <local file> <repository path>"
   echo "   load-proj <group id> <project name> <path name> <import file>"
   echo "   export-proj <project id>"
   echo "   create_proj <group id> <file_name>"
   echo "   create-group <group name> <parent group id>"
   echo "   delete-group <project id> <full text path>"
   echo "   get-group-info <group id>"
+  echo "   branch-adjust-perms <project id> <push perm> <merge perm> <unprotect perm>"
   echo "   create-sq-users <student file>"
   echo "   create-sq-projects <project name> <student file> <quality gate>"
   echo "   create-sq-proj-user <project name> <student>"
@@ -607,6 +654,30 @@ case $1 in
     if [ -z $3 ]; then echo "No student  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
     if [ -z $4 ]; then echo "No quality gate  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
     deleteSonarQubeProjects $2 $3 $4
+    ;;
+
+  "proj-update-file")
+    if [ -z $2 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
+    if [ -z "$3" ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
+    if [ -z $4 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
+    if [ -z $5 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
+    studentGroup=$2
+    projectFilter="$3"
+    fileName=$4
+    repositoryPath=$5
+    updateProjectFile
+    ;;
+
+  "branch-adjust-perms")
+    if [ -z $2 ]; then echo "No project id specified: branch-adjust-perms <project id> <push perm> <merge perm> <unprotect perm>"; exit; fi
+    if [ -z $3 ]; then echo "No push perm specified: branch-adjust-perms <project id> <push perm> <merge perm> <unprotect perm>"; exit; fi
+    if [ -z $4 ]; then echo "No merge perm specified: branch-adjust-perms <project id> <push perm> <merge perm> <unprotect perm>"; exit; fi
+    if [ -z $5 ]; then echo "No unprotect perm specified: branch-adjust-perms <project id> <push perm> <merge perm> <unprotect perm>"; exit; fi
+    projectId=$2
+    pushAccessLevel=$3
+    mergeAccessLevel=$4
+    unprotectAccessLevel=$5
+    adjustBranchPermissions
     ;;
 
 
