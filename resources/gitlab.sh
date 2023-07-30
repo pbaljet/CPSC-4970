@@ -206,10 +206,10 @@ importProject() {
   result=`eval $commandString`
   message=`echo ${result} | jq -rj '.message'`
   if [ $message == "null" ] ; then
-    id=`echo ${result} | jq -rj '.id | tostring'`
+    projectId=`echo ${result} | jq -rj '.id | tostring'`
     echo "Id: ${id}"
-    adjustProjectPermissions $id
-    adjustBranchPermissions $id
+    adjustProjectPermissions
+    adjustBranchPermissions
   else
     echo "Message: ${message}"
   fi
@@ -271,6 +271,7 @@ getProjectName () {
 getSubgroupList () {
    echo "Getting subgroups for $1"
    group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
+   echo "$group_list"
 }
 
 turnOffProjectFeatures() {
@@ -302,7 +303,7 @@ adjustProjectPermissions1() {
 }
 
 adjustProjectPermissions() {
-  project_url="https://gitlab.com/api/v4/projects/$1"
+  project_url="https://gitlab.com/api/v4/projects/$projectId"
   echo "Adjust Project Permissions $project_url"
   permString="security_and_compliance_access_level=enabled&"
   permString+="container_registry_enabled=true&"
@@ -325,10 +326,12 @@ adjustProjectPermissions() {
   permString+="operations_access_level=disabled&"
   permString+="pages_enabled=false&"
   permString+="packages_enabled=true&"
-  permString+="builds_access_level=private&"
-  permString+="emails_disabled=true"
+  permString+="builds_access_level=private"
   echo "Perm String: $permString"
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
+  curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url ${project_url} --data \"${permString}\" | jq "
+  echo $curlString
+  result=`eval $curlString`
+  echo $result
 }
 
 setProjectPermissions() {
@@ -418,6 +421,10 @@ cycleThroughProjectsSetPerms () {
     do
       getProjectName $projectId
       adjustProjectPermissions $projectId
+      mergeAccessLevel=30
+      pushAccessLevel=0
+      unprotectAccessLevel=40
+#      adjustBranchPermissions $projectId
     done
   done
 }
@@ -462,7 +469,7 @@ updateProjectFile () {
       unprotectAccessLevel=40
       adjustBranchPermissions
       echo "   UpdateFile $fileName for $pid - $projectName"
-      curlString="curl -v --request PUT --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\""
+      curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\""
       curlString+=" -F \"branch=main\""
       curlString+=" -F \"author_email=pwb0016@auburn.edu\""
       curlString+=" -F \"author_name=Peter Baljet\""
@@ -474,6 +481,8 @@ updateProjectFile () {
       echo $result
       pushAccessLevel=0
       adjustBranchPermissions
+      echo "Pausing for 5 seconds"
+      sleep 5
     done
   done
 }
@@ -613,6 +622,7 @@ case $1 in
     if [ -z "$3" ]; then echo "No Project Name specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
     if [ -z $4 ]; then echo "No Path specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
     if [ -z $5 ]; then echo "No import file specified: load-proj <group id> <project name> <path name> <import file>"; exit; fi
+    projectId=$2
     loadProjectIntoGroups $2 "$3" $4 $5
     ;;
 
