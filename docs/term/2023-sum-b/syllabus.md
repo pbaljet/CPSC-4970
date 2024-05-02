@@ -1,9 +1,9 @@
 
 ---
 
-# CPSC 4970 Applied Cyber Security <br> Spring Term A 2023 Course Syllabus
+# COMP 5970 Secure Software Development <br> Summer Term B 2023 Course Syllabus
 
-*Published: Jan 10, 2023*
+*Published: Jun 17, 2023*
 
 ---
 
@@ -17,7 +17,7 @@ Times for all course events (assignment deadlines, exam times, etc.) will be set
 
 # Course Description
 
-CPSC 4970 Applied Cyber Security is designed to introduce applied cyber security techniques in the software development process. A java based application and associated build tools (Apache Maven, Gitlab) will be used as the method to provide hands-on experience and knowledge.  The course is designed around constructing a software build pipeline that incorporates manual and automated cyber security practices as the course progresses.
+COMP 5970 Secure Software Development is designed to introduce cyber security techniques in the software development process. A java based application and associated build tools (Apache Maven, Gitlab, etc.) will be used as the method to provide hands-on experience and knowledge.  The course is designed around constructing a software build pipeline that incorporates manual and automated cyber security practices as the course progresses.
 
 
 >Description: Admission into Bachelor of Computer Science Program. Introduction to vulnerabilities and associated
@@ -25,7 +25,7 @@ CPSC 4970 Applied Cyber Security is designed to introduce applied cyber security
 > level vulnerabilities, vulnerability detection and resolution, software composition with external dependencies,
 > security scanning and analysis tools, implementing secure automated build pipelines, and secrets management.
 >
->**Credit Hours:** 3 (DSL. 45.)
+>**Credit Hours:** 3 
 >
 
 
@@ -52,11 +52,12 @@ The syllabus is subject to revision. The last modified date is always listed in 
 
 ## Textbook
 
-No specific text is required for this course. Throughout the course there will be references to a number sources on the web.  For deeper insight
+Several books are used throughout the course.  These books can be accessed with a subscription to [O'Reilly](https://www.oreilly.com/online-learning/try-now.html) and are required to access the reading material.  The monthly subscription is $49 for access to all O'Reilly book, articles, and videos.   For example:
 
 > **Ransome** James, **Misra** Anmol  (2014). *Core Software Security: Security At The Source,
 > [https://www.routledge.com/Core-Software-Security-Security-at-the-Source/Ransome-Misra/p/book/9781032027418](https://www.routledge.com/Core-Software-Security-Security-at-the-Source/Ransome-Misra/p/book/9781032027418)
->
+> Skoulikari, Anna (2023). *Learning Git*
+> [https://learning.oreilly.com/library/view/learning-git/9781098133900/](https://learning.oreilly.com/library/view/learning-git/9781098133900/)
 
 
 ## Course Notes
@@ -131,13 +132,13 @@ Auburn, AL 36849
 +1 404 216 8434  
 `pete.baljet@auburn.edu`  
 [LinkedIn Profile](https://www.linkedin.com/in/peter-baljet-882656/)
-<http://eng.auburn.edu/csse>   .
+<http://eng.auburn.edu/csse><br>
 **Office Hours:** By appointment
 
 
 ## Teaching Assistant
-![Emma](https://pbaljet.github.io/CPSC-4970/img/emma_picture.jpeg)
-### Emma Ingram
+![Deacon](https://pbaljet.github.io/CPSC-4970/img/deaconseals.jpg)
+### Deacon Seals
 
 Graduate Teaching Assistant  
 Computer Science and Software Engineering  
@@ -146,8 +147,8 @@ Auburn University
 345 West Magnolia Ave  
 Auburn, AL 36849  
 +1 334 844 4330  
-`eci0004@auburn.edu`  
-[LinkedIn Profile](https://www.linkedin.com/in/emmacingram/)
+`djs0080@auburn.edu`  
+[LinkedIn Profile](https://www.linkedin.com/in/deaconseals)<br>
 **Office Hours:** By appointment
 
 
@@ -175,25 +176,24 @@ Your total score (*Total*) for the course will be calculated as follows:
 
 - *H* is the percentage of possible points earned on Hands-on
 - *E* is the percentage of possible points earned on Exams
-- *M* is the percentage of possible points earned on module assignments
+- *M* is the percentage of possible points earned on Module Assignments
 - *Q* is the percentage of possible points earned on Quizzes
-- *A* is the percentage of possible points earned on Assignments. 
 - *F* is the percentage of possible points earned on the Final Project Assignment.
 
 Each percentage is calculated as (*points earned* / *points possible*) * 100
 
-*Total* = (0.02 * *H*) +(0.48 * *A*) + (0.2 * *E*) + (0.15 * *Q*)  + (0.15 * *A*) 
+*Total* = (0.02 * *H*) +(0.48 * *M*) + (0.2 * *E*) + (0.15 * *Q*)  + (0.15 * *F*) 
 
 Your letter grade for the course will be assigned based on your *Total*
 numeric score using the following scale.
 
-*Total*   | Letter Grade
---------  | ------------
-[90, 100] | A
-[80, 90)  | B
-[70, 80)  | C
-[60, 70)  | D
-[0, 60)   | F
+| *Total*   | Letter Grade |
+|-----------| ------------ |
+| [90, 100] | A |
+| [80, 90)  | B |
+| [70, 80)  | C |
+| [60, 70)  | D |
+|  [0, 60)  | F |
 
 **Extra Credit:** Opportunities for extra credit are sometimes given to the
 entire class, but are never given on an individual basis.
@@ -230,16 +230,15 @@ Below is the weekly schedule for [Spring A
 through all days of the term, including those marked as holidays.
 
 
-Week  | Dates         | Module | Graded Items 
-----  | -----         | ------ | ------------ 
-1     | 1/11 - 1/14   | M0     | H            
-2     | 1/16 - 1/21   | M1     | Q A          
-3     | 1/23 - 1/28   | M2     | Q A       
-4     | 1/30 - 2/4    | M3     | Q A E          
-5     | 2/6  - 2/11   | M4     | Q A       
-6     | 2/13 - 2/18   | M5     | Q A           
-7     | 2/20 - 3/25   | M6     | Q A           
-8     | 2/27 - 3/4    | M7     | Q F E     
+| Week | Dates       | Module | Graded Items |
+|-----|-------------|--------|--------------|
+| 1   | 6/27 - 7/2  | M0, M1 | H Q A        |   
+| 2   | 7/3  - 7/9  | M2     | Q A          |
+| 3   | 7/10 - 7/16 | M3, M4 | Q A          | 
+| 4   | 7/17 - 7/23 | M4, M5 | Q A E        |   
+| 5   | 7/24 - 7/30 | M6     | Q A          |
+| 6   | 7/31 - 8/4  | M7     | F            | 
+
 
 
 ---
@@ -262,15 +261,9 @@ submissions, and make-ups.
 
 ## Excused Absences
 
-To have a covid-related absence excused you must provide the course instructor
-with an official email from the AU COVID-19 Resource Center (CRC). This email
-can only be obtained by filing a [student self-report
-form](http://auburn.edu/covid-resource-center/reporting/) with the CRC.
-
-To have a non-covid absence excused you must first obtain an Excused Absence
+To have an absence excused you must first obtain an Excused Absence
 Memo from Engineering Student Services (ESS) for any absence that falls into
-categories 1 through 6 in the AU Policy on Class Attendance. You should contact
-the course instructor directly for other absences.
+categories 1 through 6 in the AU Policy on Class Attendance. You should contact the course instructor directly for other absences.
 
 > Engineering Student Services provides excused absence memos to students who
 > present verifiable documentation related to university excused absences.  The

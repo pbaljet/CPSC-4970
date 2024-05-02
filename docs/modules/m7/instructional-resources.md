@@ -1,9 +1,9 @@
 # Lecture Notes Module 7
 
-- [Introduction to Module 7](notes/cpsc4970-m7-intro.pdf)
-- [SIEM](notes/cpsc4970-m7-siem.pdf)
-- [Wrapup Lecture](notes/cpsc4970-m7-wrapup.pdf)
-- [AWS Elastic Beanstalk Deploy Config](notes/aws-eb.pdf)
+- [Introduction to Module 7](notes/ssc-m7-intro.pdf)
+- [SIEM](notes/ssc-m7-siem.pdf)
+- [Wrapup Lecture](notes/ssc-m7-wrapup.pdf)
+- [AWS Elastic Beanstalk Deploy Config](notes/ssc-aws-eb.pdf)
 
 # References
 

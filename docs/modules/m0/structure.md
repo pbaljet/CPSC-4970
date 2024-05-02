@@ -1,6 +1,6 @@
 # Course Structure
 
-This course is organied into eight modules numbered zero
+This course is organized into eight modules numbered zero
 through seven. Module 0 is an introductory "getting started" module, while Module 1 through Module 7 are course-content modules. Rather than being organized strictly by content, these modules are
 [timeboxed](https://en.wikipedia.org/wiki/Timeboxing); that is, M1 - M7 are of fixed, equal durations with specific tasks to be completed within each. (If you're familiar with [agile methods](https://en.wikipedia.org/wiki/Agile_software_development), you'll recognize similarities to [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) sprints.)
 
@@ -8,18 +8,19 @@ Scheduling, planning, and knowing when things are due are easy with timeboxed mo
 
 The timeboxed organization of the course is as follows. Module 0 begins on the first day of classes for the term and ends on the first Sunday of the term. Each module 1-7 begins on a Monday and ends on the following Sunday.
 
+For the Summer mini term there are several weeks with the modules combined due to the shorted schedule.
+
 Here is the specific schedule for [2023 Spring Term A](http://online.auburn.edu/term_calendar).
 
-Module | Begin | End
------- | ----- | ---
-M0 | Wed 11 Jan | Sun 15 Jan
-M1 | Mon 16 Jan | Sun 22 Jan
-M2 | Mon 23 Jan | Sun 29 Jun 
-M3 | Mon 30 Feb | Sun 5 Feb
-M4 | Mon 6 Feb  | Sun 12 Feb
-M5 | Mon 13 Feb | Sun 19 Feb
-M6 | Mon 20 Feb | Sun 26 Feb
-M7 | Mon 27 Feb | Sun 5 Mar
+ 
+| Module | Begin       | End        |
+|-------| -----       |------------|
+| M0    | Tue June 27 | Sun Jul 2  |
+| M1    | Mon Jul 3   | Sun Jul 9  |
+| M2    | Mon Jul 10  | Sun Jul 16 |
+| M3, M4 | Mon Jul 17  | Sun Jul 23 |
+| M5, M6 | Mon Jul 24  | Sun Jul 30 |
+| M7    | Mon Jul 31  | Sun Aug 24 |
 
 # Module Structure
 
@@ -39,7 +40,7 @@ Each of the seven content modules has the same structure with the following comp
 In addition to these common elements, Module 4 and 7 have:
 
 - **Exam:** A timed Canvas exam that tests your overall mastery of the content in the current module and one or more previous modules.
-
+- **Final Project:** An assignment that combines all the techniques learned during the course
 
 # Workflow
 

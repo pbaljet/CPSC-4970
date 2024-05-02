@@ -20,6 +20,6 @@ Before we dive into the functional use of SonarQube this diagram and video provi
 
 SonarQube Overview - How to use Sonarqube to investigate and resolve issues found during static code scanning.
 
-> [*Video: SonarQube Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7887c8d8-16d2-4346-bfaa-aeac01212eda)
+> [*Video: SonarQube Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e493f108-74a9-46ab-878a-b03d00c84501)
 
     
