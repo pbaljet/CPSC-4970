@@ -5,7 +5,7 @@ an organizations comprehensive security program. Also covered are a number of in
 throughout the course as we examine how security practices can be used to prevent, detect, and remediate different types
 of security threats.
 
-> [*Video: Cyber Security Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b364f45-fa48-4ad8-a07a-ae95014343f0)
+> [*Video: Cyber Security Overview*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=691dfb3e-9e97-496e-a8a1-b02e018878f5)
 
 ---
 
@@ -14,7 +14,26 @@ of security threats.
 A common language and framework to communicate security related information is important to ensure rapid understanding
 and comprehensive coverage. This lecture video describes the NIST standards and the National Vulnerability Database.
 
-> [*Video: Cyber Security Industry Standards](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=87e9b016-1d07-4ece-8aaa-ae95014b3304)
+### CVE Level Overview
+
+> [*Video: CVE Terminology & Structure*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0179e56-de7c-4e9e-b2ca-b030002f832a) (2 min)
+
+### CVE Program Description 
+
+> [*Video: What is a CVE?*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1e63d0f3-4fa9-4b94-b51d-b03000242fd2) (9 min)
+
+### CWE - Common Weakness Enumeration 
+
+> [*Video: Classifying Software Weaknesses*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6545965b-dfb8-4162-836b-b030002951f3) (7 min)
+
+### CWSS - Common Weakness Scoring System
+
+> [*Video: How to measure weakness severity*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=635b435b-3d1d-4305-9312-b030002e01ba) (6 min)
+
+### CNA CVE Numbering Authority
+
+> [*Video: Who creates and publishes CVEs?*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5680c998-1adf-43f2-8313-b02f0174000a) (2min)
+
 
 ---
 
@@ -25,14 +44,11 @@ The proliferation of open source and 3rd party components has made software deve
 and more secure. However it also introduces challenges with ensuring and maintaining secure software.
 
 
-> [*Video: Software Composition*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3e22254c-bae0-4e6c-bfeb-ae950151c7c8)
+> [*Video: Software Composition*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3e22254c-bae0-4e6c-bfeb-ae950151c7c8) (12 min)
 
-# Course Project Overview
+# Course Assignments Overview
 
-A common language and framework to communicate security related information is important to ensure rapid understanding
-and comprehensive coverage. This lecture video describes the NIST standards and the National Vulnerability Database.
-
-> [*Video: Course Project*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=027ea13c-8e61-4639-b59e-ae950154f8c4)
+> [*Video: Course Project*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=027ea13c-8e61-4639-b59e-ae950154f8c4) (3 min)
 
 ---
 
@@ -42,15 +58,15 @@ Git will be used throughout the course to manage our source code, build automati
 
 ## Git Concepts
 
-> [*Video: Git Overview & Concepts*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c629d7c5-1deb-466b-be11-ae9d0074f520)
+> [*Video: Git Overview & Concepts*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c629d7c5-1deb-466b-be11-ae9d0074f520) (7 min)
 
 ## Git Hands On
 
-> [*Video: Git Hands On*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1645e05b-b05e-4a2c-aa18-ae9d00b0c2bb)
+> [*Video: Git Hands On*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1645e05b-b05e-4a2c-aa18-ae9d00b0c2bb) (15 min)
 
 ## Git Branching & Merging
 
-> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b)
+> [*Video: Git Branching & Merging*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fac76254-d9e5-4895-9fe5-ae9d00b0b70b) (14 min)
 
 ---
 

@@ -40,10 +40,6 @@ or for windows:
 
     git version 2.36.0.windows.1
 
-### Using Git
-
-> [*Video: Welcome Message*](https://auburn.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=67e96d16-5cc1-4d59-bf17-ae8a000a224d)
-
 ## Maven Build Automation
 
 The Apache Java Maven tool (https://maven.apache.org/) to provide build automation for our Java source code.  Maven provides the ability to compile, test, scan, and package our applications using a configuration file called a project object model (POM).

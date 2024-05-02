@@ -1,1 +1,4 @@
 .idea
+students/**
+assignments/**
+**/.DS_Store
