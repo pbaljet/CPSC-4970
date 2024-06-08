@@ -1,5 +1,5 @@
 
-# Welcome to CPSC 4970 Summer A 2022!
+# Welcome to CPSC 4970 Summer B 2024
 
 The course progressively constructs a software application build pipline that involves manual and automated techniques for developing, validating and monitoring security related aspects of the software development lifecycle.  The application used as part of the course will be a Java classes and a standard Java web application.  In addition, the students will be expected to be familiar with using command line tools (linux, windows, mac).  Most of the tools used during the course will be cloud based minimize to installed software locally and deal with installation/compatibility issues. 
 
