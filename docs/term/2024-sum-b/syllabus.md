@@ -3,7 +3,7 @@
 
 # COMP 5970 Secure Software Development <br> Summer Term B 2024 Course Syllabus
 
-*Published: May 2, 2024*
+*Published: Jun 1, 2024*
 
 ---
 
