@@ -1,9 +1,9 @@
 
 ---
 
-# COMP 5970 Secure Software Development <br> Summer Term B 2024 Course Syllabus
+#Secure Software Construction <br> Summer Term B 2024 Course Syllabus
 
-*Published: Jun 1, 2024*
+*Published: June 16, 2024*
 
 ---
 
@@ -17,7 +17,7 @@ Times for all course events (assignment deadlines, exam times, etc.) will be set
 
 # Course Description
 
-COMP 5970 Secure Software Development is designed to introduce cyber security techniques in the software development process. A java based application and associated build tools (Apache Maven, Gitlab, etc.) will be used as the method to provide hands-on experience and knowledge.  The course is designed around constructing a software build pipeline that incorporates manual and automated cyber security practices as the course progresses.
+ Secure Software Construction is designed to introduce cyber security techniques in the software development process. A java based application and associated build tools (Apache Maven, Gitlab, etc.) will be used as the method to provide hands-on experience and knowledge.  The course is designed around constructing a software build pipeline that incorporates manual and automated cyber security practices as the course progresses.
 
 
 >Description: Admission into Bachelor of Computer Science Program. Introduction to vulnerabilities and associated
@@ -232,12 +232,12 @@ through all days of the term, including those marked as holidays.
 
 | Week | Dates       | Module | Graded Items |
 |-----|-------------|--------|--------------|
-| 1   | 6/27 - 7/2  | M0, M1 | H Q A        |   
-| 2   | 7/3  - 7/9  | M2     | Q A          |
-| 3   | 7/10 - 7/16 | M3, M4 | Q A          | 
-| 4   | 7/17 - 7/23 | M4, M5 | Q A E        |   
-| 5   | 7/24 - 7/30 | M6     | Q A          |
-| 6   | 7/31 - 8/4  | M7     | F            | 
+| 1   | 6/25 - 6/30 | M0, M1 | H Q A        |   
+| 2   | 7/1  - 7/7  | M2     | Q A          |
+| 3   | 7/8 - 7/14  | M3, M4 | Q A          | 
+| 4   | 7/15 - 7/21 | M4, M5 | Q A E        |   
+| 5   | 7/22 - 7/28 | M6     | Q A          |
+| 6   | 7/29 - 8/2  | M7     | F            | 
 
 
 
