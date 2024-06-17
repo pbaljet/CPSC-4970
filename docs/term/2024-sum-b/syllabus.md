@@ -1,7 +1,7 @@
 
 ---
 
-#Secure Software Construction <br> Summer Term B 2024 Course Syllabus
+# Secure Software Construction <br> Summer Term B 2024 Course Syllabus
 
 *Published: June 16, 2024*
 
