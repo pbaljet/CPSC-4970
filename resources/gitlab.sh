@@ -6,6 +6,8 @@ projectId=0
 projectName="None"
 groupName=""
 
+# Token: glpat-H_JYihq-5x31-yWxtDmk
+
 
 fix() {
 
@@ -17,38 +19,6 @@ fix() {
   done
 
 }
-#
-# Setup Class
-#
-setupClass() {
-
-  studentFile=$1
-  dirLocation=$2
-  classGroup=$3
-
-  echo "Setting up class from student file $studentFile"
-
-  IFS=$'\n'
-  read -d '' -r -a students < $1
-
-  echo "Creating student directory"
-  mkdir ${dirLocation}/students
-
-  echo "Creating directory for each student"
-
-  for student in ${students[@]}
-  do
-    directory="students/${student}"
-    echo "Creating directory for $directory"
-    mkdir  "$directory"
-#    echo "Creating Gitlab group under $classGroup"
-#    createGroup $line $classGroup
-    echo "Inviting ${line}@auburn.edu to $createdGroupId "
-    inviteUserToGroup $line $createdGroupId
-  done
-
-}
-
 
 createSonarQubeProjects() {
 
@@ -161,7 +131,7 @@ addSonarqubeUsers() {
 createGroup() {
 
   echo "Creating group $1 under parent id $2"
-  createdGroupId=`curl -s --request POST --url "https://gitlab.com/api/v4/groups" --data "{ \"name\": \"${1}\", \"path\": \"${1}\", \"parent_id\": \"${2}\" }" --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --header "Content-Type: application/json" | jq -rj '.id'`
+  createdGroupId=`curl -s --request POST --url "https://gitlab.com/api/v4/groups" --data "{ \"name\": \"${1}\", \"path\": \"${1}\", \"parent_id\": \"${2}\" }" --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --header "Content-Type: application/json" | jq -rj '.id'`
   echo "Created group $createdGroupId"
 
 }
@@ -175,17 +145,6 @@ deleteGroup() {
   curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --data "permanently_remove=true&full_path=${2}" --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
   echo "Done"
 
-}
-
-#
-# Invite User
-#
-inviteUserToGroup() {
-
-echo "Inviting $1 to group $2"
-curl --request POST --url "https://gitlab.com/api/v4/groups/${2}/invitations" \
-     --data "email=${1}@auburn.edu&access_level=40" \
-    --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
 }
 
 #
@@ -487,11 +446,55 @@ updateProjectFile () {
   done
 }
 
+#
+# Setup Class
+#
+setupClass() {
+
+  studentFile=$1
+  dirLocation=$2
+  classGroup=$3
+
+  echo "Setting up class from student file $studentFile"
+
+  IFS=$'\n'
+  read -d '' -r -a students < $1
+
+  echo "Creating student directory"
+  mkdir ${dirLocation}/students
+
+  echo "Creating directory for each student"
+
+  for student in ${students[@]}
+  do
+    directory="students/${student}"
+    echo "Creating directory for $directory"
+    mkdir  "${dirLocation}/students/${student}"
+    echo "Creating Gitlab group $student under $classGroup"
+    createGroup $student $classGroup
+    echo "Inviting ${student}@auburn.edu to $createdGroupId "
+    inviteUserToGroup $student $createdGroupId
+  done
+
+}
+
+#
+# Invite User
+#
+inviteUserToGroup() {
+
+echo "Inviting $1 to group $2"
+curl --request POST --url "https://gitlab.com/api/v4/groups/${2}/invitations" \
+     --data "email=${1}@auburn.edu&access_level=40" \
+     --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk"
+}
+
 usage (){
   echo "gitlab <command> <parameters>"
   echo ""
   echo "Commands: "
   echo "   setup-class <student file> <directory> <group id> "
+  echo "   invite-user <student> <group id> "
   echo "   proj-info <project id>"
   echo "   proj-adjust-perms <project id>"
   echo "   set-proj-perm <project id> <permission> <value>"
