@@ -232,11 +232,12 @@ through all days of the term, including those marked as holidays.
 
 | Week | Dates       | Module | Graded Items |
 |-----|-------------|--------|--------------|
-| 1   | 6/25 - 6/30 | M0, M1 | H Q A        |   
-| 2   | 7/1  - 7/7  | M2     | Q A          |
-| 3   | 7/8 - 7/14  | M3, M4 | Q A          | 
-| 4   | 7/15 - 7/21 | M4, M5 | Q A E        |   
-| 5   | 7/22 - 7/28 | M6     | Q A          |
+| 1   | 6/25 - 6/28 | M0     | H Q A        |   
+| 2   | 6/29  - 7/3 | M1     | Q A          |
+| 2   | 7/5  - 7/14 | M2     | Q A          |
+| 3   | 7/15 - 7/19 | M3     | Q A          | 
+| 4   | 7/15 - 7/21 | M4     | Q A E        |   
+| 5   | 7/22 - 7/28 | M5, M6 | Q A          |
 | 6   | 7/29 - 8/2  | M7     | F            | 
 
 

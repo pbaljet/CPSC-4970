@@ -141,8 +141,8 @@ createGroup() {
 deleteGroup() {
 
   echo "Deleting group $1 $2"
-  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
-  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --data "permanently_remove=true&full_path=${2}" --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
+  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk"
+  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --data "permanently_remove=true&full_path=${2}" --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk"
   echo "Done"
 
 }
@@ -160,7 +160,7 @@ importProject() {
   echo "================================================="
   echo "Adding Project to Group: $groupid - $groupName $projectName $projectSlug $filename"
   paramString="{\"name\": \"${projectName}\",\"path\": \"${projectSlug}\",\"namespace\": \"${groupId}\",\"region\": \"us-east-2\", \"bucket_name\": \"cpsc4970-assignments\",\"file_key\": \"${filename}\",\"access_key_id\": \"AKIAR7BGN267JKVFTFPU\", \"secret_access_key\": \"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\"}"
-  commandString="curl -s --request POST --url \"https://gitlab.com/api/v4/projects/remote-import-s3\" --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --header 'Content-Type: application/json' --data  '{\"name\": \"${projectName}\",\"path\": \"${projectSlug}\",\"namespace\": \"${groupId}\",\"region\": \"us-east-2\", \"bucket_name\": \"cpsc4970-assignments\",\"file_key\": \"${filename}\",\"access_key_id\": \"AKIAR7BGN267JKVFTFPU\", \"secret_access_key\": \"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\"}'"
+  commandString="curl -s --request POST --url \"https://gitlab.com/api/v4/projects/remote-import-s3\" --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --header 'Content-Type: application/json' --data  '{\"name\": \"${projectName}\",\"path\": \"${projectSlug}\",\"namespace\": \"${groupId}\",\"region\": \"us-east-2\", \"bucket_name\": \"cpsc4970-assignments\",\"file_key\": \"${filename}\",\"access_key_id\": \"AKIAR7BGN267JKVFTFPU\", \"secret_access_key\": \"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\"}'"
   # echo $commandString
   result=`eval $commandString`
   message=`echo ${result} | jq -rj '.message'`
@@ -180,7 +180,7 @@ importProject() {
 createProject() {
 curl --request POST \
   --url "https://gitlab.com/api/v4/projects/remote-import-s3" \
-  --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" \
+  --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" \
   --header 'Content-Type: application/json' \
   --data '{
   "name": "Assignment1aa",
@@ -199,37 +199,37 @@ exportProject() {
 echo "Exporting project $1"
 curl --request POST \
   --url "https://gitlab.com/api/v4/projects/$1/export" \
-  --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH"
-sleep 5
+  --header "PRIVATE-TOKEN: glpat-Qf2TyowiGQgnnyb5dDhR"
+sleep 10
 curl --request GET \
   --url "https://gitlab.com/api/v4/projects/$1/export/download" \
-  --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" \
+  --header "PRIVATE-TOKEN: glpat-Qf2TyowiGQgnnyb5dDhR" \
   --output "proj_export.tar.gz"
 }
 
 
 getGroupInfo () {
 #   echo "Getting Group name $1"
-   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1 | jq`
+   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url https://gitlab.com/api/v4/groups/$1 | jq`
    echo "Group: $groupName"
 }
 
 
 getGroupName () {
 #   echo "Getting Group name $1"
-   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url https://gitlab.com/api/v4/groups/${gid} | jq -rj '.name'"
+   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url https://gitlab.com/api/v4/groups/${gid} | jq -rj '.name'"
    groupName=`eval $curlString`
    echo "Name: $groupName"
 }
 
 getProjectName () {
 #   echo "Getting Project name $1"
-   projectName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/projects/$1 | jq -rj '.name'`
+   projectName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url https://gitlab.com/api/v4/projects/$1 | jq -rj '.name'`
 }
 
 getSubgroupList () {
    echo "Getting subgroups for $1"
-   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
+   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
    echo "$group_list"
 }
 
@@ -250,7 +250,7 @@ turnOffProjectFeatures() {
    permString+="pages_enabled=false&"
    permString+="packages_enabled=false&"
    permString+="service_desk_enabled=false&"
-   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
+   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url ${project_url} --data ${permString} | jq
 
 }
 adjustProjectPermissions1() {
@@ -258,7 +258,7 @@ adjustProjectPermissions1() {
   echo "Adjust Project Permissions $project_url"
   permString="jobs_enabled=true&"
   echo $permString
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url ${project_url} --data ${permString} | jq
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url ${project_url} --data ${permString} | jq
 }
 
 adjustProjectPermissions() {
@@ -287,7 +287,7 @@ adjustProjectPermissions() {
   permString+="packages_enabled=true&"
   permString+="builds_access_level=private"
   echo "Perm String: $permString"
-  curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url ${project_url} --data \"${permString}\" | jq "
+  curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} --data \"${permString}\" | jq "
   echo $curlString
   result=`eval $curlString`
   echo $result
@@ -296,7 +296,7 @@ adjustProjectPermissions() {
 setProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
   echo "Setting Project Permissions $project_url: $2=$3"
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url --data "$2=$3" | jq
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url $project_url --data "$2=$3" | jq
 }
 
 
@@ -304,14 +304,14 @@ getProjectBranches() {
   project_url="https://gitlab.com/api/v4/projects/$1/repository/branches"
   getProjectName $1
 #  echo "Getting branches for $project_url: "
-  curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq '.[].name'
+  curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url $project_url | jq '.[].name'
 }
 
 getProjectPermission() {
   echo "Getting project permission $permId for $projectName - $projectId"
   project_url="https://gitlab.com/api/v4/projects/$projectId"
   jq_filter="'.${permId}'"
-  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url $project_url | jq $jq_filter"
+  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url $project_url | jq $jq_filter"
   permValue=`eval $curlString`
   echo "Project: $groupName $permId=$permValue"
 }
@@ -321,12 +321,12 @@ adjustBranchPermissions() {
   echo "Adjusting Branch Permissions merge=$mergeAccessLevel push=$pushAccessLevel unprotect=$unprotectAccessLevel"
   project_url="https://gitlab.com/api/v4/projects/$projectId/protected_branches"
   echo "\tDeleting existing main protection: $project_url"
-  curlString="curl -s --request DELETE --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" $project_url/main"
+  curlString="curl -s --request DELETE --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" $project_url/main"
   result=`eval $curlString`
   echo $result
   echo "\tAdd Protection"
-#  curl -s --request POST --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
-  curlString="curl -s --request POST --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url \"$project_url?name=main&push_access_level=$pushAccessLevel&merge_access_level=$mergeAccessLevel&unprotect_access_level=$unprotectAccessLevel\" | jq"
+#  curl -s --request POST --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
+  curlString="curl -s --request POST --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url \"$project_url?name=main&push_access_level=$pushAccessLevel&merge_access_level=$mergeAccessLevel&unprotect_access_level=$unprotectAccessLevel\" | jq"
   result=`eval $curlString`
   echo $curlString
   echo $result | jq
@@ -338,7 +338,7 @@ getProjectsForGroups () {
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
   filter="select( .name | contains(\"${projectFilter}\"))"
   echo "Using filter $filter for find projects in group $project_url"
-  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
+  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
 #  echo $curlString
   project_list=`eval $curlString`
   echo "Project list: $project_list"
@@ -347,7 +347,7 @@ getProjectsForGroups () {
 getProjectInfo () {
     project_url="https://gitlab.com/api/v4/projects/$1"
     echo "Retrieving Info for $project_url"
-    curl -s --request GET --header "PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH" --url $project_url | jq
+    curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url $project_url | jq
 
 }
 
@@ -428,7 +428,7 @@ updateProjectFile () {
       unprotectAccessLevel=40
       adjustBranchPermissions
       echo "   UpdateFile $fileName for $pid - $projectName"
-      curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-t8H-qytSodB5BCcT2oyH\""
+      curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\""
       curlString+=" -F \"branch=main\""
       curlString+=" -F \"author_email=pwb0016@auburn.edu\""
       curlString+=" -F \"author_name=Peter Baljet\""
