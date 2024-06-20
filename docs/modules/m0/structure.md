@@ -17,10 +17,11 @@ Here is the specific schedule for [2024 Summer Term B](https://auburn.edu/about/
 |------------|-------------|------------|
 | M0         | Tue June 25 | Fri Jun 28 |
 | M1         | Sat Jun 29  | Wed Jul 3  |
-| M2         | Fri Jul 5   | Mon Jul 14 |
-| M3         | Mon Jul 15  | Fri Jul 19 |
+| M2         | Fri Jul 5   | Mon Jul 11 |
+| M3         | Mon Jul 12  | Fri Jul 19 |
 | M4         | Mon Jul 15  | Sun Jul 21 |
-| M5, M6     | Mon Jul 22  | Sun Jul 28 |
+| M5         | Mon Jul 22  | Fri Jul 26 |
+| M6         | Mon Jul 22  | Sun Jul 28 |
 | Final Exam | Mon Jul 29  | Sun Aug 2  |
 
 # Module Structure
