@@ -10,17 +10,18 @@ The timeboxed organization of the course is as follows. Module 0 begins on the f
 
 For the Summer mini term there are several weeks with the modules combined due to the shorted schedule.
 
-Here is the specific schedule for [2023 Spring Term A](http://online.auburn.edu/term_calendar).
+Here is the specific schedule for [2024 Summer Term B](https://auburn.edu/about/academic-calendar/).
 
  
-| Module | Begin       | End        |
-|-------| -----       |------------|
-| M0    | Tue June 27 | Sun Jul 2  |
-| M1    | Mon Jul 3   | Sun Jul 9  |
-| M2    | Mon Jul 10  | Sun Jul 16 |
-| M3, M4 | Mon Jul 17  | Sun Jul 23 |
-| M5, M6 | Mon Jul 24  | Sun Jul 30 |
-| M7    | Mon Jul 31  | Sun Aug 24 |
+| Module     | Begin       | End        |
+|------------|-------------|------------|
+| M0         | Tue June 25 | Fri Jun 28 |
+| M1         | Sat Jun 29  | Wed Jul 3  |
+| M2         | Fri Jul 5   | Mon Jul 14 |
+| M3         | Mon Jul 15  | Fri Jul 19 |
+| M4         | Mon Jul 15  | Sun Jul 21 |
+| M5, M6     | Mon Jul 22  | Sun Jul 28 |
+| Final Exam | Mon Jul 29  | Sun Aug 2  |
 
 # Module Structure
 
