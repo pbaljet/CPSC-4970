@@ -6,7 +6,7 @@ Cyber Security is  an area of increasing importance in today's modern world as s
 > 
 ## Course Outcomes
 
-By the end of this course, you should be able to:
+By the end of this course, you should be able to: 
 
 - Understand concepts of software composition and execution
 - How software systems are delivered and managed
