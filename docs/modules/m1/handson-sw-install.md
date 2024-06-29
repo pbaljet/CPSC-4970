@@ -2,6 +2,13 @@
 
 The next sections and lectures guide you through installing and learning to use the core development tools that will be used throughout the course.  Each of these tools can be installed on Linux, Windows, or Mac operating systems.  Most of the videos and examples will be using unix command line, but the options and commands should for the most part be the same on each operations system.
 
+## Environment Variables
+
+Understanding the concept of environment variables is essential for CLI Tools, DevOps pipelines, and processes.  You will see them used throughout the various tool configurations in this course.  If you are you not familiar with the usage of environment variables you can review the following resources:
+
+- <a href="https://en.wikipedia.org/wiki/Environment_variable">Wikipedia </a>
+- <a href="https://www.youtube.com/watch?v=ADh_OFBfdEE">Good video</a> for unix and windows.
+
 ## Java Installation and Verification
 
 The version of Java used through the course is Java JDK 11.  The Java JDK 11 can be downloaded from <a href="https://www.oracle.com/java/technologies/downloads/#java11" target="_blank">Oracle</a>
@@ -17,7 +24,9 @@ The output looks something line this:
     Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.8+10-LTS, mixed mode)
 
 
-If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey (<a href="https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd" target="_blank">Windows</a> to quickly switch between java versions.  The key environment variable for Java are the "JAVA_HOME" and "JAVA_"
+If you are using multiple versions of Java you can  create a shell alias (linux/max) or doskey (<a href="https://stackoverflow.com/questions/47469310/switch-jdk-version-in-windows-10-cmd" target="_blank">Windows</a> to quickly switch between java versions.  The key environment variable for Java is "JAVA_HOME".
+
+You are also welcome to use other Java implementations such as OpenJDK. 
 
 
 ## Git Version Control
