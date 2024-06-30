@@ -200,7 +200,7 @@ echo "Exporting project $1"
 curl --request POST \
   --url "https://gitlab.com/api/v4/projects/$1/export" \
   --header "PRIVATE-TOKEN: glpat-Qf2TyowiGQgnnyb5dDhR"
-sleep 10
+sleep 30
 curl --request GET \
   --url "https://gitlab.com/api/v4/projects/$1/export/download" \
   --header "PRIVATE-TOKEN: glpat-Qf2TyowiGQgnnyb5dDhR" \
@@ -338,8 +338,9 @@ getProjectsForGroups () {
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
   filter="select( .name | contains(\"${projectFilter}\"))"
   echo "Using filter $filter for find projects in group $project_url"
+#  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} | jq -rj '.[] | select( .name ==\"${projectFilter}\") | .id'"
   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
-#  echo $curlString
+  echo $curlString
   project_list=`eval $curlString`
   echo "Project list: $project_list"
 }
@@ -415,9 +416,10 @@ updateProjectFile () {
   echo "Subgroups: $group_list"
   for gid in $group_list
   do
+    echo "Getting Group name for: $gid"
     getGroupName $gid
     echo "================================================="
-    echo "Group for $pid - $groupName"
+    echo "Processing group $gid - $groupName"
     getProjectsForGroups $gid
     for pid in $project_list
     do
@@ -433,7 +435,7 @@ updateProjectFile () {
       curlString+=" -F \"author_email=pwb0016@auburn.edu\""
       curlString+=" -F \"author_name=Peter Baljet\""
       curlString+=" -F \"content=<$fileName\""
-      curlString+=" -F \"commit_message=Remove -app from url\""
+      curlString+=" -F \"commit_message=$comment\""
       curlString+=" https://gitlab.com/api/v4/projects/$pid/repository/files/$repositoryPath"
       echo $curlString
       result=`eval $curlString`
