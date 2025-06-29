@@ -6,7 +6,7 @@ projectId=0
 projectName="None"
 groupName=""
 
-# Token: glpat-H_JYihq-5x31-yWxtDmk
+# Token: glpat-y36ZeX7Q4ryxtd87d5ko
 
 
 fix() {
@@ -44,24 +44,25 @@ createSonarQubeProjects() {
 addSonarProjectForUser() {
 
     echo "Adding SonarQube project ${1} for ${2} quality gate ${3}"
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/projects/create\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}&name=${1}-${2}&visibility=private\""
+    curlString="curl -s --request POST --url \"https://sonarqube.au-csse-cpsc4970.com/api/projects/create\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"project=${1}-${2}&name=${1}-${2}&visibility=private\""
+    echo $curlString
     eval $curlString
     echo "Adding permissions..."
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=securityhotspotadmin\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"projectKey=${1}-${2}&login=${2}&permission=securityhotspotadmin\""
     eval $curlString
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=user\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"projectKey=${1}-${2}&login=${2}&permission=user\""
     eval $curlString
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=scan\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"projectKey=${1}-${2}&login=${2}&permission=scan\""
     eval $curlString
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=codeviewer\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"projectKey=${1}-${2}&login=${2}&permission=codeviewer\""
     eval $curlString
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&login=${2}&permission=issueadmin\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/permissions/add_user\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"projectKey=${1}-${2}&login=${2}&permission=issueadmin\""
     eval $curlString
     echo "Adding quality gate..."
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualitygates/select\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"projectKey=${1}-${2}&gateName=${3}\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualitygates/select\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"projectKey=${1}-${2}&gateName=${3}\""
     eval $curlString
     echo "Adding quality profile..."
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualityprofiles/add_project\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}&language=java&qualityProfile=au_profile\""
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/qualityprofiles/add_project\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"project=${1}-${2}&language=java&qualityProfile=au_profile\""
     eval $curlString
 
 }
@@ -70,7 +71,6 @@ deleteSonarQubeProjects() {
 
   projectName=$1
   studentFile=$2
-  qualityGate=$3
 
   IFS=$'\n'
   read -d '' -r -a students < $studentFile
@@ -79,8 +79,8 @@ deleteSonarQubeProjects() {
 
   for student in ${students[@]}
   do
-    echo "Add Project for ${student}"
-    deleteSonarProjectForUser $projectName $student $qualityGate
+    echo "Delete Project for ${student}"
+    deleteSonarProjectForUser $projectName $student
     sleep 1
   done
 }
@@ -89,8 +89,8 @@ deleteSonarQubeProjects() {
 #
 deleteSonarProjectForUser() {
 
-    echo "Deleting SonarQube project ${1} for ${2} quality gate ${3}"
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/projects/delete\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"project=${1}-${2}\""
+    echo "Delete project id: ${1}-${2}"
+    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/projects/delete\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"project=${1}-${2}\""
     eval $curlString
 
 }
@@ -116,11 +116,12 @@ addSonarqubeUsers() {
     echo "Adding student X${aStudent[0]}X"
     echo "Adding student X${aStudent[1]}X"
     echo "Adding student X${aStudent[2]}X"
-    #curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/users/create\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"login=${aStudent[0]}&name=test&password=aubie&email=${aStudent[1]}\""
-    curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/users/update\" --header \"Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9\" --data \"login=${aStudent[0]}&name=${aStudent[2]}\""
+    curlString="curl -s --request POST --url \"https://sonarqube.au-csse-cpsc4970.com/api/users/create\" --header \"Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711\" --data \"login=${aStudent[0]}&name=${aStudent[2]}&password=aubie&email=${aStudent[1]}\""
+    #curlString="curl -s --request POST --url \"https://au-csse-cpsc4970.com/api/users/update\" --header \"Authorization: Bearer sqa_59c9ee690d620ea69abbd638d2fdca5d5e84156a" --data \"login=${aStudent[0]}&name=${aStudent[2]}\""
     eval $curlString
-#    curlString=`curl -s --request POST --url "https://au-csse-cpsc4970.com/api/users/create" --header "Authorization: Bearer squ_fc0bf0abd5dccc1f812aa79aaf8a2c05ce97b3d9" --data "login=${aStudent[0]}&name=test&password=aubie&email=${aStudent[1]}"`
+#    curlString=`curl -s --request POST --url "https://au-csse-cpsc4970.com/api/users/create" --header "Authorization: Bearer squ_1a065bae8ae1823cfc2a682861a4bdb0d31ae711" --data "login=${aStudent[0]}&name=test&password=aubie&email=${aStudent[1]}"`
 #    echo $createUser
+
   done
 
 }
@@ -131,7 +132,7 @@ addSonarqubeUsers() {
 createGroup() {
 
   echo "Creating group $1 under parent id $2"
-  createdGroupId=`curl -s --request POST --url "https://gitlab.com/api/v4/groups" --data "{ \"name\": \"${1}\", \"path\": \"${1}\", \"parent_id\": \"${2}\" }" --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --header "Content-Type: application/json" | jq -rj '.id'`
+  createdGroupId=`curl -s --request POST --url "https://gitlab.com/api/v4/groups" --data "{ \"name\": \"${1}\", \"path\": \"${1}\", \"parent_id\": \"${2}\" }" --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --header "Content-Type: application/json" | jq -rj '.id'`
   echo "Created group $createdGroupId"
 
 }
@@ -141,11 +142,12 @@ createGroup() {
 deleteGroup() {
 
   echo "Deleting group $1 $2"
-  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk"
-  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --data "permanently_remove=true&full_path=${2}" --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk"
+  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko"
+  curl --request DELETE --url "https://gitlab.com/api/v4/groups/${1}" --data "permanently_remove=true&full_path=${2}" --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko"
   echo "Done"
 
 }
+
 
 #
 # Import Project
@@ -160,14 +162,18 @@ importProject() {
   echo "================================================="
   echo "Adding Project to Group: $groupid - $groupName $projectName $projectSlug $filename"
   paramString="{\"name\": \"${projectName}\",\"path\": \"${projectSlug}\",\"namespace\": \"${groupId}\",\"region\": \"us-east-2\", \"bucket_name\": \"cpsc4970-assignments\",\"file_key\": \"${filename}\",\"access_key_id\": \"AKIAR7BGN267JKVFTFPU\", \"secret_access_key\": \"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\"}"
-  commandString="curl -s --request POST --url \"https://gitlab.com/api/v4/projects/remote-import-s3\" --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --header 'Content-Type: application/json' --data  '{\"name\": \"${projectName}\",\"path\": \"${projectSlug}\",\"namespace\": \"${groupId}\",\"region\": \"us-east-2\", \"bucket_name\": \"cpsc4970-assignments\",\"file_key\": \"${filename}\",\"access_key_id\": \"AKIAR7BGN267JKVFTFPU\", \"secret_access_key\": \"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\"}'"
+  commandString="curl -s --request POST --url \"https://gitlab.com/api/v4/projects/remote-import-s3\" --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --header 'Content-Type: application/json' --data  '{\"name\": \"${projectName}\",\"path\": \"${projectSlug}\",\"namespace\": \"${groupId}\",\"region\": \"us-east-2\", \"bucket_name\": \"cpsc4970-assignments\",\"file_key\": \"${filename}\",\"access_key_id\": \"AKIAR7BGN267GNZVNY7Q\", \"secret_access_key\": \"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\"}'"
   # echo $commandString
   result=`eval $commandString`
+  echo "Result: $result"
   message=`echo ${result} | jq -rj '.message'`
-  if [ $message == "null" ] ; then
+  if [[ -n $message ]] ; then
     projectId=`echo ${result} | jq -rj '.id | tostring'`
-    echo "Id: ${id}"
+    echo "Project Id: $projectId"
     adjustProjectPermissions
+    mergeAccessLevel=40
+    pushAccessLevel=0
+    unprotectAccessLevel=40
     adjustBranchPermissions
   else
     echo "Message: ${message}"
@@ -180,7 +186,7 @@ importProject() {
 createProject() {
 curl --request POST \
   --url "https://gitlab.com/api/v4/projects/remote-import-s3" \
-  --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" \
+  --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" \
   --header 'Content-Type: application/json' \
   --data '{
   "name": "Assignment1aa",
@@ -210,26 +216,26 @@ curl --request GET \
 
 getGroupInfo () {
 #   echo "Getting Group name $1"
-   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url https://gitlab.com/api/v4/groups/$1 | jq`
+   groupName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url https://gitlab.com/api/v4/groups/$1 | jq`
    echo "Group: $groupName"
 }
 
 
 getGroupName () {
 #   echo "Getting Group name $1"
-   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url https://gitlab.com/api/v4/groups/${gid} | jq -rj '.name'"
+   curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url https://gitlab.com/api/v4/groups/${gid} | jq -rj '.name'"
    groupName=`eval $curlString`
    echo "Name: $groupName"
 }
 
 getProjectName () {
 #   echo "Getting Project name $1"
-   projectName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url https://gitlab.com/api/v4/projects/$1 | jq -rj '.name'`
+   projectName=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url https://gitlab.com/api/v4/projects/$1 | jq -rj '.name'`
 }
 
 getSubgroupList () {
    echo "Getting subgroups for $1"
-   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
+   group_list=`curl -s --request GET --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url https://gitlab.com/api/v4/groups/$1/subgroups?per_page=100 | jq -rj '.[].id | tostring + " "'`
    echo "$group_list"
 }
 
@@ -250,7 +256,7 @@ turnOffProjectFeatures() {
    permString+="pages_enabled=false&"
    permString+="packages_enabled=false&"
    permString+="service_desk_enabled=false&"
-   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url ${project_url} --data ${permString} | jq
+   curl -s --request PUT --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url ${project_url} --data ${permString} | jq
 
 }
 adjustProjectPermissions1() {
@@ -258,7 +264,7 @@ adjustProjectPermissions1() {
   echo "Adjust Project Permissions $project_url"
   permString="jobs_enabled=true&"
   echo $permString
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url ${project_url} --data ${permString} | jq
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url ${project_url} --data ${permString} | jq
 }
 
 adjustProjectPermissions() {
@@ -287,7 +293,7 @@ adjustProjectPermissions() {
   permString+="packages_enabled=true&"
   permString+="builds_access_level=private"
   echo "Perm String: $permString"
-  curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} --data \"${permString}\" | jq "
+  curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url ${project_url} --data \"${permString}\" | jq "
   echo $curlString
   result=`eval $curlString`
   echo $result
@@ -296,22 +302,21 @@ adjustProjectPermissions() {
 setProjectPermissions() {
   project_url="https://gitlab.com/api/v4/projects/$1"
   echo "Setting Project Permissions $project_url: $2=$3"
-  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url $project_url --data "$2=$3" | jq
+  curl -s --request PUT --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url $project_url --data "$2=$3" | jq
 }
 
 
 getProjectBranches() {
   project_url="https://gitlab.com/api/v4/projects/$1/repository/branches"
-  getProjectName $1
 #  echo "Getting branches for $project_url: "
-  curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url $project_url | jq '.[].name'
+  curl -s --request GET --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url $project_url | jq '.[].name'
 }
 
 getProjectPermission() {
   echo "Getting project permission $permId for $projectName - $projectId"
   project_url="https://gitlab.com/api/v4/projects/$projectId"
   jq_filter="'.${permId}'"
-  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url $project_url | jq $jq_filter"
+  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url $project_url | jq $jq_filter"
   permValue=`eval $curlString`
   echo "Project: $groupName $permId=$permValue"
 }
@@ -321,12 +326,12 @@ adjustBranchPermissions() {
   echo "Adjusting Branch Permissions merge=$mergeAccessLevel push=$pushAccessLevel unprotect=$unprotectAccessLevel"
   project_url="https://gitlab.com/api/v4/projects/$projectId/protected_branches"
   echo "\tDeleting existing main protection: $project_url"
-  curlString="curl -s --request DELETE --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" $project_url/main"
+  curlString="curl -s --request DELETE --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" $project_url/main"
   result=`eval $curlString`
   echo $result
   echo "\tAdd Protection"
-#  curl -s --request POST --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
-  curlString="curl -s --request POST --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url \"$project_url?name=main&push_access_level=$pushAccessLevel&merge_access_level=$mergeAccessLevel&unprotect_access_level=$unprotectAccessLevel\" | jq"
+#  curl -s --request POST --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url "$project_url?name=main&push_access_level=0&merge_access_level=30&unprotect_access_level=40" | jq
+  curlString="curl -s --request POST --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url \"$project_url?name=main&push_access_level=$pushAccessLevel&merge_access_level=$mergeAccessLevel&unprotect_access_level=$unprotectAccessLevel\" | jq"
   result=`eval $curlString`
   echo $curlString
   echo $result | jq
@@ -338,8 +343,8 @@ getProjectsForGroups () {
   project_url="https://gitlab.com/api/v4/groups/$1/projects"
   filter="select( .name | contains(\"${projectFilter}\"))"
   echo "Using filter $filter for find projects in group $project_url"
-#  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} | jq -rj '.[] | select( .name ==\"${projectFilter}\") | .id'"
-  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
+  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url ${project_url} | jq -rj '.[] | select( .name ==\"${projectFilter}\") | .id'"
+#  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
   echo $curlString
   project_list=`eval $curlString`
   echo "Project list: $project_list"
@@ -348,8 +353,45 @@ getProjectsForGroups () {
 getProjectInfo () {
     project_url="https://gitlab.com/api/v4/projects/$1"
     echo "Retrieving Info for $project_url"
-    curl -s --request GET --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk" --url $project_url | jq
+    curl -s --request GET --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko" --url $project_url | jq
 
+}
+
+#
+# Delete Project
+#
+deleteProjectFromGroup()
+{
+  echo "Group: $1 Project: $2"
+  getSubgroupList $1
+  for gid in $group_list
+  do
+      echo $gid
+      projectFilter=$2
+      deleteProject $gid
+      sleep 5
+  done
+}
+
+#
+# Delete Project
+#
+deleteProject()
+{
+  echo "Group: $1 Project: $projectFilter"
+
+      project_url="https://gitlab.com/api/v4/groups/$1/projects"
+      filter="select( .name | contains(\"${projectFilter}\"))"
+      echo "Using filter $filter for find projects in group $project_url"
+      curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url ${project_url} | jq -rj '.[] | select( .name ==\"${projectFilter}\") | .id'"
+    #  curlString="curl -s --request GET --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url ${project_url} | jq -rj '.[] | select( .name | contains(\"${projectFilter}\")) | .id'"
+      echo $curlString
+      projectId=`eval $curlString`
+      echo "Deleting project: $projectId"
+      project_url="https://gitlab.com/api/v4/projects/$projectId"
+      curlString="curl -s --request DELETE --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\" --url ${project_url} | jq "
+      response=`eval $curlString`
+      echo "$response"
 }
 
 loadProjectIntoGroups()
@@ -359,12 +401,37 @@ loadProjectIntoGroups()
   for gid in $group_list
   do
       importProject $gid "$2" $3 $4
-      sleep 20
+      sleep 11
     # fi
   done
 }
 
 cycleThroughProjectsSetPerms () {
+
+  echo "Cycling Temp"
+  echo "=========================="
+  echo "=========================="
+  getSubgroupList $groupId
+  echo "Found Subgroups: $group_list"
+  for gid in $group_list
+  do
+    getGroupName $gid
+    echo "================================================="
+    echo "Group for $gid - $groupName"
+    getProjectsForGroups $gid
+    for projectId in $project_list
+    do
+      getProjectName $projectId
+      adjustProjectPermissions $projectId
+      mergeAccessLevel=30
+      pushAccessLevel=30
+      unprotectAccessLevel=40
+      adjustBranchPermissions $projectId
+    done
+  done
+}
+
+cycleThroughProjectsSetBranchPerms () {
 
   echo "Cycling Temp"
   echo "=========================="
@@ -409,6 +476,25 @@ cycleThroughProjects () {
   done
 }
 
+getStudentProjectBranches () {
+
+  getSubgroupList $1
+  projectFilter=$2
+  echo "Subgroups: $group_list"
+  for gid in $group_list
+  do
+    getGroupName $gid
+    echo "================================================="
+    echo "Group for $pid - $groupName"
+    getProjectsForGroups $gid
+    for pid in $project_list
+    do
+      getProjectName $pid
+      echo "   Branches for $pid - $projectName"
+      getProjectBranches $pid
+    done
+  done
+}
 
 updateProjectFile () {
 
@@ -430,12 +516,12 @@ updateProjectFile () {
       unprotectAccessLevel=40
       adjustBranchPermissions
       echo "   UpdateFile $fileName for $pid - $projectName"
-      curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk\""
+      curlString="curl -s --request PUT --header \"PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko\""
       curlString+=" -F \"branch=main\""
       curlString+=" -F \"author_email=pwb0016@auburn.edu\""
       curlString+=" -F \"author_name=Peter Baljet\""
       curlString+=" -F \"content=<$fileName\""
-      curlString+=" -F \"commit_message=$comment\""
+      curlString+=" -F \"commit_message=$commit_message\""
       curlString+=" https://gitlab.com/api/v4/projects/$pid/repository/files/$repositoryPath"
       echo $curlString
       result=`eval $curlString`
@@ -446,6 +532,34 @@ updateProjectFile () {
       sleep 5
     done
   done
+}
+
+#
+# Setup Class
+#
+awsDeleteEnv() {
+
+  studentFile=$1
+
+  echo "Deleting Env for - $studentFile"
+
+  IFS=$'\n'
+  read -d '' -r -a students < $1
+
+  echo "Delete Environments"
+  mkdir ${dirLocation}/students
+
+  echo "Creating directory for each student"
+
+  for student in ${students[@]}
+  do
+    echo "Delete Env for $student"
+    cmd="aws elasticbeanstalk terminate-environment --environment-name ${student}-env"
+    echo $cmd
+    result=`eval $cmd`
+    echo $result
+  done
+
 }
 
 #
@@ -488,7 +602,7 @@ inviteUserToGroup() {
 echo "Inviting $1 to group $2"
 curl --request POST --url "https://gitlab.com/api/v4/groups/${2}/invitations" \
      --data "email=${1}@auburn.edu&access_level=40" \
-     --header "PRIVATE-TOKEN: glpat-H_JYihq-5x31-yWxtDmk"
+     --header "PRIVATE-TOKEN: glpat-y36ZeX7Q4ryxtd87d5ko"
 }
 
 usage (){
@@ -502,6 +616,7 @@ usage (){
   echo "   set-proj-perm <project id> <permission> <value>"
   echo "   get-proj-perm <project id> <permission>"
   echo "   get-group-projects <group id>"
+  echo "   get-student-proj-branches <group id> <project name>"
   echo "   get-group-name <group id>"
   echo "   branch-adjust-perms <project id> <push perm> <merge perm > <unprotect perm>"
   echo "   proj-cycle <group id>"
@@ -509,14 +624,17 @@ usage (){
   echo "   proj-update-file <group id> <project name> <local file> <repository path>"
   echo "   load-proj <group id> <project name> <path name> <import file>"
   echo "   export-proj <project id>"
-  echo "   create_proj <group id> <file_name>"
+  echo "   create-proj <group id> <file_name>"
+  echo "   delete-proj <group id> <projectname>"
   echo "   create-group <group name> <parent group id>"
   echo "   delete-group <project id> <full text path>"
   echo "   get-group-info <group id>"
   echo "   branch-adjust-perms <project id> <push perm> <merge perm> <unprotect perm>"
-  echo "   create-sq-users <student file>"
+  echo "   add-sq-users <student file>"
   echo "   create-sq-projects <project name> <student file> <quality gate>"
   echo "   create-sq-proj-user <project name> <student>"
+  echo "   delete-sq-projects <project name> <student file>"
+  echo "   aws-delete-env <student file>"
   echo ""
 
 }
@@ -524,6 +642,11 @@ usage (){
 echo "Parameters: $1"
 
 case $1 in
+
+  "aws-delete-env")
+    if [ -z $2 ]; then echo "No student file specified: setup-class <student file> <directory> <group id>"; exit; fi
+    awsDeleteEnv $2
+    ;;
 
   "setup-class")
     if [ -z $2 ]; then echo "No student file specified: setup-class <student file> <directory> <group id>"; exit; fi
@@ -558,6 +681,13 @@ case $1 in
   "get-group-projects")
     if [ -z $2 ]; then echo "No group specified"; exit; fi
     getProjectsForGroups $2
+    ;;
+
+  "get-student-proj-branches")
+    echo "$1  $2  $3"
+    if [ -z $2 ]; then echo "No group name specified: get-student-proj-branches <group id> <full text path>"; exit; fi
+    if [ -z "$3" ]; then echo "No project name specified: get-student-proj-branches <group id> <full text path>"; exit; fi
+    getStudentProjectBranches $2 "$3"
     ;;
 
   "delete-group")
@@ -639,10 +769,16 @@ case $1 in
     importProject $2 "$3" $4 $5
     ;;
 
-  "create-project")
+  "create-proj")
     if [ -z $2 ]; then echo "No group specified"; exit; fi
     if [ -z $3 ]; then echo "No file specified"; exit; fi
     createProject $2 $3
+    ;;
+
+  "delete-proj")
+    if [ -z $2 ]; then echo "No group specified"; exit; fi
+    if [ -z $3 ]; then echo "No project specified"; exit; fi
+    deleteProjectFromGroup $2 "$3"
     ;;
 
   "add-sq-users")
@@ -654,7 +790,7 @@ case $1 in
     if [ -z $2 ]; then echo "No project name specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
     if [ -z $3 ]; then echo "No student file specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
     if [ -z $3 ]; then echo "No quality gate specified. Usage: add-sq-proj <project name> <student file> <quality gate>"; exit; fi
-    createSonarQubeProjects $2 $3 $4
+    createSonarQubeProjects "$2" $3 $4
     ;;
 
   "create-sq-proj-user")
@@ -665,21 +801,22 @@ case $1 in
     ;;
 
   "delete-sq-projects")
-    if [ -z $2 ]; then echo "No project name specified. Usage: create-sq-proj-user <project name> <student> <quality gate>"; exit; fi
-    if [ -z $3 ]; then echo "No student  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
-    if [ -z $4 ]; then echo "No quality gate  specified. Usage: create-sq-proj-user <project name> <student file> <quality gate>"; exit; fi
-    deleteSonarQubeProjects $2 $3 $4
+    if [ -z $2 ]; then echo "No project name specified. Usage: elete-sq-projects <project name> <student>"; exit; fi
+    if [ -z $3 ]; then echo "No student  specified. Usage: elete-sq-projects <project name> <student file>"; exit; fi
+    deleteSonarQubeProjects $2 $3
     ;;
 
   "proj-update-file")
-    if [ -z $2 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
-    if [ -z "$3" ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
-    if [ -z $4 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
-    if [ -z $5 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path"; exit; fi
+    if [ -z $2 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path> <comment>"; exit; fi
+    if [ -z "$3" ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path> <comment>"; exit; fi
+    if [ -z $4 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path> <comment>"; exit; fi
+    if [ -z $5 ]; then echo "No group specified: proj-update-file <group id> <project name> <local file> <repository path> <comment>"; exit; fi
+    if [ -z $6 ]; then echo "No comment specified: proj-update-file <group id> <project name> <local file> <repository path> <comment>"; exit; fi
     studentGroup=$2
     projectFilter="$3"
     fileName=$4
     repositoryPath=$5
+    commit_message="$6"
     updateProjectFile
     ;;
 

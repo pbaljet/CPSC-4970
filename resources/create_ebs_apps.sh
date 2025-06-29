@@ -1,6 +1,6 @@
 #!/bin/bash
 
-student_list="azb azo bpm bzg cef cwj czl czt dhc dml eci frs fzg jmh klb msb rwm"
+student_list="msb"
 
 #
 # Gitlab private token to use
