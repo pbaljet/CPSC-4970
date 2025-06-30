@@ -212,16 +212,16 @@ Below is the weekly schedule for [Spring A
 through all days of the term, including those marked as holidays.
 
 
-| Week | Dates       | Module | Graded Items |
-|-----|-------------|--------|--------------|
-| 1   | 6/25 - 6/28 | M0     | H Q A        |   
-| 2   | 6/29  - 7/3 | M1     | Q A          |
-| 2   | 7/5  - 7/11 | M2     | Q A          |
-| 3   | 7/12 - 7/19 | M3     | Q A          | 
-| 4   | 7/15 - 7/21 | M4     | Q A E        |   
-| 5   | 7/22 - 7/26 | M5     | Q A          |
-| 5   | 7/22 - 7/28 | M6     | Q A          |
-| 6   | 7/29 - 8/2  | M7     | F            | 
+| Week | Dates        | Module | Graded Items |
+|-----|--------------|--------|--------------|
+| 1   | 6/30 - 7/3   | M0     | H Q A        |   
+| 2   | 7/5  - 7/9   | M1     | Q A          |
+| 2   | 7/10  - 7/13 | M2     | Q A          |
+| 3   | 7/14 - 7/18  | M3     | Q A          | 
+| 4   | 7/19 - 7/24  | M4     | Q A E        |   
+| 5   | 7/25 - 7/29  | M5     | Q A          |
+| 5   | 7/30 - 8/3   | M6     | Q A          |
+| 6   | 8/4 - 8/8    | M7     | F            | 
 
 
 
